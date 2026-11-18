@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.3' );
+define( 'OVENTS_VERSION', '2.9.4' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -83,10 +83,13 @@ add_action(
 add_action(
 	'wp_head',
 	function () {
-		if ( is_front_page() && function_exists( 'ovents_manifest_image_webp_preload_url' ) ) {
-			$hero = ovents_manifest_image_webp_preload_url( 'hero-erica-samuel-pavilion' );
-			if ( $hero ) {
-				echo '<link rel="preload" as="image" type="image/webp" href="' . esc_url( $hero ) . '">' . "\n";
+		if ( is_front_page() && function_exists( 'ovents_home_hero_webp_preload_urls' ) ) {
+			$hero_preloads = ovents_home_hero_webp_preload_urls();
+			if ( ! empty( $hero_preloads['mobile'] ) ) {
+				echo '<link rel="preload" as="image" type="image/webp" href="' . esc_url( $hero_preloads['mobile'] ) . '" media="(max-width: 767px)">' . "\n";
+			}
+			if ( ! empty( $hero_preloads['desktop'] ) ) {
+				echo '<link rel="preload" as="image" type="image/webp" href="' . esc_url( $hero_preloads['desktop'] ) . '" media="(min-width: 768px)">' . "\n";
 			}
 		}
 		if ( ! has_site_icon() ) {

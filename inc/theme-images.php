@@ -274,6 +274,34 @@ function ovents_render_home_hero_picture() {
  * @param string $name Manifest name.
  */
 /**
+ * Home hero WebP preload URLs matched to ovents_render_home_hero_picture() sources.
+ *
+ * @return array{mobile?: string, desktop?: string}
+ */
+function ovents_home_hero_webp_preload_urls() {
+	$item = ovents_theme_manifest_image( 'hero-erica-samuel-pavilion' );
+	if ( ! $item || empty( $item['outputs'] ) ) {
+		return array();
+	}
+	$urls = array();
+	foreach ( $item['outputs'] as $out ) {
+		if ( empty( $out['path'] ) || 'webp' !== ( $out['format'] ?? '' ) ) {
+			continue;
+		}
+		$path = (string) $out['path'];
+		$role = isset( $out['role'] ) ? (string) $out['role'] : 'desktop';
+		$w    = (int) ( $out['width'] ?? 0 );
+		$url  = get_theme_file_uri( 'assets/img/' . $path );
+		if ( 'mobile' === $role && 800 === $w ) {
+			$urls['mobile'] = $url;
+		} elseif ( 'desktop' === $role && 2400 === $w ) {
+			$urls['desktop'] = $url;
+		}
+	}
+	return $urls;
+}
+
+/**
  * Hero/content WebP URL for preload (prefers 1200px, then 2400px).
  *
  * @param string $name Manifest name.
