@@ -93,6 +93,9 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 
 <section class="section section--ovents-way" aria-labelledby="ovents-way-heading">
 	<div class="wrap ovents-way-split">
+		<figure class="ovents-way__media">
+			<?php ovents_render_manifest_image( 'content-tablescape-herbs' ); ?>
+		</figure>
 		<div class="ovents-way__copy">
 			<p class="label-gold">The Ovents way</p>
 			<h2 id="ovents-way-heading">
@@ -111,9 +114,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 				<a class="btn btn-primary" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
 			</p>
 		</div>
-		<figure class="ovents-way__media">
-			<?php ovents_render_manifest_image( 'content-tablescape-herbs' ); ?>
-		</figure>
 	</div>
 </section>
 
