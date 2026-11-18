@@ -1,0 +1,1975 @@
+[
+  {
+    "name": "hero-erica-samuel-pavilion",
+    "source": "D11",
+    "source_file": "/workspace/drive-photos/ERICA & SAMUEL pavilion",
+    "crop_px": "2400x1350",
+    "aspect": 1.7778,
+    "fx": 0.5,
+    "fy": 0.38,
+    "object_position": "center 38%",
+    "object_position_mobile": "47% center",
+    "alt": "A bride and groom standing with their backs to the camera in a white Gothic pavilion, looking out over a lake and parkland.",
+    "credit": "",
+    "category": "hero",
+    "folder": "",
+    "notes": "Home hero. Desktop 16:9 (2400x1350) + portrait mobile crop (800x1436). Erica & Samuel.",
+    "outputs": [
+      {
+        "path": "hero-erica-samuel-pavilion-2400.webp",
+        "width": 2400,
+        "height": 1350,
+        "format": "webp",
+        "role": "desktop"
+      },
+      {
+        "path": "hero-erica-samuel-pavilion-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "format": "webp",
+        "role": "desktop"
+      },
+      {
+        "path": "hero-erica-samuel-pavilion-1200.jpg",
+        "width": 1200,
+        "height": 675,
+        "format": "jpeg",
+        "role": "desktop"
+      },
+      {
+        "path": "hero-erica-samuel-pavilion-mobile-800.webp",
+        "width": 800,
+        "height": 1436,
+        "format": "webp",
+        "role": "mobile"
+      },
+      {
+        "path": "hero-erica-samuel-pavilion-mobile-800.jpg",
+        "width": 800,
+        "height": 1436,
+        "format": "jpeg",
+        "role": "mobile"
+      }
+    ]
+  },
+  {
+    "name": "hero-alt-blossom-backdrop",
+    "source": "D03",
+    "source_file": "/workspace/drive-photos/D03.jpg",
+    "crop_px": "5475x3054",
+    "aspect": 1.7927,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Event room lit in purple, with a blossom-covered backdrop, chandelier and banquet chairs facing a floral stage.",
+    "credit": "",
+    "category": "alternate",
+    "folder": "alternates",
+    "notes": "Home hero alternate. D03 / 4 (1 of 1).jpg, Canon EOS 5D Mark II, 5 Aug 2017. Already used on staging as promise-venue.jpg.",
+    "outputs": [
+      {
+        "path": "alternates/hero-alt-blossom-backdrop-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 207698,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "alternates/hero-alt-blossom-backdrop-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 78794,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "alternates/hero-alt-blossom-backdrop-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 131697,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-erica-samuel-bridge",
+    "source": "D11",
+    "source_file": "/workspace/drive-photos/D11.jpg",
+    "crop_px": "4842x2701",
+    "aspect": 1.7927,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Erica and Samuel walking away along a white wooden bridge through trees, the bride in a long veil.",
+    "credit": "V. Opoku Photography",
+    "category": "hero",
+    "folder": "",
+    "notes": "Weddings page hero. D11 / ERICA & SAMUEL-304.jpg, 13 Sep 2018. Also a home-hero alternate.",
+    "outputs": [
+      {
+        "path": "hero-erica-samuel-bridge-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 707906,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-erica-samuel-bridge-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 180812,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-erica-samuel-bridge-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 234779,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-outdoor-tablescape",
+    "source": "D07",
+    "source_file": "/workspace/drive-photos/D07.jpg",
+    "crop_px": "5760x3213",
+    "aspect": 1.7927,
+    "fx": 0.5,
+    "fy": 0.48,
+    "object_position": "center 48%",
+    "alt": "A place setting with glassware, a bread roll and a small sign, on a table laid for a celebration.",
+    "credit": "",
+    "category": "hero",
+    "folder": "",
+    "notes": "About page hero. D07 / 8 (1 of 2).jpg, Canon EOS 5D Mark II, 26 Oct 2019. This is a close tablescape, not a wide vineyard view.",
+    "outputs": [
+      {
+        "path": "hero-outdoor-tablescape-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 326832,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-outdoor-tablescape-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 102726,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-outdoor-tablescape-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 159498,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-balloon-celebration",
+    "source": "L30",
+    "source_file": "/workspace/drive-photos/site/L30_live.jpg",
+    "crop_px": "3840x2142",
+    "aspect": 1.7927,
+    "fx": 0.5,
+    "fy": 0.28,
+    "object_position": "center 28%",
+    "alt": "Gold, cream and white balloon display around a circular gold-and-white sign reading \u2018Illya is ONE\u2019.",
+    "credit": "",
+    "category": "hero",
+    "folder": "",
+    "notes": "Parties page hero. Horizontal crop of the live-site balloon installation (L30). Portrait original, so this crop keeps the sign and the densest balloons.",
+    "outputs": [
+      {
+        "path": "hero-balloon-celebration-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 196720,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-balloon-celebration-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 85138,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-balloon-celebration-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 149388,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-planners-table-conversation",
+    "source": "D41",
+    "source_file": "/workspace/drive-photos/D41.jpg",
+    "crop_px": "6161x3437",
+    "aspect": 1.7927,
+    "fx": 0.55,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Two women in conversation at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "hero",
+    "folder": "",
+    "notes": "Corporate page hero. D41 / SMH_6296.jpg, 25 Apr 2026. Eddy has confirmed Ovents organised this lunch and learn. Do not invent a venue name, headcount or attendee names.",
+    "outputs": [
+      {
+        "path": "hero-planners-table-conversation-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 98400,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-planners-table-conversation-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 32364,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-planners-table-conversation-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 75526,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-erica-samuel-sweetheart-table",
+    "source": "D23",
+    "source_file": "/workspace/drive-photos/D23.jpg",
+    "crop_px": "4854x2708",
+    "aspect": 1.7927,
+    "fx": 0.5,
+    "fy": 0.4,
+    "object_position": "center 40%",
+    "alt": "Erica and Samuel seated at their sweetheart table in front of a white floral backdrop.",
+    "credit": "V. Opoku Photography",
+    "category": "hero",
+    "folder": "",
+    "notes": "Portfolio page hero. D23 / ERICA & SAMUEL-565.jpg, 13 Sep 2018.",
+    "outputs": [
+      {
+        "path": "hero-erica-samuel-sweetheart-table-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 451224,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-erica-samuel-sweetheart-table-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 76288,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-erica-samuel-sweetheart-table-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 141899,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-erica-samuel-first-dance",
+    "source": "D19",
+    "source_file": "/workspace/drive-photos/D19.jpg",
+    "crop_px": "3609x2887",
+    "aspect": 1.25,
+    "fx": 0.52,
+    "fy": 0.45,
+    "object_position": "center 45%",
+    "alt": "Erica and Samuel during their first dance, under string lights and hanging blossoms.",
+    "credit": "V. Opoku Photography",
+    "category": "content",
+    "folder": "",
+    "notes": "Weddings page intro split (replaces weddings-detail.jpg / church aisle).",
+    "outputs": [
+      {
+        "path": "content-erica-samuel-first-dance-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 244152,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-erica-samuel-first-dance-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 66720,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-erica-samuel-first-dance-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 108595,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-erica-samuel-couple",
+    "source": "D13",
+    "source_file": "/workspace/drive-photos/D13.jpg",
+    "crop_px": "4080x3264",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.4,
+    "object_position": "center 40%",
+    "alt": "Erica and Samuel, forehead to forehead, on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "content",
+    "folder": "",
+    "notes": "Weddings FAQ split (replaces weddings-faq.jpg / optional black-and-white couple). D13 / ERICA & SAMUEL-337.jpg.",
+    "outputs": [
+      {
+        "path": "content-erica-samuel-couple-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 111386,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-erica-samuel-couple-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 31438,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-erica-samuel-couple-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 63677,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-cupcakes",
+    "source": "D02",
+    "source_file": "/workspace/drive-photos/D02.jpg",
+    "crop_px": "4320x3456",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.5,
+    "object_position": "center center",
+    "alt": "A tray of iced cupcakes topped with chocolate, sweets and candles.",
+    "credit": "",
+    "category": "content",
+    "folder": "",
+    "notes": "Parties intro split (replaces parties-detail.jpg). D02 / 3 (1 of 1).jpg, Canon EOS 60D, 17 Jan 2015.",
+    "outputs": [
+      {
+        "path": "content-cupcakes-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 97634,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-cupcakes-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 43736,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-cupcakes-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 80047,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-buffet-service",
+    "source": "D09",
+    "source_file": "/workspace/drive-photos/D09.jpg",
+    "crop_px": "2084x1667",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.45,
+    "object_position": "center 45%",
+    "alt": "Guests being served from a buffet at a celebration.",
+    "credit": "David di Guida",
+    "category": "content",
+    "folder": "",
+    "notes": "Parties \u2018Celebrations we plan\u2019 split (replaces the reused parties-hero.jpg). D09 / DDG_7249_high.jpg, 8 Sep 2018.",
+    "outputs": [
+      {
+        "path": "content-buffet-service-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 130434,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-buffet-service-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 52838,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-buffet-service-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 92283,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-planners-table-canapes",
+    "source": "D34",
+    "source_file": "/workspace/drive-photos/D34.jpg",
+    "crop_px": "5600x4480",
+    "aspect": 1.25,
+    "fx": 0.62,
+    "fy": 0.5,
+    "object_position": "center 50%",
+    "alt": "Canap\u00e9s and small plates set out at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "content",
+    "folder": "",
+    "notes": "Corporate intro split (replaces corporate-detail.jpg / Vexta). D34 / SMH_6074.jpg. Eddy has confirmed Ovents organised this lunch and learn. Do not invent a venue, headcount or attendee names.",
+    "outputs": [
+      {
+        "path": "content-planners-table-canapes-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 57574,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-canapes-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 25388,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-canapes-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 51730,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-planners-table-speaker",
+    "source": "D36",
+    "source_file": "/workspace/drive-photos/D36.jpg",
+    "crop_px": "4391x3513",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.38,
+    "object_position": "center 38%",
+    "alt": "A speaker presenting at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "content",
+    "folder": "",
+    "notes": "Corporate FAQ split (replaces corporate-faq.jpg / Vexta). D36 / SMH_6147.jpg. Do not invent the speaker\u2019s name or role.",
+    "outputs": [
+      {
+        "path": "content-planners-table-speaker-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 114882,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-speaker-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 28402,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-speaker-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 57391,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-planners-table-signage",
+    "source": "D31",
+    "source_file": "/workspace/drive-photos/D31.jpg",
+    "crop_px": "4710x3768",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Window sign for The Planner\u2019s Table, photographed at the lunch and learn in April 2026, organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "content",
+    "folder": "",
+    "notes": "Corporate \u2018events we plan\u2019 split (replaces the reused corporate-hero.jpg). D31 / SMH_6016.jpg. Eddy has confirmed Ovents organised this lunch and learn. Do not invent a venue, headcount or attendee names.",
+    "outputs": [
+      {
+        "path": "content-planners-table-signage-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 58340,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-signage-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 23622,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-signage-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 56677,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-balloon-celebration",
+    "source": "L30",
+    "source_file": "/workspace/drive-photos/site/L30_live.jpg",
+    "crop_px": "3840x3072",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.28,
+    "object_position": "center 30%",
+    "alt": "Gold, cream and white balloon display around a circular gold-and-white sign reading \u2018Illya is ONE\u2019.",
+    "credit": "",
+    "category": "content",
+    "folder": "",
+    "notes": "Parties FAQ split (replaces parties-faq.jpg with a 5:4 crop of the same original). object-position already 30% in CSS.",
+    "outputs": [
+      {
+        "path": "content-balloon-celebration-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 169380,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-balloon-celebration-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 68878,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-balloon-celebration-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 111329,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-tablescape-herbs",
+    "source": "D06",
+    "source_file": "/workspace/drive-photos/D06.jpg",
+    "crop_px": "3072x3840",
+    "aspect": 0.8,
+    "fx": 0.42,
+    "fy": 0.48,
+    "object_position": "center 48%",
+    "alt": "Close-up of a place setting with glassware, greenery and two wedding rings.",
+    "credit": "",
+    "category": "content",
+    "folder": "",
+    "notes": "Home \u2018Bespoke excellence in every detail\u2019 (replaces bespoke-detail.jpg / Yuri Arcurs stock). D06 / 7 (1 of 2).jpg, 26 Oct 2019. CSS aspect 4:5.",
+    "outputs": [
+      {
+        "path": "content-tablescape-herbs-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 136492,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-tablescape-herbs-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 40210,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-tablescape-herbs-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 89817,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-erica-samuel-sweetheart-table",
+    "source": "D23",
+    "source_file": "/workspace/drive-photos/D23.jpg",
+    "crop_px": "2589x3236",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Erica and Samuel seated at their sweetheart table in front of a white floral backdrop.",
+    "credit": "V. Opoku Photography",
+    "category": "content",
+    "folder": "",
+    "notes": "Weddings \u2018What our wedding services include\u2019 media (replaces service-weddings.jpg in that slot). CSS aspect 4:5, object-position 42%.",
+    "outputs": [
+      {
+        "path": "content-erica-samuel-sweetheart-table-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 443254,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-erica-samuel-sweetheart-table-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 51720,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-erica-samuel-sweetheart-table-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 116038,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-blossom-backdrop",
+    "source": "D03",
+    "source_file": "/workspace/drive-photos/D03.jpg",
+    "crop_px": "2443x3054",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Event room lit in purple, with a blossom-covered backdrop and banquet chairs facing a floral stage.",
+    "credit": "",
+    "category": "content",
+    "folder": "",
+    "notes": "About \u2018Our promise\u2019 (replaces promise-venue.jpg with a 4:5 crop of the same D03 original). CSS aspect 4:5.",
+    "outputs": [
+      {
+        "path": "content-blossom-backdrop-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 146768,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-blossom-backdrop-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 59458,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-blossom-backdrop-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 109116,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-catering-plating",
+    "source": "D08",
+    "source_file": "/workspace/drive-photos/D08.jpg",
+    "crop_px": "1334x1668",
+    "aspect": 0.8,
+    "fx": 0.55,
+    "fy": 0.48,
+    "object_position": "center 48%",
+    "alt": "A pastry being plated from a tray at a celebration.",
+    "credit": "David di Guida",
+    "category": "content",
+    "folder": "supporting",
+    "notes": "Spare parties/detail crop if a taller slot is needed. D08 / DDG_7241_high.jpg, 8 Sep 2018.",
+    "outputs": [
+      {
+        "path": "supporting/content-catering-plating-1334.webp",
+        "width": 1334,
+        "height": 1668,
+        "bytes": 53318,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/content-catering-plating-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 26290,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/content-catering-plating-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 66081,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "card-service-weddings",
+    "source": "D13",
+    "source_file": "/workspace/drive-photos/D13.jpg",
+    "crop_px": "2611x3264",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.38,
+    "object_position": "center 38%",
+    "alt": "Erica and Samuel, forehead to forehead, on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "card",
+    "folder": "",
+    "notes": "Home Weddings service strip (replaces service-weddings.jpg). Also used as the current portfolio hero file; after this change the portfolio hero should use hero-erica-samuel-sweetheart-table instead.",
+    "outputs": [
+      {
+        "path": "card-service-weddings-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 370070,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "card-service-weddings-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 55150,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "card-service-weddings-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 114679,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "card-service-parties",
+    "source": "L30",
+    "source_file": "/workspace/drive-photos/site/L30_live.jpg",
+    "crop_px": "3840x4800",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.28,
+    "object_position": "center 28%",
+    "alt": "Gold, cream and white balloon display around a circular gold-and-white sign reading \u2018Illya is ONE\u2019.",
+    "credit": "",
+    "category": "card",
+    "folder": "",
+    "notes": "Home Parties service strip (replaces service-parties.jpg / gold-and-flowers stock).",
+    "outputs": [
+      {
+        "path": "card-service-parties-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 251084,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "card-service-parties-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 99278,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "card-service-parties-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 166577,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "studio-erica-samuel-couple",
+    "source": "D13",
+    "source_file": "/workspace/drive-photos/D13.jpg",
+    "crop_px": "3264x3264",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.38,
+    "object_position": "center 38%",
+    "alt": "Erica and Samuel, forehead to forehead, on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Home \u2018Moments from our studio\u2019 tile 1 (replaces instagram/account-01.jpg).",
+    "outputs": [
+      {
+        "path": "instagram/studio-erica-samuel-couple-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 42670,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-erica-samuel-bridge",
+    "source": "D11",
+    "source_file": "/workspace/drive-photos/D11.jpg",
+    "crop_px": "3228x3228",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Erica and Samuel on a white wooden bridge through trees.",
+    "credit": "V. Opoku Photography",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 2 (replaces account-02.jpg).",
+    "outputs": [
+      {
+        "path": "instagram/studio-erica-samuel-bridge-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 129652,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-erica-samuel-sweetheart-table",
+    "source": "D23",
+    "source_file": "/workspace/drive-photos/D23.jpg",
+    "crop_px": "3236x3236",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.4,
+    "object_position": "center 40%",
+    "alt": "Erica and Samuel seated at their sweetheart table.",
+    "credit": "V. Opoku Photography",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 3 (replaces account-03.jpg).",
+    "outputs": [
+      {
+        "path": "instagram/studio-erica-samuel-sweetheart-table-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 45532,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-erica-samuel-first-dance",
+    "source": "D19",
+    "source_file": "/workspace/drive-photos/D19.jpg",
+    "crop_px": "2887x2887",
+    "aspect": 1.0,
+    "fx": 0.52,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Erica and Samuel during their first dance.",
+    "credit": "V. Opoku Photography",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 4 (replaces account-04.jpg).",
+    "outputs": [
+      {
+        "path": "instagram/studio-erica-samuel-first-dance-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 70126,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-balloon-celebration",
+    "source": "L30",
+    "source_file": "/workspace/drive-photos/site/L30_live.jpg",
+    "crop_px": "3840x3840",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.28,
+    "object_position": "center 28%",
+    "alt": "Gold, cream and white balloon display around a circular gold-and-white sign reading \u2018Illya is ONE\u2019.",
+    "credit": "",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 6 (replaces account-06.jpg).",
+    "outputs": [
+      {
+        "path": "instagram/studio-balloon-celebration-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 81916,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-cupcakes",
+    "source": "D02",
+    "source_file": "/workspace/drive-photos/D02.jpg",
+    "crop_px": "3456x3456",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.5,
+    "object_position": "center center",
+    "alt": "A tray of iced cupcakes topped with chocolate, sweets and candles.",
+    "credit": "",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 7 (replaces account-07.jpg).",
+    "outputs": [
+      {
+        "path": "instagram/studio-cupcakes-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 46812,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-planners-table-sign",
+    "source": "D33",
+    "source_file": "/workspace/drive-photos/D33.jpg",
+    "crop_px": "4344x4344",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.48,
+    "object_position": "center 48%",
+    "alt": "Freestanding sign for The Planner\u2019s Table vendors\u2019 brunch and lunch-and-learn, 25 April 2026, organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 8 (replaces account-08.jpg). Eddy has confirmed Ovents organised this lunch and learn. Do not invent a venue, headcount or attendee names.",
+    "outputs": [
+      {
+        "path": "instagram/studio-planners-table-sign-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 17684,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "studio-gloria-daniel",
+    "source": "D48",
+    "source_file": "/workspace/drive-photos/D48.heic",
+    "crop_px": "3024x3024",
+    "aspect": 1.0,
+    "fx": 0.5,
+    "fy": 0.4,
+    "object_position": "center 40%",
+    "alt": "Gloria and Daniel on their wedding day, standing close in their wedding clothes.",
+    "credit": "",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 9 (replaces account-09.jpg). iPhone photo, March 2026.",
+    "outputs": [
+      {
+        "path": "instagram/studio-gloria-daniel-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 152942,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "portfolio-erica-samuel-2018",
+    "source": "D11",
+    "source_file": "/workspace/drive-photos/D11.jpg",
+    "crop_px": "4842x3228",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.45,
+    "object_position": "center 45%",
+    "alt": "Erica and Samuel walking along a white wooden bridge through trees on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "portfolio",
+    "folder": "portfolio",
+    "notes": "Selected celebrations card. Wedding, 13 September 2018. Photographer: V. Opoku Photography.",
+    "outputs": [
+      {
+        "path": "portfolio/portfolio-erica-samuel-2018-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 347486,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-erica-samuel-2018-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 92440,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-erica-samuel-2018-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 121892,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "portfolio-gloria-daniel-2026",
+    "source": "D48",
+    "source_file": "/workspace/drive-photos/D48.heic",
+    "crop_px": "3024x2016",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.4,
+    "object_position": "center 40%",
+    "alt": "Gloria and Daniel on their wedding day, standing close in their wedding clothes.",
+    "credit": "",
+    "category": "portfolio",
+    "folder": "portfolio",
+    "notes": "Selected celebrations card. Wedding, 26 March 2026. Shot on iPhone; use as a supporting card, not a full-bleed hero.",
+    "outputs": [
+      {
+        "path": "portfolio/portfolio-gloria-daniel-2026-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 268838,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-gloria-daniel-2026-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 98030,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-gloria-daniel-2026-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 128102,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "portfolio-funmi-yemi-2025",
+    "source": "D57",
+    "source_file": "/workspace/drive-photos/D57.heic",
+    "crop_px": "4284x2856",
+    "aspect": 1.5,
+    "fx": 0.55,
+    "fy": 0.5,
+    "object_position": "center 48%",
+    "alt": "Funmi and Yemi standing in a doorway on their wedding day, the bride holding a bouquet.",
+    "credit": "",
+    "category": "portfolio",
+    "folder": "portfolio",
+    "notes": "Selected celebrations card. Wedding, 18 October 2025. Shot on iPhone; use as a supporting card, not a full-bleed hero.",
+    "outputs": [
+      {
+        "path": "portfolio/portfolio-funmi-yemi-2025-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 111796,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-funmi-yemi-2025-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 45954,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-funmi-yemi-2025-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 83402,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "portfolio-balloon-celebration",
+    "source": "L30",
+    "source_file": "/workspace/drive-photos/site/L30_live.jpg",
+    "crop_px": "3840x2560",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.28,
+    "object_position": "center 28%",
+    "alt": "Gold, cream and white balloon display around a circular gold-and-white sign reading \u2018Illya is ONE\u2019.",
+    "credit": "",
+    "category": "portfolio",
+    "folder": "portfolio",
+    "notes": "Selected celebrations card for a private celebration. No venue name is recorded.",
+    "outputs": [
+      {
+        "path": "portfolio/portfolio-balloon-celebration-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 141616,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-balloon-celebration-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 57176,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-balloon-celebration-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 94021,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "portfolio-couple-evening",
+    "source": "D29",
+    "source_file": "/workspace/drive-photos/D29.jpg",
+    "crop_px": "4000x2667",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "A couple dancing together in a softly lit room.",
+    "credit": "Zeal Photography (Christopher Akpokodje)",
+    "category": "portfolio",
+    "folder": "portfolio",
+    "notes": "Optional extra Selected celebrations card. ZIL01192.jpg, 19 March 2022. Couple names are not in the file metadata, so do not invent them.",
+    "outputs": [
+      {
+        "path": "portfolio/portfolio-couple-evening-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 157020,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-couple-evening-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 32604,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-couple-evening-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 68270,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-erica-samuel-flower-girls",
+    "source": "D10",
+    "source_file": "/workspace/drive-photos/D10.jpg",
+    "crop_px": "4846x3231",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.55,
+    "object_position": "center 55%",
+    "alt": "Flower girls walking down a petal-strewn aisle at Erica and Samuel\u2019s wedding.",
+    "credit": "V. Opoku Photography",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Optional extra for a weddings gallery.",
+    "outputs": [
+      {
+        "path": "supporting/supporting-erica-samuel-flower-girls-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 262624,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-erica-samuel-flower-girls-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 85378,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-erica-samuel-flower-girls-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 117316,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-erica-samuel-brick-wall",
+    "source": "D12",
+    "source_file": "/workspace/drive-photos/D12.jpg",
+    "crop_px": "4749x3166",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Erica and Samuel standing together in front of a brick wall on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Optional extra for a weddings gallery.",
+    "outputs": [
+      {
+        "path": "supporting/supporting-erica-samuel-brick-wall-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 351492,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-erica-samuel-brick-wall-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 106776,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-erica-samuel-brick-wall-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 132815,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-erica-samuel-dance-floor",
+    "source": "D25",
+    "source_file": "/workspace/drive-photos/D25.jpg",
+    "crop_px": "4783x3189",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.42,
+    "object_position": "center 42%",
+    "alt": "Guests dancing under purple light and a disco ball at Erica and Samuel\u2019s wedding.",
+    "credit": "V. Opoku Photography",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Optional extra for a weddings gallery.",
+    "outputs": [
+      {
+        "path": "supporting/supporting-erica-samuel-dance-floor-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 197364,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-erica-samuel-dance-floor-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 43500,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-erica-samuel-dance-floor-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 80079,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-funmi-yemi-details",
+    "source": "D52",
+    "source_file": "/workspace/drive-photos/D52.heic",
+    "crop_px": "4284x5355",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.48,
+    "object_position": "center 48%",
+    "alt": "Wedding shoes, a hat and a newspaper-style stationery suite laid out on a wooden surface.",
+    "credit": "",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Optional detail for Funmi and Yemi\u2019s wedding (iPhone, 18 Oct 2025).",
+    "outputs": [
+      {
+        "path": "supporting/supporting-funmi-yemi-details-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 357394,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-funmi-yemi-details-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 128394,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-funmi-yemi-details-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 196619,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-bride-shoes",
+    "source": "D04",
+    "source_file": "/workspace/drive-photos/D04.jpg",
+    "crop_px": "5760x3840",
+    "aspect": 1.5,
+    "fx": 0.58,
+    "fy": 0.4,
+    "object_position": "center 40%",
+    "alt": "A bride\u2019s white shoes on a woven rug, the soles lettered \u2018Bride\u2019.",
+    "credit": "",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Optional detail shot. D04 / 5 (1 of 1).jpg, 25 Aug 2018. Do not invent the couple\u2019s name.",
+    "outputs": [
+      {
+        "path": "supporting/supporting-bride-shoes-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 154952,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-bride-shoes-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 59024,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-bride-shoes-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 86129,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-gloria-daniel-street",
+    "source": "D47",
+    "source_file": "/workspace/drive-photos/D47.heic",
+    "crop_px": "4284x2856",
+    "aspect": 1.5,
+    "fx": 0.5,
+    "fy": 0.45,
+    "object_position": "center 45%",
+    "alt": "Gloria and Daniel standing in a residential street on their wedding day.",
+    "credit": "",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Optional extra for Gloria and Daniel (iPhone, 26 Mar 2026).",
+    "outputs": [
+      {
+        "path": "supporting/supporting-gloria-daniel-street-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 401920,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-gloria-daniel-street-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 113380,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-gloria-daniel-street-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 138889,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-planners-table-sign-portrait",
+    "source": "D33",
+    "source_file": "/workspace/drive-photos/D33.jpg",
+    "crop_px": "4344x5430",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.48,
+    "object_position": "center 48%",
+    "alt": "Freestanding sign for The Planner\u2019s Table lunch and learn, April 2026, organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Portrait version of the sign, if a taller corporate slot is needed. Eddy has confirmed Ovents organised this lunch and learn. Do not invent a venue, headcount or attendee names.",
+    "outputs": [
+      {
+        "path": "supporting/supporting-planners-table-sign-portrait-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 50174,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-planners-table-sign-portrait-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 19836,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-planners-table-sign-portrait-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 49997,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "optional-church-aisle",
+    "source": "L59",
+    "source_file": "/workspace/drive-photos/site/L59_live.jpeg",
+    "crop_px": "3218x2574",
+    "aspect": 1.25,
+    "fx": 0.5,
+    "fy": 0.55,
+    "object_position": "center 55%",
+    "alt": "A church aisle lined with candles and flowers.",
+    "credit": "",
+    "category": "optional",
+    "folder": "optional",
+    "notes": "Optional only. Currently weddings-detail.jpg on staging. Venue name is not recorded. Use only if a ceremony-aisle image is specifically wanted.",
+    "outputs": [
+      {
+        "path": "optional/optional-church-aisle-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 188648,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "optional/optional-church-aisle-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 77322,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "optional/optional-church-aisle-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 119740,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "optional-couple-black-and-white",
+    "source": "L42",
+    "source_file": "/workspace/drive-photos/site/L42_live.jpg",
+    "crop_px": "2371x2964",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.35,
+    "object_position": "center 35%",
+    "alt": "A couple kissing, photographed in black and white.",
+    "credit": "",
+    "category": "optional",
+    "folder": "optional",
+    "notes": "Optional only. Currently weddings-faq.jpg on staging. Couple names and photographer are not in the file metadata.",
+    "outputs": [
+      {
+        "path": "optional/optional-couple-black-and-white-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 98828,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "optional/optional-couple-black-and-white-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 18802,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "optional/optional-couple-black-and-white-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 74844,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-planners-table-lunch-learn",
+    "source": "SMH_6228",
+    "source_file": null,
+    "crop_px": "6034x3366",
+    "object_position": "center 42%",
+    "alt": "Guests seated around a long table at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "hero",
+    "folder": "",
+    "notes": "Corporate page hero (replaces Vexta conference images). SMH_6228.jpg, also published on the live Wix site as the wide room photograph. Signs for The Planner\u2019s Table are visible above the table. Do not invent a venue name or a headcount.",
+    "outputs": [
+      {
+        "path": "hero-planners-table-lunch-learn-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 193958,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-planners-table-lunch-learn-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 71894,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-planners-table-lunch-learn-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 135904,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "card-service-corporate",
+    "source": "SMH_6228",
+    "source_file": null,
+    "crop_px": "3218x4022",
+    "object_position": "center 50%",
+    "alt": "Guests seated around a long table at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "card",
+    "folder": "",
+    "notes": "Home Corporate service strip. 4:5 crop of SMH_6228. Overwrites the earlier D36 speaker crop of the same filename.",
+    "outputs": [
+      {
+        "path": "card-service-corporate-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 165256,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "card-service-corporate-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 61388,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "card-service-corporate-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 120435,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-planners-table-session",
+    "source": "SMH_6069",
+    "source_file": null,
+    "crop_px": "5600x4480",
+    "object_position": "center 45%",
+    "alt": "Guests talking across a flower-topped table at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "content",
+    "folder": "",
+    "notes": "Corporate intro split (replaces corporate-detail.jpg / Vexta). SMH_6069.jpg, from the full DamisolaTolaoluwa 2 / Original folder.",
+    "outputs": [
+      {
+        "path": "content-planners-table-session-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 62284,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-session-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 25814,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-session-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 50001,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-planners-table-hosts",
+    "source": "SMH_6484",
+    "source_file": null,
+    "crop_px": "4480x3584",
+    "object_position": "center 40%",
+    "alt": "Two women standing either side of The Planner\u2019s Table sign at the lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "content",
+    "folder": "",
+    "notes": "Corporate \u2018events we plan\u2019 split (replaces the reused corporate-hero.jpg). SMH_6484.jpg. Do not invent the women\u2019s names or roles.",
+    "outputs": [
+      {
+        "path": "content-planners-table-hosts-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 87610,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-hosts-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 33154,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "content-planners-table-hosts-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 68450,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "portfolio-planners-table-2026",
+    "source": "SMH_6459",
+    "source_file": null,
+    "crop_px": "6720x4480",
+    "object_position": "center 48%",
+    "alt": "Attendees gathered for a group photograph at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "portfolio",
+    "folder": "portfolio",
+    "notes": "Selected celebrations card. Title: \u201cThe Planner\u2019s Table \u2013 a lunch & learn experience, April 2026, organised by Ovents\u201d. SMH_6459.jpg. Do not invent a headcount, venue or attendee names. Overwrites the earlier D41 conversation crop of the same filename.",
+    "outputs": [
+      {
+        "path": "portfolio/portfolio-planners-table-2026-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 186578,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-planners-table-2026-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 62318,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "portfolio/portfolio-planners-table-2026-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 100547,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "supporting-planners-table-group-alt",
+    "source": "SMH_6456",
+    "source_file": null,
+    "crop_px": "6720x4480",
+    "object_position": "center 48%",
+    "alt": "Attendees gathered for a group photograph at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Alternate group photograph (SMH_6456.jpg) if a second gallery frame is wanted.",
+    "outputs": [
+      {
+        "path": "supporting/supporting-planners-table-group-alt-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 179922,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-planners-table-group-alt-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 62266,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/supporting-planners-table-group-alt-800.jpg",
+        "width": 800,
+        "height": 533,
+        "bytes": 100317,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "content-planners-table-conversation",
+    "source": "D41",
+    "source_file": null,
+    "crop_px": "5135x4108",
+    "object_position": "center 42%",
+    "alt": "Two women in conversation at The Planner\u2019s Table, a lunch and learn organised by Ovents in April 2026.",
+    "credit": "Sure Moments HQ",
+    "category": "supporting",
+    "folder": "supporting",
+    "notes": "Supporting networking frame (D41 / SMH_6296.jpg), previously considered for the corporate hero.",
+    "outputs": [
+      {
+        "path": "supporting/content-planners-table-conversation-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 68064,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/content-planners-table-conversation-800.webp",
+        "width": 800,
+        "height": 640,
+        "bytes": 23424,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "supporting/content-planners-table-conversation-800.jpg",
+        "width": 800,
+        "height": 640,
+        "bytes": 53056,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "hero-erica-samuel-vineyard",
+    "source": "D14",
+    "source_file": "/workspace/drive-photos/D14.jpg",
+    "crop_px": "4878x2721",
+    "object_position": "center 58%",
+    "alt": "Erica and Samuel standing between rows of vines on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "hero",
+    "folder": "",
+    "notes": "Contact page hero. D14 / ERICA & SAMUEL-353.jpg, 13 Sep 2018. Recropped to keep the couple prominent (fy=0.58). Previously mis-described as a tablescape.",
+    "outputs": [
+      {
+        "path": "hero-erica-samuel-vineyard-2400.webp",
+        "width": 2400,
+        "height": 1339,
+        "bytes": 758836,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-erica-samuel-vineyard-1200.webp",
+        "width": 1200,
+        "height": 669,
+        "bytes": 211330,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "hero-erica-samuel-vineyard-1200.jpg",
+        "width": 1200,
+        "height": 669,
+        "bytes": 258377,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "studio-erica-samuel-vineyard",
+    "source": "D14",
+    "source_file": "/workspace/drive-photos/D14.jpg",
+    "crop_px": "3252x3252",
+    "object_position": "center 62%",
+    "alt": "Erica and Samuel standing between rows of vines on their wedding day.",
+    "credit": "V. Opoku Photography",
+    "category": "instagram",
+    "folder": "instagram",
+    "notes": "Studio tile 5 (replaces account-05.jpg). Square crop of D14 centred on the couple.",
+    "outputs": [
+      {
+        "path": "instagram/studio-erica-samuel-vineyard-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 140600,
+        "format": "webp",
+        "quality": 80
+      }
+    ]
+  }
+]

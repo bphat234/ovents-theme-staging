@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Weddings",
+    "title": "Wedding in Reading",
+    "location": "Reading, UK",
+    "overview": "Planning and coordination support for Emmanuel and Alberta's wedding.",
+    "image": "service-weddings.jpg",
+    "alt": "Wedding celebration coordinated by Ovents"
+  },
+  {
+    "category": "Weddings",
+    "title": "London wedding",
+    "location": "London, UK",
+    "overview": "On-the-day coordination and guest hosting support.",
+    "image": "instagram/studio-02.jpg",
+    "alt": "London wedding event"
+  },
+  {
+    "category": "Corporate Events",
+    "title": "Corporate party",
+    "location": "UK",
+    "overview": "Event coordination for a corporate celebration (client feedback from Jolene).",
+    "image": "service-corporate.jpg",
+    "alt": "Corporate event setting"
+  },
+  {
+    "category": "Corporate Events",
+    "title": "University fair",
+    "location": "UK",
+    "overview": "Setup and coordination support for a university-facing event (client feedback from Mayah).",
+    "image": "instagram/studio-03.jpg",
+    "alt": "University event coordination"
+  },
+  {
+    "category": "Private Celebrations",
+    "title": "Birthday party",
+    "location": "UK",
+    "overview": "Private celebration planning and coordination (client feedback from Sacha).",
+    "image": "service-parties.jpg",
+    "alt": "Private birthday celebration"
+  }
+]

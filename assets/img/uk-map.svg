@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none" role="img" aria-labelledby="map-title map-description">
+  <title id="map-title">London-based, UK-wide event planning</title>
+  <desc id="map-description">Illustrative connections from London across England, Scotland, Wales and Northern Ireland. Not to scale.</desc>
+  <g stroke="#9a8448" stroke-width="1.2" stroke-dasharray="4 7" opacity="0.55">
+    <path d="M350 350 L175 70"/>
+    <path d="M350 350 L355 90"/>
+    <path d="M350 350 L70 190"/>
+    <path d="M350 350 L450 185"/>
+    <path d="M350 350 L215 240"/>
+    <path d="M350 350 L100 365"/>
+    <path d="M350 350 L235 440"/>
+  </g>
+  <g fill="#1c1b1a" stroke="#f5f1ea" stroke-width="2">
+    <circle cx="175" cy="70" r="5.5"/>
+    <circle cx="355" cy="90" r="5.5"/>
+    <circle cx="70" cy="190" r="5.5"/>
+    <circle cx="450" cy="185" r="5.5"/>
+    <circle cx="215" cy="240" r="5.5"/>
+    <circle cx="100" cy="365" r="5.5"/>
+    <circle cx="235" cy="440" r="5.5"/>
+  </g>
+  <g fill="#1c1b1a" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="2">
+    <text x="175" y="48" text-anchor="middle">GLASGOW</text>
+    <text x="355" y="68" text-anchor="middle">EDINBURGH</text>
+    <text x="70" y="168" text-anchor="middle">BELFAST</text>
+    <text x="450" y="163" text-anchor="middle">NEWCASTLE</text>
+    <text x="215" y="218" text-anchor="middle">MANCHESTER</text>
+    <text x="100" y="397" text-anchor="middle">CARDIFF</text>
+    <text x="235" y="472" text-anchor="middle">BRISTOL</text>
+  </g>
+  <circle cx="350" cy="350" r="15" stroke="#9a8448" stroke-opacity="0.2"/>
+  <circle cx="350" cy="350" r="8" fill="#9a8448" stroke="#f5f1ea" stroke-width="2.5"/>
+  <text x="350" y="326" text-anchor="middle" fill="#786532" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="2.5">LONDON</text>
+  <text x="350" y="385" text-anchor="middle" fill="#625d55" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.5">OUR HOME BASE</text>
+  <text x="280" y="522" text-anchor="middle" fill="#625d55" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">England · Scotland · Wales · Northern Ireland</text>
+  <text x="280" y="547" text-anchor="middle" fill="#625d55" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">Illustrative UK-wide coverage · not to scale</text>
+</svg>
