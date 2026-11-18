@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_CONTENT_VERSION', '1.7.0' );
+define( 'OVENTS_CONTENT_VERSION', '1.8.0' );
 
 add_action( 'after_switch_theme', 'ovents_on_activate' );
 add_action( 'init', 'ovents_maybe_reseed', 20 );
@@ -182,94 +182,107 @@ function ovents_seed_pages() {
 }
 
 /**
- * Publish the journal from the Wix blog export.
- * Runs when the content version changes, and updates posts that already exist.
+ * Editorial Journal posts (HTML import / WP-CLI) — the only posts that may remain on the site.
+ *
+ * @return list<string>
+ */
+function ovents_journal_curated_slugs() {
+	return array(
+		'wedding-planner-cost-uk',
+		'full-planning-vs-partial-planning-vs-on-the-day-coordination',
+		'how-to-choose-a-wedding-planner-london',
+		'corporate-event-planning-checklist',
+		'plan-product-launch-conference-london',
+		'milestone-birthday-party-ideas',
+		'wedding-party-entertainment-ideas',
+	);
+}
+
+/**
+ * Legacy Wix / AI export slugs (journal-posts.json) — always removed from the Journal.
+ *
+ * @return list<string>
+ */
+function ovents_wix_journal_slugs() {
+	static $slugs = null;
+	if ( null !== $slugs ) {
+		return $slugs;
+	}
+	$slugs = array();
+	$file  = get_template_directory() . '/inc/journal-posts.json';
+	if ( ! is_readable( $file ) ) {
+		return $slugs;
+	}
+	$items = json_decode( (string) file_get_contents( $file ), true );
+	if ( ! is_array( $items ) ) {
+		return $slugs;
+	}
+	foreach ( $items as $item ) {
+		if ( empty( $item['slug'] ) ) {
+			continue;
+		}
+		$slug = sanitize_title( (string) $item['slug'] );
+		if ( '' !== $slug ) {
+			$slugs[] = $slug;
+		}
+	}
+	return $slugs;
+}
+
+/**
+ * Trash legacy Wix AI posts and anything that is not an allowed curated Journal draft.
+ */
+function ovents_journal_prune_posts() {
+	$allowed = ovents_journal_curated_slugs();
+	$retire  = array_merge(
+		ovents_wix_journal_slugs(),
+		array(
+			'when-to-book-a-wedding-planner',
+			'wedding-planner-or-coordinator',
+			'planning-a-corporate-event-in-london',
+			'hello-world',
+			'sample-page',
+		)
+	);
+
+	$ids = get_posts(
+		array(
+			'post_type'      => 'post',
+			'post_status'    => array( 'publish', 'draft', 'pending', 'future', 'private' ),
+			'posts_per_page' => -1,
+			'fields'         => 'ids',
+		)
+	);
+
+	foreach ( $ids as $post_id ) {
+		$post_id = (int) $post_id;
+		$slug    = (string) get_post_field( 'post_name', $post_id );
+		if ( in_array( $slug, $allowed, true ) ) {
+			if ( 'publish' === get_post_status( $post_id ) ) {
+				wp_update_post(
+					array(
+						'ID'          => $post_id,
+						'post_status' => 'draft',
+					)
+				);
+			}
+			continue;
+		}
+		wp_trash_post( $post_id );
+	}
+
+	foreach ( array( 'Weddings', 'Corporate', 'Parties' ) as $name ) {
+		if ( ! term_exists( $name, 'category' ) ) {
+			wp_insert_term( $name, 'category' );
+		}
+	}
+}
+
+/**
+ * Sync Journal posts — no Wix AI re-import; curated posts stay draft until editorial publish.
  */
 function ovents_seed_posts() {
-	$file = get_template_directory() . '/inc/journal-posts.json';
-	if ( ! file_exists( $file ) ) {
-		return;
-	}
-	$items = json_decode( file_get_contents( $file ), true );
-	if ( ! is_array( $items ) ) {
-		return;
-	}
-
-	$keep = array();
-	foreach ( $items as $item ) {
-		$slug = isset( $item['slug'] ) ? sanitize_title( $item['slug'] ) : '';
-		if ( '' === $slug || empty( $item['title'] ) ) {
-			continue;
-		}
-		$keep[] = $slug;
-
-		$cat_ids = array();
-		$names   = array();
-		if ( ! empty( $item['categories'] ) && is_array( $item['categories'] ) ) {
-			$names = $item['categories'];
-		} elseif ( ! empty( $item['category'] ) ) {
-			$names = array( $item['category'] );
-		}
-		foreach ( $names as $name ) {
-			$name = trim( (string) $name );
-			if ( '' === $name ) {
-				continue;
-			}
-			$term = term_exists( $name, 'category' );
-			if ( ! $term ) {
-				$term = wp_insert_term( $name, 'category' );
-			}
-			if ( ! is_wp_error( $term ) ) {
-				$cat_ids[] = (int) ( is_array( $term ) ? $term['term_id'] : $term );
-			}
-		}
-
-		$stamp = ! empty( $item['date'] ) ? gmdate( 'Y-m-d H:i:s', strtotime( $item['date'] ) ) : current_time( 'mysql', true );
-		$status  = 'draft';
-		$content = isset( $item['content'] ) ? $item['content'] : '';
-		$excerpt = isset( $item['excerpt'] ) ? (string) $item['excerpt'] : '';
-		$excerpt = preg_replace( '/\s*From Ovents[^.]*\.?\s*/i', '', $excerpt );
-		$data    = array(
-			'post_title'    => $item['title'],
-			'post_name'     => $slug,
-			'post_status'   => $status,
-			'post_type'     => 'post',
-			'post_excerpt'  => $excerpt,
-			'post_content'  => $content,
-			'post_date'     => $stamp,
-			'post_date_gmt' => $stamp,
-		);
-		$existing = get_page_by_path( $slug, OBJECT, 'post' );
-		if ( $existing ) {
-			$data['ID'] = (int) $existing->ID;
-		}
-		$post_id = wp_insert_post( $data );
-		if ( ! $post_id || is_wp_error( $post_id ) ) {
-			continue;
-		}
-		if ( $cat_ids ) {
-			wp_set_post_categories( (int) $post_id, $cat_ids, false );
-		}
-		if ( ! empty( $item['image'] ) ) {
-			ovents_attach_journal_image( (int) $post_id, $item['image'], $item['title'] );
-		}
-	}
-
-	$retire = array(
-		'when-to-book-a-wedding-planner',
-		'wedding-planner-or-coordinator',
-		'planning-a-corporate-event-in-london',
-	);
-	foreach ( $retire as $slug ) {
-		if ( in_array( $slug, $keep, true ) ) {
-			continue;
-		}
-		$old = get_page_by_path( $slug, OBJECT, 'post' );
-		if ( $old ) {
-			wp_trash_post( (int) $old->ID );
-		}
-	}
-
+	ovents_journal_prune_posts();
 	update_option( 'posts_per_page', 9 );
 }
 
