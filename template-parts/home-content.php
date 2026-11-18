@@ -20,12 +20,16 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	<p class="hero-rail hero-rail--left" aria-hidden="true">London HQ &middot; UK-wide</p>
 	<p class="hero-rail hero-rail--right" aria-hidden="true">Weddings &middot; Parties &middot; Corporate</p>
 	<div class="hero-inner">
-		<p class="hero-eyebrow">Bespoke event excellence</p>
-		<h1 class="hero-title hero-title--primary"><?php echo esc_html( $home_h1 ); ?></h1>
-		<p class="lead">From intimate weddings to corporate occasions and private celebrations, Ovents brings creativity, organisation and attention to detail to events across the UK.</p>
-		<div class="hero-ctas">
-			<a class="btn btn-light" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
-			<a class="btn btn-ghost" href="#services">Explore our services</a>
+		<div class="hero-inner__head">
+			<p class="hero-eyebrow">Bespoke event excellence</p>
+			<h1 class="hero-title hero-title--primary"><?php echo esc_html( $home_h1 ); ?></h1>
+		</div>
+		<div class="hero-inner__foot">
+			<p class="lead">From intimate weddings to corporate occasions and private celebrations, Ovents brings creativity, organisation and attention to detail to events across the UK.</p>
+			<div class="hero-ctas">
+				<a class="btn btn-light" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
+				<a class="btn btn-ghost" href="#services">Explore our services</a>
+			</div>
 		</div>
 	</div>
 </section>

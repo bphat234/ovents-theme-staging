@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning — weddings, corporate and private celebrations.
-Version: 2.9.4
+Version: 2.9.5
 Text Domain: ovents
 */
 
@@ -548,7 +548,7 @@ body.nav-open .site-chrome {
 	min-height: var(--hero-height);
 	max-height: 100svh;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	color: var(--white);
 	overflow: hidden;
@@ -557,7 +557,9 @@ body.nav-open .site-chrome {
 @media (max-width: 767px) {
 	.hero {
 		--hero-height: clamp(28rem, max(72svh, calc(100vw * 1.12)), 92svh);
-		align-items: flex-end;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: flex-start;
 		max-height: none;
 	}
 }
@@ -607,14 +609,43 @@ body.nav-open .site-chrome {
 .hero-inner {
 	position: relative;
 	z-index: 2;
-	padding: calc(var(--header-h) + clamp(1.25rem, 3vw, 2rem)) var(--hero-inner-pad-x) var(--hero-inner-pad-bottom);
+	padding: calc(var(--header-h) + 12vh) var(--hero-inner-pad-x) clamp(1.5rem, 3vh, 2.5rem);
 	max-width: min(960px, 94vw);
 	width: 100%;
 }
+@media (min-width: 768px) {
+	.hero .lead {
+		margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+	}
+}
 @media (max-width: 767px) {
 	.hero-inner {
-		padding-top: calc(var(--header-h) + 1rem);
-		padding-bottom: clamp(2.25rem, 8vw, 3.25rem);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 1 1 auto;
+		box-sizing: border-box;
+		max-width: none;
+		width: 100%;
+		min-height: 0;
+		padding: calc(var(--header-h) + 0.75rem) var(--hero-inner-pad-x) clamp(1.25rem, 5vw, 2rem);
+	}
+	.hero-inner__head {
+		width: 100%;
+		max-width: min(960px, 94vw);
+		margin: 0 auto;
+	}
+	.hero-inner__foot {
+		width: 100%;
+		max-width: min(34rem, 94vw);
+		margin: auto auto 0;
+		padding-top: clamp(1rem, 4vw, 2rem);
+	}
+	.hero h1.hero-title.hero-title--primary {
+		margin-bottom: 0;
+	}
+	.hero .lead {
+		margin-bottom: clamp(1rem, 3vw, 1.35rem);
 	}
 }
 .hero-eyebrow {
@@ -644,6 +675,12 @@ body.nav-open .site-chrome {
 	margin: 0 auto clamp(1rem, 2.5vw, 1.5rem);
 	width: 100%;
 	max-width: 42rem;
+}
+@media (min-width: 768px) {
+	.hero h1.hero-title.hero-title--primary {
+		font-size: clamp(1.65rem, 3.6vw, 2.875rem);
+		margin-bottom: clamp(0.75rem, 2vw, 1.15rem);
+	}
 }
 .hero-title__line {
 	display: block;
@@ -3113,6 +3150,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	color: rgba(28, 27, 26, 0.55);
 }
 .consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; background: var(--ink); color: #fff; padding: 1rem 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+.consent-banner[hidden] { display: none !important; }
 .consent-banner__actions { display: flex; gap: 0.5rem; }
 .about-quote { margin-top: 2rem; font-size: 1.15rem; font-style: italic; border-left: 3px solid var(--gold); padding-left: 1rem; }
 @media (max-width: 700px) {

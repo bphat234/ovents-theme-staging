@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.4' );
+define( 'OVENTS_VERSION', '2.9.5' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -86,10 +86,10 @@ add_action(
 		if ( is_front_page() && function_exists( 'ovents_home_hero_webp_preload_urls' ) ) {
 			$hero_preloads = ovents_home_hero_webp_preload_urls();
 			if ( ! empty( $hero_preloads['mobile'] ) ) {
-				echo '<link rel="preload" as="image" type="image/webp" href="' . esc_url( $hero_preloads['mobile'] ) . '" media="(max-width: 767px)">' . "\n";
+				echo '<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="' . esc_url( $hero_preloads['mobile'] ) . '" media="(max-width: 767px)">' . "\n";
 			}
 			if ( ! empty( $hero_preloads['desktop'] ) ) {
-				echo '<link rel="preload" as="image" type="image/webp" href="' . esc_url( $hero_preloads['desktop'] ) . '" media="(min-width: 768px)">' . "\n";
+				echo '<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="' . esc_url( $hero_preloads['desktop'] ) . '" media="(min-width: 768px)">' . "\n";
 			}
 		}
 		if ( ! has_site_icon() ) {

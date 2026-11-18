@@ -24,6 +24,7 @@
     var banner = document.getElementById('ovents-consent-banner');
     if (banner) {
       banner.hidden = true;
+      banner.setAttribute('aria-hidden', 'true');
     }
     if (granted) {
       revealSmashBalloonFeeds();
@@ -94,13 +95,16 @@
   }
 
   banner.hidden = false;
+  banner.setAttribute('aria-hidden', 'false');
   if (accept) {
-    accept.addEventListener('click', function () {
+    accept.addEventListener('click', function (event) {
+      event.preventDefault();
       applyConsent(true);
     });
   }
   if (reject) {
-    reject.addEventListener('click', function () {
+    reject.addEventListener('click', function (event) {
+      event.preventDefault();
       applyConsent(false);
     });
   }
