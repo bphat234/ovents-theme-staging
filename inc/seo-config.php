@@ -125,3 +125,17 @@ function ovents_seo_for_request() {
 	$config = ovents_seo_config();
 	return $config[ $slug ] ?? null;
 }
+
+/**
+ * Production site URL for canonicals (launch domain).
+ */
+function ovents_canonical_base() {
+	if ( function_exists( 'ovents_is_local_env' ) && ovents_is_local_env() ) {
+		return untrailingslashit( home_url() );
+	}
+	$host = isset( $_SERVER['HTTP_HOST'] ) ? strtolower( (string) wp_unslash( $_SERVER['HTTP_HOST'] ) ) : '';
+	if ( false !== strpos( $host, 'brandnoddev.com' ) ) {
+		return untrailingslashit( home_url() );
+	}
+	return 'https://www.ovents.co.uk';
+}
