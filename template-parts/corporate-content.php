@@ -101,27 +101,27 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section class="section section--inner section--inner-alt section--tiers section--corporate-tiers" aria-labelledby="corp-tiers-heading">
 	<div class="wrap">
 		<h2 id="corp-tiers-heading" class="centered">How we can help</h2>
-		<div class="value-grid corporate-value-grid">
-			<article class="value-card">
+		<div class="service-tiers">
+			<article class="service-tier">
 				<h3>Full package</h3>
 				<?php if ( '' !== $price_full ) : ?>
-					<p class="value-card__from">From <?php echo esc_html( $price_full ); ?></p>
+					<p class="service-tier__from">From <?php echo esc_html( $price_full ); ?></p>
 				<?php endif; ?>
 				<p>For organisations that want planning from the first conversation. We come in early, find the right options and suppliers, and then look after the timeline, the budget, invitations and RSVPs, the itinerary and seating, supplier liaison and the day itself, with communication by email and phone throughout.</p>
 				<a class="link-explore" href="<?php echo esc_url( ovents_corporate_contact_url( 'full' ) ); ?>">Book a discovery call</a>
 			</article>
-			<article class="value-card">
+			<article class="service-tier">
 				<h3>Lite planning package</h3>
 				<?php if ( '' !== $price_lite ) : ?>
-					<p class="value-card__from">From <?php echo esc_html( $price_lite ); ?></p>
+					<p class="service-tier__from">From <?php echo esc_html( $price_lite ); ?></p>
 				<?php endif; ?>
 				<p>For organisations that need help finding key suppliers early on, or with the final touches a couple of months before: an initial consultation, a timeline, budget planning, regular communication, an itinerary, supplier liaison two weeks before, and coordination on the day.</p>
 				<a class="link-explore" href="<?php echo esc_url( ovents_corporate_contact_url( 'lite-planning' ) ); ?>">Book a discovery call</a>
 			</article>
-			<article class="value-card">
+			<article class="service-tier">
 				<h3>Day coordination package</h3>
 				<?php if ( '' !== $price_day ) : ?>
-					<p class="value-card__from">From <?php echo esc_html( $price_day ); ?></p>
+					<p class="service-tier__from">From <?php echo esc_html( $price_day ); ?></p>
 				<?php endif; ?>
 				<p>For organisations that have planned the event themselves and want a dedicated team on the day. We begin with a consultation six weeks before, prepare the itinerary, settle remaining supplier questions two weeks out, and coordinate the day so it runs smoothly.</p>
 				<a class="link-explore" href="<?php echo esc_url( ovents_corporate_contact_url( 'day' ) ); ?>">Book a discovery call</a>
@@ -133,7 +133,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 					<?php esc_html_e( 'Prices shown are starting points.', 'ovents' ); ?>
 				<?php endif; ?>
 				<?php esc_html_e( 'Every event receives a tailored quote, based on the package, the size of the event, and how early we are involved.', 'ovents' ); ?>
-				<a href="<?php echo esc_url( ovents_corporate_contact_url() ); ?>"><?php esc_html_e( 'Book a discovery call', 'ovents' ); ?></a>
+				<a class="link-explore" href="<?php echo esc_url( ovents_corporate_contact_url() ); ?>"><?php esc_html_e( 'Book a discovery call', 'ovents' ); ?></a>
 				<?php esc_html_e( 'and we\'ll talk it through.', 'ovents' ); ?>
 			</p>
 		</div>
@@ -144,12 +144,12 @@ get_template_part( 'template-parts/inner', 'hero' );
 	<div class="wrap content-prose">
 		<h2 id="corp-process-heading">How we work</h2>
 		<ol class="approach-steps">
-			<li><strong>Free discovery call</strong> – We learn what you want the event to do, who it is for, and your date, location and budget. Book online, by WhatsApp or by phone; we will reply within one to two business days. The call is free.</li>
-			<li><strong>Tailored proposal and quote</strong> – We recommend the right level of support, and send a proposal and quote shaped around your event.</li>
-			<li><strong>Planning</strong> – Timeline, budget, venue and supplier coordination, with clear responsibilities on both sides, and final checks in the weeks before.</li>
-			<li><strong>Delivery</strong> – Our team runs the day so you can host, followed by a short debrief and supplier wrap-up.</li>
+			<li><strong>Free discovery call.</strong> We learn what you want the event to do, who it is for, and your date, location and budget. Book online, by WhatsApp or by phone; we will reply within one to two business days. The call is free.</li>
+			<li><strong>Tailored proposal and quote.</strong> We recommend the right level of support, and send a proposal and quote shaped around your event.</li>
+			<li><strong>Planning.</strong> Timeline, budget, venue and supplier coordination, with clear responsibilities on both sides, and final checks in the weeks before.</li>
+			<li><strong>Delivery.</strong> Our team runs the day so you can host, followed by a short debrief and supplier wrap-up.</li>
 		</ol>
-		<p><a href="<?php echo esc_url( ovents_corporate_contact_url() ); ?>">Book a discovery call</a></p>
+		<p><a class="link-explore" href="<?php echo esc_url( ovents_corporate_contact_url() ); ?>">Book a discovery call</a></p>
 	</div>
 </section>
 

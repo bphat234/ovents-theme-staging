@@ -126,11 +126,8 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		<p class="sub">A few words from people we have planned with.</p>
 		<div class="testimonial-carousel" data-testimonial-carousel>
 			<div class="testimonial-carousel__controls">
-				<button type="button" class="testimonial-carousel__arrow testimonial-carousel__arrow--prev" data-carousel-prev aria-label="<?php esc_attr_e( 'Previous testimonial', 'ovents' ); ?>">
-					<?php echo ovents_icon( 'chevron-left', array( 'width' => 22, 'height' => 22 ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-				</button>
 				<div class="testimonial-carousel__frame">
-					<div class="testimonial-carousel__viewport" data-carousel-viewport tabindex="0" role="region" aria-label="<?php esc_attr_e( 'Client testimonials. Use arrow keys to browse.', 'ovents' ); ?>">
+					<div class="testimonial-carousel__viewport" data-carousel-viewport tabindex="0" role="region" aria-label="<?php esc_attr_e( 'Client testimonials. Scroll horizontally or use arrow keys to browse.', 'ovents' ); ?>">
 						<div class="testimonial-carousel__track" data-carousel-track>
 							<?php
 							foreach ( ovents_google_testimonials_for( 'home' ) as $review ) {
@@ -140,9 +137,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 						</div>
 					</div>
 				</div>
-				<button type="button" class="testimonial-carousel__arrow testimonial-carousel__arrow--next" data-carousel-next aria-label="<?php esc_attr_e( 'Next testimonial', 'ovents' ); ?>">
-					<?php echo ovents_icon( 'chevron-right', array( 'width' => 22, 'height' => 22 ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-				</button>
 			</div>
 		</div>
 		<?php ovents_render_google_review_cta(); ?>

@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.43
+Version: 2.9.46
 Text Domain: ovents
 */
 
@@ -589,6 +589,14 @@ body.nav-open .site-chrome {
 .btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-outline-gold { background: transparent; color: var(--ink); border-color: var(--gold); }
 .btn-outline-gold:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+.btn:focus-visible,
+.link-explore:focus-visible {
+	outline: 2px solid var(--gold);
+	outline-offset: 3px;
+}
+.inner-page .link-explore:focus-visible {
+	outline-offset: 4px;
+}
 .header-enquire { width: 100%; text-align: center; margin-top: 0.5rem; }
 
 /* Hero */
@@ -1036,12 +1044,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	font-size: 1rem;
 }
 .sub.centered { max-width: 36rem; margin: 0 auto 2.75rem; color: #4a4641; }
-.testimonial-carousel { --testimonial-gap: 1.25rem; --testimonial-arrow: 3rem; }
+.testimonial-carousel { --testimonial-gap: 1.25rem; }
 .testimonial-carousel__controls {
-	display: grid;
-	grid-template-columns: var(--testimonial-arrow) minmax(0, 1fr) var(--testimonial-arrow);
-	align-items: center;
-	gap: clamp(0.65rem, 2vw, 1.25rem);
+	display: block;
 }
 .testimonial-carousel__frame { min-width: 0; }
 .testimonial-carousel__viewport {
@@ -1114,36 +1119,6 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
 	color: #625d55;
-}
-.testimonial-carousel__arrow {
-	flex-shrink: 0;
-	width: var(--testimonial-arrow);
-	height: var(--testimonial-arrow);
-	border: 1px solid rgba(168, 139, 74, 0.45);
-	border-radius: 50%;
-	background: #fffcf7;
-	color: var(--ink);
-	cursor: pointer;
-	display: grid;
-	place-items: center;
-	padding: 0;
-	box-shadow: 0 1px 2px rgba(28, 27, 26, 0.06), 0 8px 24px rgba(28, 27, 26, 0.06);
-	transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-}
-.testimonial-carousel__arrow .lucide { display: block; }
-.testimonial-carousel__arrow:hover:not(:disabled) {
-	background: var(--ink);
-	color: var(--cream);
-	border-color: var(--ink);
-	box-shadow: 0 4px 16px rgba(28, 27, 26, 0.12);
-	transform: translateY(-1px);
-}
-.testimonial-carousel__arrow:active:not(:disabled) { transform: translateY(0); }
-.testimonial-carousel__arrow:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.testimonial-carousel__arrow:disabled {
-	opacity: 0.35;
-	cursor: default;
-	box-shadow: none;
 }
 
 .section--founder {
@@ -2523,8 +2498,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	text-decoration: underline;
 	text-underline-offset: 3px;
 }
-.section--corporate-details .corporate-value-grid,
-.section--corporate-tiers .corporate-value-grid {
+.section--corporate-details .corporate-value-grid {
+	margin-top: clamp(2rem, 4vw, 2.75rem);
+}
+.section--corporate-tiers .service-tiers {
 	margin-top: clamp(2rem, 4vw, 2.75rem);
 }
 .section--corporate-tiers #corp-tiers-heading {
@@ -2955,6 +2932,15 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	padding-bottom: 0.75rem;
 	border-bottom: 1px solid rgba(154, 132, 72, 0.35);
 }
+.service-tier p:not(.service-tier__from) {
+	flex: 1;
+}
+.service-tier__from {
+	margin: -0.35rem 0 0.85rem;
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--gold);
+}
 .section--tiers h2.centered { text-align: center; }
 .section--corporate-tiers .corporate-tiers__note {
 	max-width: 48rem;
@@ -3130,14 +3116,13 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 		bottom: calc(3.25rem + var(--whatsapp-float-gap, 24px));
 	}
 }
-@media (max-width: 719px) {
+@media (max-width: 720px) {
 	.testimonial-carousel {
 		--testimonial-gap: 0.75rem;
 	}
 	.testimonial-carousel .testimonial {
 		flex: 0 0 100%;
 	}
-	.testimonial-carousel { --testimonial-arrow: 2.5rem; }
 }
 @media (max-width: 720px) {
 	.instagram-grid--photos:not(.is-expanded) .insta-tile--more { display: none; }
@@ -3996,9 +3981,12 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 
 @media (max-width: 900px) {
 	.portfolio-home__grid,
+	.portfolio-home__grid.portfolio-archive__grid,
 	.portfolio-archive .portfolio-archive__grid {
 		grid-template-columns: 1fr;
-		max-width: min(22rem, 92vw);
+		gap: clamp(0.65rem, 3vw, 1rem);
+		max-width: none;
+		width: 100%;
 		margin-inline: auto;
 	}
 }
@@ -4052,13 +4040,15 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	color: var(--gold);
 	border-bottom-color: var(--gold);
 }
-.portfolio-home__grid.portfolio-archive__grid,
-.portfolio-home__grid {
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: clamp(0.75rem, 1.75vw, 1.25rem);
-	width: 100%;
-	max-width: none;
-	margin-inline: auto;
+@media (min-width: 901px) {
+	.portfolio-home__grid.portfolio-archive__grid,
+	.portfolio-home__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: clamp(0.75rem, 1.75vw, 1.25rem);
+		width: 100%;
+		max-width: none;
+		margin-inline: auto;
+	}
 }
 .portfolio-lookbook-card__media picture {
 	display: block;

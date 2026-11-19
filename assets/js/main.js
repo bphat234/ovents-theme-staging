@@ -93,15 +93,8 @@
 	document.querySelectorAll('[data-testimonial-carousel]').forEach(function (testimonialCarousel) {
 		var viewport = testimonialCarousel.querySelector('[data-carousel-viewport]');
 		var track = testimonialCarousel.querySelector('[data-carousel-track]');
-		var prevBtn = testimonialCarousel.querySelector('[data-carousel-prev]');
-		var nextBtn = testimonialCarousel.querySelector('[data-carousel-next]');
-		if (!viewport || !track || !prevBtn || !nextBtn) return;
+		if (!viewport || !track) return;
 		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-		function updateControls() {
-			prevBtn.disabled = viewport.scrollLeft <= 1;
-			nextBtn.disabled = viewport.scrollLeft >= viewport.scrollWidth - viewport.clientWidth - 1;
-		}
 
 		function moveTestimonial(direction) {
 			var card = track.querySelector('.testimonial');
@@ -110,16 +103,11 @@
 			viewport.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: reduceMotion ? 'instant' : 'smooth' });
 		}
 
-		prevBtn.addEventListener('click', function () { moveTestimonial(-1); });
-		nextBtn.addEventListener('click', function () { moveTestimonial(1); });
 		viewport.addEventListener('keydown', function (e) {
 			if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
 			e.preventDefault();
 			moveTestimonial(e.key === 'ArrowLeft' ? -1 : 1);
 		});
-		viewport.addEventListener('scroll', updateControls, { passive: true });
-		window.addEventListener('resize', updateControls, { passive: true });
-		updateControls();
 	});
 
 	document.addEventListener('click', function (e) {
