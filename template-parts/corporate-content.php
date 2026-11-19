@@ -212,32 +212,11 @@ get_template_part( 'template-parts/inner', 'hero' );
 			<h2 id="corp-reviews-heading" class="inner-section-title">From our wedding and party clients</h2>
 			<p class="corporate-reviews__lead">Our corporate work is built on the same organisation, and the same on-the-day care, that our wedding and party clients describe.</p>
 		</header>
-		<div class="corporate-reviews-quotes">
-			<figure class="testimonial testimonial--google testimonial--corporate-quote">
-				<?php ovents_render_star_rating( 5 ); ?>
-				<blockquote class="testimonial__quote">
-					<?php echo esc_html( 'The team will spare no effort in delivering your wishes, and the attention to detail is great. Ovents is the first team I recommend whenever events are being planned.' ); ?>
-				</blockquote>
-				<figcaption>
-					<cite>
-						<strong><?php echo esc_html( 'Francis D.' ); ?></strong>
-						<span class="testimonial__meta"><?php echo esc_html( 'Events · Google review, February 2020' ); ?></span>
-					</cite>
-				</figcaption>
-			</figure>
-			<figure class="testimonial testimonial--google testimonial--corporate-quote">
-				<?php ovents_render_star_rating( 5 ); ?>
-				<blockquote class="testimonial__quote">
-					<?php echo esc_html( 'We got there on time and everything was well managed.' ); ?>
-				</blockquote>
-				<figcaption>
-					<cite>
-						<strong><?php echo esc_html( 'Amanda L.' ); ?></strong>
-						<span class="testimonial__meta"><?php echo esc_html( 'Wedding · Google review, March 2023' ); ?></span>
-					</cite>
-				</figcaption>
-			</figure>
-		</div>
+		<?php
+		if ( function_exists( 'ovents_render_testimonial_bare_carousel' ) ) {
+			ovents_render_testimonial_bare_carousel( ovents_google_testimonials_for_corporate_page() );
+		}
+		?>
 		<div class="corporate-reviews__cta">
 			<?php ovents_render_google_review_cta( 'Read our Google reviews' ); ?>
 		</div>

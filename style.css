@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.55
+Version: 2.9.57
 Text Domain: ovents
 */
 
@@ -2074,6 +2074,14 @@ body.home .territory-panel.home-band--dark {
 		object-fit: cover;
 		object-position: center 40%;
 	}
+	/* Vertically centre prose in image/text splits (home ovents-way uses .ovents-way__copy). */
+	.inner-split:not(.inner-split--contact):not(.inner-split--service-faq) > .inner-split__copy,
+	.promise-split__copy {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-self: stretch;
+	}
 }
 .section--corporate-why .corporate-why-list {
 	margin: 0 0 1.25rem;
@@ -3535,12 +3543,6 @@ body.home .territory-panel.home-band--dark {
 	line-height: 1.75;
 	color: #625d55;
 }
-.corporate-reviews-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: clamp(1.25rem, 2.5vw, 2rem);
-	align-items: stretch;
-}
 .corporate-recent-event-wrap {
 	max-width: min(52rem, 100%);
 	margin: 0 auto;
@@ -3592,41 +3594,9 @@ body.home .territory-panel.home-band--dark {
 	text-decoration: underline;
 	text-underline-offset: 3px;
 }
-.corporate-reviews-quotes {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: clamp(1.25rem, 2.5vw, 2rem);
-	align-items: stretch;
-	text-align: left;
-}
-.testimonial--corporate-quote {
-	margin: 0;
-	padding: 0;
-	background: transparent;
-	border: none;
-}
-.testimonial--corporate-quote blockquote {
-	margin: 0;
-	font-size: 1rem;
-	line-height: 1.75;
-	color: #3d3a36;
-}
-.testimonial--corporate-quote blockquote::before {
-	font-size: 2.5rem;
-	line-height: 1;
-	margin-bottom: 0.35rem;
-}
-.testimonial--corporate-quote cite {
-	margin-top: 1rem;
-	padding-top: 0.85rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
 @media (max-width: 720px) {
 	.planners-table-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-	.corporate-reviews-quotes {
-		grid-template-columns: 1fr;
 	}
 }
 .section--service-reviews .testimonial-carousel,
@@ -3776,11 +3746,6 @@ body.home .territory-panel.home-band--dark {
 @media (max-width: 900px) {
 	.testimonial-carousel--single .testimonial {
 		flex: 0 0 100%;
-	}
-}
-@media (max-width: 720px) {
-	.corporate-reviews-grid {
-		grid-template-columns: 1fr;
 	}
 }
 .section--corporate-coverage .corporate-coverage-split {
