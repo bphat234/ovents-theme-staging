@@ -53,17 +53,27 @@ $selected = array(
 		<h2 id="portfolio-selected-heading" class="visually-hidden"><?php esc_html_e( 'Selected celebrations', 'ovents' ); ?></h2>
 		<div class="portfolio-teaser-grid portfolio-selected-grid">
 			<?php foreach ( $selected as $card ) : ?>
-				<article class="portfolio-card">
+				<article class="portfolio-card portfolio-card--selected">
 					<figure class="portfolio-card__media">
-						<?php ovents_render_manifest_image( $card['manifest'] ); ?>
-					</figure>
-					<h3><?php echo esc_html( $card['title'] ); ?></h3>
-					<?php
-					$row = ovents_theme_manifest_image( $card['manifest'] );
-					if ( $row && ! empty( $row['credit'] ) ) :
+						<?php
+						ovents_render_manifest_image(
+							$card['manifest'],
+							array(
+								'img_class' => 'portfolio-card__img',
+								'sizes'     => '(max-width: 720px) 92vw, 33vw',
+							)
+						);
 						?>
-						<p class="portfolio-card__meta"><?php echo esc_html( (string) $row['credit'] ); ?></p>
-					<?php endif; ?>
+					</figure>
+					<div class="portfolio-card__body">
+						<h3 class="portfolio-card__title"><?php echo esc_html( $card['title'] ); ?></h3>
+						<?php
+						$row = ovents_theme_manifest_image( $card['manifest'] );
+						if ( $row && ! empty( $row['credit'] ) ) :
+							?>
+							<p class="portfolio-card__meta"><?php echo esc_html( (string) $row['credit'] ); ?></p>
+						<?php endif; ?>
+					</div>
 				</article>
 			<?php endforeach; ?>
 		</div>

@@ -96,3 +96,48 @@ add_action(
 	},
 	20
 );
+
+/**
+ * About page graph: AboutPage + Person + founder link on Organization (no full Organization node).
+ */
+function ovents_echo_about_founder_schema() {
+	if ( ! is_page( 'about' ) ) {
+		return;
+	}
+
+	$home      = untrailingslashit( home_url() );
+	$about_url = trailingslashit( home_url( '/about' ) );
+	$portrait  = get_template_directory_uri() . '/assets/img/founder-portrait-800.jpg';
+
+	$graph = array(
+		array(
+			'@type'      => 'AboutPage',
+			'@id'        => $home . '/about/#aboutpage',
+			'url'        => $about_url,
+			'about'      => array( '@id' => $home . '/#organization' ),
+			'mainEntity' => array( '@id' => $home . '/about/#founder' ),
+		),
+		array(
+			'@type'     => 'Person',
+			'@id'       => $home . '/about/#founder',
+			'name'      => 'Titilope Fagbore',
+			'jobTitle'  => 'Founder',
+			'worksFor'  => array( '@id' => $home . '/#organization' ),
+			'image'     => $portrait,
+			'url'       => $about_url,
+		),
+		array(
+			'@id'     => $home . '/#organization',
+			'founder' => array( '@id' => $home . '/about/#founder' ),
+		),
+	);
+
+	$data = array(
+		'@context' => 'https://schema.org',
+		'@graph'   => $graph,
+	);
+
+	echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+}
+
+add_action( 'wp_head', 'ovents_echo_about_founder_schema', 21 );
