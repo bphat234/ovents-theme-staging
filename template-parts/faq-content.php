@@ -110,7 +110,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 				</details>
 				<details>
 					<summary>Do you provide entertainment and catering contacts?</summary>
-					<p>We introduce DJs, bands, caterers and production partners who suit your brief and your budget.</p>
+					<p>We introduce DJs, bands, caterers and other trusted suppliers who suit your brief and your budget.</p>
 				</details>
 				<details>
 					<summary>Can you join mid-planning?</summary>

@@ -46,7 +46,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 					<span class="founder-gap"><?php echo esc_html( $founder_gap_1 ); ?></span>
 				<?php endif; ?>
 			</p>
-			<p><?php esc_html_e( 'Based in London and planning events across the UK, she and her team design and deliver luxury weddings, corporate events and private parties. From the first conversation to the last guest leaving, she looks after every detail, so her clients can simply be present.', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Based in London and planning events across the UK, she and her team plan and coordinate luxury weddings, corporate events and private parties. From the first conversation to the last guest leaving, she looks after every detail, so her clients can simply be present.', 'ovents' ); ?></p>
 			<p>
 				<?php esc_html_e( 'Her approach is personal and hands-on.', 'ovents' ); ?>
 				<?php

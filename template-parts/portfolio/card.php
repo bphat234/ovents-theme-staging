@@ -13,7 +13,7 @@ $meta  = ovents_portfolio_get_meta( $post );
 $slug  = $meta['event_slug'] ?: $post->post_name;
 $stem  = $meta['cover_stem'];
 $type  = $meta['type_label'] ?: ucfirst( $meta['event_type'] );
-$sizes = '(max-width: 720px) 92vw, (max-width: 1100px) 45vw, 22vw';
+$sizes = '(max-width: 720px) 92vw, 46vw';
 $url   = get_permalink( $post );
 ?>
 <article class="portfolio-lookbook-card">

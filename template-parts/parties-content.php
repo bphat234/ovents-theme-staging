@@ -76,7 +76,7 @@ ovents_render_testimonial_proof_section( 'parties' );
 				</li>
 				<li>
 					<strong>Anniversaries</strong>
-					<span>Intimate dinners and anniversary gatherings, with venue liaison and styling direction.</span>
+					<span>Intimate dinners and anniversary gatherings, with venue liaison and supplier coordination.</span>
 				</li>
 				<li>
 					<strong>Larger gatherings</strong>
@@ -95,7 +95,7 @@ ovents_render_testimonial_proof_section( 'parties' );
 		</header>
 		<div class="inner-feature-grid">
 			<article><h3>Venue and supplier coordination</h3><p>Hired venues and private homes, with the logistics adapted to your space.</p></article>
-			<article><h3>Styling and guest experience</h3><p>Theme, catering timings and the welcome, planned so the evening feels intentional from the first arrival.</p></article>
+			<article><h3>Guest experience</h3><p>Theme, catering timings and the welcome, coordinated with your chosen suppliers.</p></article>
 			<article><h3>On-the-day direction</h3><p>Timings, supplier arrivals and the running order, so you can be present with your guests.</p></article>
 		</div>
 		<div class="parties-process-block" aria-labelledby="parties-process-heading">
@@ -125,7 +125,7 @@ ovents_render_testimonial_proof_section( 'parties' );
 				</details>
 				<details>
 					<summary>Do you provide entertainment and catering contacts?</summary>
-					<p>We introduce DJs, bands, caterers and production partners who suit your brief and your budget.</p>
+					<p>We introduce DJs, bands, caterers and other trusted suppliers who suit your brief and your budget.</p>
 				</details>
 				<details>
 					<summary>Do you offer Lite planning?</summary>
