@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.10' );
+define( 'OVENTS_VERSION', '2.9.11' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -53,11 +53,19 @@ add_action(
 );
 
 add_action(
+	'wp_head',
+	function () {
+		echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+	},
+	1
+);
+
+add_action(
 	'wp_enqueue_scripts',
 	function () {
 		wp_enqueue_style(
 			'ovents-fonts',
-			'https://fonts.googleapis.com/css2?family=Google+Sans:wght@400&family=Playfair+Display:ital,wght@0,700;1,400&display=swap',
+			'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Google+Sans:wght@400;500&display=swap',
 			array(),
 			null
 		);
