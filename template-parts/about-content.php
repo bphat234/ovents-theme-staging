@@ -52,6 +52,34 @@ get_template_part( 'template-parts/inner', 'hero' );
 	</div>
 </section>
 
+<?php if ( function_exists( 'ovents_founder_at_work_items' ) && function_exists( 'ovents_portfolio_render_image' ) ) : ?>
+<section class="section section--inner section--founder-at-work" aria-labelledby="founder-at-work-heading">
+	<div class="wrap founder-at-work">
+		<h2 id="founder-at-work-heading" class="founder-at-work__title inner-section-title visually-hidden"><?php esc_html_e( 'Titilope at work', 'ovents' ); ?></h2>
+		<div class="founder-at-work__grid">
+			<?php foreach ( ovents_founder_at_work_items() as $item ) : ?>
+				<figure class="founder-at-work__frame">
+					<?php
+					ovents_portfolio_render_image(
+						'founder-at-work',
+						$item['stem'],
+						array(
+							'widths'    => array( 800, 1600 ),
+							'sizes'     => '(max-width: 720px) 92vw, (max-width: 1100px) 45vw, 30vw',
+							'img_class' => 'founder-at-work__img',
+							'width'     => 1280,
+							'height'    => 1600,
+							'alt'       => $item['alt'],
+						)
+					);
+					?>
+				</figure>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
 <section class="section section--inner section--values" aria-labelledby="about-values-heading">
 	<div class="wrap values-wrap">
 		<header class="values-header">

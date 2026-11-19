@@ -85,12 +85,15 @@ function ovents_portfolio_seed_items() {
 			'quote'         => '',
 			'quote_attr'    => '',
 			'photographer'  => '',
-			'cover_stem'    => 'cover-funmi-yemi-doorway',
-			'cover_pos'     => 'center 40%',
+			'cover_stem'    => 'cover-funmi-yemi-couple',
+			'cover_pos'     => 'center 32%',
 			'home_featured' => true,
 			'home_order'    => 2,
 			'meta_desc'     => "Funmi and Yemi's wedding, planned by Ovents.",
 			'gallery'       => array(
+				array( 'stem' => 'gallery-funmi-yemi-welcome-sign', 'layout' => 'landscape', 'w' => 1600, 'h' => 1067, 'alt' => 'A welcome display of white flowers and candles, with a board that reads Welcome to our wedding, Funmilola and Opeyemi, 18th October 2025, beside a large portrait of the couple.' ),
+				array( 'stem' => 'gallery-funmi-yemi-bride-portrait', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => 'The bride standing in an embroidered off-the-shoulder wedding gown beside a dark marble column, with a wall of framed photographs behind her.' ),
+				array( 'stem' => 'gallery-funmi-yemi-doorway', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => 'The bride looking back over her shoulder in a doorway of dark wood and glass, holding a white rose bouquet, the train of her embroidered gown falling behind her.' ),
 				array( 'stem' => 'gallery-funmi-yemi-shoes-and-papers', 'layout' => 'landscape', 'w' => 1600, 'h' => 1067, 'alt' => 'Ivory shoes with jewelled buckles, a wooden bowl and printed wedding newspapers arranged on a pale wooden table.' ),
 				array( 'stem' => 'gallery-funmi-yemi-getting-ready', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => 'A group of women in white satin shirts and robes gathered together in a pale room, getting ready.' ),
 				array( 'stem' => 'gallery-funmi-yemi-wedding-newspaper', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => 'A hand holding a printed newspaper-style programme headed The Wedding Post, with the words Fumilola and Opeyemi are getting married.' ),
@@ -118,7 +121,7 @@ function ovents_portfolio_seed_items() {
 			'schema_date'   => '2026-04-25',
 			'gallery'       => array(
 				array( 'stem' => 'gallery-planners-table-lunch', 'layout' => 'landscape', 'w' => 1600, 'h' => 1067, 'alt' => "Guests seated around a long table of flowers and bags, with Planner's Table signs on screens at either end of the room." ),
-				array( 'stem' => 'gallery-planners-table-sign', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => "A gold easel holding a printed sign: Vendors' Brunch, The Planner's Table, a lunch and learn experience, 25th April 2026." ),
+				array( 'stem' => 'gallery-planners-table-host', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => "Titilope Fagbore, founder of Ovents, in a brown suit, smiling and clapping as she hosts The Planner's Table." ),
 				array( 'stem' => 'gallery-planners-table-guest-profile', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => "A woman in a black-and-white houndstooth jacket, photographed in profile, seated at The Planner's Table." ),
 				array( 'stem' => 'gallery-planners-table-group', 'layout' => 'landscape', 'w' => 1600, 'h' => 1067, 'alt' => "A group of attendees standing together, some holding The Planner's Table sign, at the lunch and learn organised by Ovents." ),
 				array( 'stem' => 'gallery-planners-table-speaker-cream', 'layout' => 'portrait', 'w' => 1280, 'h' => 1600, 'alt' => "A woman in a cream shirt dress gesturing as she speaks at The Planner's Table." ),
@@ -210,6 +213,28 @@ function ovents_portfolio_facts( $meta ) {
 		}
 	}
 	return $facts;
+}
+
+/**
+ * Behind-the-scenes founder stills (About page strip).
+ *
+ * @return array<int, array{stem: string, alt: string}>
+ */
+function ovents_founder_at_work_items() {
+	return array(
+		array(
+			'stem' => 'founder-titilope-hosting',
+			'alt'  => "Titilope Fagbore, founder of Ovents, smiling and clapping as she hosts The Planner's Table.",
+		),
+		array(
+			'stem' => 'founder-titilope-speaking',
+			'alt'  => "Titilope Fagbore speaking and gesturing at The Planner's Table, with the event sign visible behind her.",
+		),
+		array(
+			'stem' => 'founder-titilope-at-table',
+			'alt'  => "Titilope Fagbore seated at a table of flowers, candles and goodie bags at The Planner's Table.",
+		),
+	);
 }
 
 /**
