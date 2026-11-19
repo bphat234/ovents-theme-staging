@@ -1,6 +1,6 @@
 <?php
 /**
- * Homepage sections — Wix scroll order; SEO blocks kept where they convert.
+ * Homepage sections — Hero, intro, portfolio, services, how we work, testimonials, territory, FAQ; footer CTA in footer.
  *
  * @package Ovents
  */
@@ -41,6 +41,8 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		<p class="intro-process">We offer luxury event planning and coordination for weddings, private parties and corporate occasions, so you can be present for the moments that matter.</p>
 	</div>
 </section>
+
+<?php get_template_part( 'template-parts/portfolio/home', 'section' ); ?>
 
 <section class="services-grid" id="services" aria-label="Our services">
 	<article class="service-strip" aria-labelledby="weddings-heading">
@@ -146,8 +148,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		<?php ovents_render_google_review_cta(); ?>
 	</div>
 </section>
-
-<?php get_template_part( 'template-parts/portfolio/home', 'section' ); ?>
 
 <section class="territory-panel territory-panel--split" aria-labelledby="territory-heading">
 	<div class="wrap territory-split">
