@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning — weddings, corporate and private celebrations.
-Version: 2.9.7
+Version: 2.9.8
 Text Domain: ovents
 */
 
@@ -1061,6 +1061,43 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	box-shadow: none;
 }
 
+.section--founder {
+	padding-block: clamp(3rem, 7vw, 5rem);
+}
+.founder-split {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: clamp(2rem, 4vw, 4rem);
+	align-items: start;
+}
+.founder-split__media {
+	margin: 0;
+}
+.founder-portrait,
+.founder-split__media picture,
+.founder-split__media img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: min(28rem, 100%);
+	margin-inline: auto;
+	aspect-ratio: 2 / 3;
+	object-fit: cover;
+	object-position: center 18%;
+	border-radius: var(--img-radius-bottom);
+}
+.founder-split__copy h2 {
+	margin-top: 0;
+}
+.founder-gap {
+	background: rgba(154, 132, 72, 0.14);
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	padding: 0.12em 0.35em;
+	border-radius: 2px;
+	font-style: italic;
+}
+
 .section--ovents-way {
 	padding-block: clamp(4rem, 9vw, 6rem);
 }
@@ -1770,6 +1807,8 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .inner-split__media picture,
 .inner-split__media img,
+.founder-split__media picture,
+.founder-split__media img,
 .ovents-way__media picture,
 .ovents-way__media img,
 .promise-split__media picture,
@@ -2797,7 +2836,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	.value-grid,
 	.promise-split,
 	.ovents-way-split,
+	.founder-split,
 	.territory-split { grid-template-columns: 1fr; }
+	.founder-split__media { order: -1; }
 	.inner-split__media,
 	.promise-split__media { order: -1; max-width: min(28rem, 100%); margin-inline: auto; }
 	.territory-split__map { order: -1; }
