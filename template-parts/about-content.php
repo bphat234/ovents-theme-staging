@@ -36,18 +36,33 @@ get_template_part( 'template-parts/inner', 'hero' );
 			</picture>
 		</figure>
 		<div class="founder-split__copy content-prose">
-			<h2 id="founder-heading"><?php esc_html_e( 'Meet Titilope Fagbore, Founder of Ovents', 'ovents' ); ?></h2>
+			<h2 id="founder-heading"><?php esc_html_e( 'Titilope Fagbore, founder of Ovents', 'ovents' ); ?></h2>
 			<p>
 				<?php esc_html_e( 'Titilope founded Ovents with a simple belief: every celebration deserves to feel effortless for the people at its heart.', 'ovents' ); ?>
-				<span class="founder-gap"><?php esc_html_e( '[How and when she started Ovents.]', 'ovents' ); ?></span>
+				<?php
+				$founder_gap_1 = '[How and when she started Ovents.]';
+				if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_1 ) ) :
+					?>
+					<span class="founder-gap"><?php echo esc_html( $founder_gap_1 ); ?></span>
+				<?php endif; ?>
 			</p>
-			<p><?php esc_html_e( 'Based in London and planning events across the UK, Titilope and her team design and deliver luxury weddings, corporate events and private parties. From the first conversation to the last guest leaving, she looks after every detail so her clients can be present and enjoy the moment.', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Based in London and planning events across the UK, she and her team design and deliver luxury weddings, corporate events and private parties. From the first conversation to the last guest leaving, she looks after every detail, so her clients can simply be present.', 'ovents' ); ?></p>
 			<p>
 				<?php esc_html_e( 'Her approach is personal and hands-on.', 'ovents' ); ?>
-				<span class="founder-gap"><?php esc_html_e( '[One or two lines on her style.]', 'ovents' ); ?></span>
+				<?php
+				$founder_gap_2 = '[One or two lines on her style.]';
+				if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_2 ) ) :
+					?>
+					<span class="founder-gap"><?php echo esc_html( $founder_gap_2 ); ?></span>
+				<?php endif; ?>
 			</p>
-			<p><?php esc_html_e( 'Beyond client events, Titilope is investing in the wider events community. In April 2026, Ovents organised The Planner’s Table, a lunch and learn bringing together event professionals, wedding planners, coordinators and creatives for honest conversations and practical sessions.', 'ovents' ); ?></p>
-			<p class="founder-gap"><?php esc_html_e( '[Optional quote in her own words.]', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Beyond client events, Titilope is investing in the wider events community. In April 2026, Ovents organised The Planner’s Table, a lunch and learn for event professionals, wedding planners, coordinators and creatives — honest conversations and practical sessions.', 'ovents' ); ?></p>
+			<?php
+			$founder_gap_3 = '[Optional quote in her own words.]';
+			if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_3 ) ) :
+				?>
+				<p class="founder-gap"><?php echo esc_html( $founder_gap_3 ); ?></p>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
@@ -55,7 +70,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 <?php if ( function_exists( 'ovents_founder_at_work_items' ) && function_exists( 'ovents_portfolio_render_image' ) ) : ?>
 <section class="section section--inner section--founder-at-work" aria-labelledby="founder-at-work-heading">
 	<div class="wrap founder-at-work">
-		<h2 id="founder-at-work-heading" class="founder-at-work__title inner-section-title visually-hidden"><?php esc_html_e( 'Titilope at work', 'ovents' ); ?></h2>
+		<h2 id="founder-at-work-heading" class="founder-at-work__title inner-section-title"><?php esc_html_e( 'Behind the scenes', 'ovents' ); ?></h2>
 		<div class="founder-at-work__grid">
 			<?php foreach ( ovents_founder_at_work_items() as $item ) : ?>
 				<figure class="founder-at-work__frame">
@@ -83,20 +98,20 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section class="section section--inner section--values" aria-labelledby="about-values-heading">
 	<div class="wrap values-wrap">
 		<header class="values-header">
-			<h2 id="about-values-heading" class="inner-section-title">Our values</h2>
+			<h2 id="about-values-heading" class="inner-section-title">What we hold to</h2>
 		</header>
 		<div class="value-grid">
 			<article class="value-card">
 				<h3>Dependability</h3>
-				<p>Timelines, suppliers and guest experience managed with calm, professional delivery — including when plans shift on the day.</p>
+				<p>Timelines, suppliers and the feel of the room, held with a calm hand — including when the plan has to move.</p>
 			</article>
 			<article class="value-card">
 				<h3>Customer commitment</h3>
-				<p>Our focus is you. We listen to what matters to you and shape our planning around your priorities, with clear communication throughout.</p>
+				<p>We listen to what matters to you, and we plan around that, with clear, steady communication throughout.</p>
 			</article>
 			<article class="value-card">
 				<h3>Transparent proposals</h3>
-				<p>Transparent, itemised proposals after a free consultation, so you know exactly what is included before you commit.</p>
+				<p>After a free consultation, you receive an itemised proposal, so you can see what is included before you decide.</p>
 			</article>
 		</div>
 		<?php if ( function_exists( 'ovents_google_testimonials_for_about_page' ) ) : ?>
@@ -119,8 +134,8 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</figure>
 		<div class="promise-split__copy">
 			<h2 id="promise-heading" class="promise-heading">Our promise</h2>
-			<p>At Ovents, we aim to provide a professional, quality service that surpasses your expectations.</p>
-			<p>We use your feedback to improve our service and explain the scope of our support clearly at every stage.</p>
+			<p>We aim to give you a calm, considered service, and to be a quiet presence you can trust.</p>
+			<p>We explain clearly, at every stage, what is included — and we listen to your feedback along the way.</p>
 			<p class="promise-split__cta">
 				<a class="link-cta" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
 			</p>

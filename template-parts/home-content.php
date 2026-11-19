@@ -21,7 +21,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<h1 class="hero-title hero-title--primary"><?php echo esc_html( $home_h1 ); ?></h1>
 		</div>
 		<div class="hero-inner__foot">
-			<p class="lead">From intimate weddings to corporate occasions and private celebrations, Ovents brings creativity, organisation and attention to detail to events across the UK.</p>
+			<p class="lead">Celebrations that feel effortless, because every detail has already been taken care of.</p>
 			<div class="hero-ctas">
 				<a class="btn btn-light" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
 				<a class="btn btn-ghost" href="#services">Explore our services</a>
@@ -33,12 +33,12 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 <section class="section section--intro" id="intro" aria-labelledby="intro-heading">
 	<div class="wrap intro-copy">
 		<h2 id="intro-heading">
-			<span class="intro-heading__line">Your vision,</span>
-			<span class="intro-heading__line">orchestrated with care</span>
+			<span class="intro-heading__line">Every event starts</span>
+			<span class="intro-heading__line">differently.</span>
 		</h2>
-		<p>Ovents LTD is a London-based event planner specialising in weddings, private parties and corporate occasions across the UK.</p>
-		<p>From concept and supplier curation to flawless on-the-day coordination, we combine creative direction with meticulous production so you can be fully present for the moments that matter.</p>
-		<p class="intro-process">We <strong>discover</strong> your priorities, <strong>plan</strong> schedules and suppliers, <strong>coordinate</strong> logistics on the day, and <strong>celebrate</strong> with you while we manage the running order.</p>
+		<p>Some begin with a date, some with a venue, some with just an idea.</p>
+		<p>Wherever you’re starting from, we’ll take it from there.</p>
+		<p class="intro-process">We plan luxury weddings, corporate events and private parties from London, across the UK.</p>
 	</div>
 </section>
 
@@ -50,7 +50,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<div class="service-strip__copy">
 				<div class="service-strip__foot">
 					<h2 id="weddings-heading">Weddings</h2>
-					<p>Bespoke design and coordination tailored to your vision.</p>
+					<p>A day that feels like you, held with calm and care.</p>
 					<a class="link-explore" href="<?php echo esc_url( $home . '/weddings/' ); ?>">Explore</a>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<div class="service-strip__copy">
 				<div class="service-strip__foot">
 					<h2 id="corporate-heading">Corporate</h2>
-					<p>High-impact events delivered with precision and premium production.</p>
+					<p>Discreet, polished events that reflect your brand.</p>
 					<a class="link-explore" href="<?php echo esc_url( $home . '/corporate-events/' ); ?>">Explore</a>
 				</div>
 			</div>
@@ -78,7 +78,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<div class="service-strip__copy">
 				<div class="service-strip__foot">
 					<h2 id="parties-heading">Parties</h2>
-					<p>Stylish private celebrations planned with seamless coordination.</p>
+					<p>Celebrations for the people you love, planned so you can enjoy them.</p>
 					<a class="link-explore" href="<?php echo esc_url( $home . '/parties/' ); ?>">Explore</a>
 				</div>
 			</div>
@@ -93,16 +93,26 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		</figure>
 		<div class="ovents-way__copy">
 			<h2 id="ovents-way-heading">
-				<span class="ovents-way__title-line">Bespoke excellence in</span>
-				<span class="ovents-way__title-line">every detail</span>
+				<span class="ovents-way__title-line">Behind a</span>
+				<span class="ovents-way__title-line">seamless day.</span>
 			</h2>
-			<p>Based in London, we specialise in high-end event planning and coordination for weddings, private parties and corporate events.</p>
-			<p>We focus on schedules, suppliers and guest experience so you can be present for the moments that matter.</p>
-			<p class="label-gold ovents-way__why-label" id="why-heading">Why Ovents</p>
-			<ul class="check-list">
-				<li>Planning shaped around your brief, with clear communication throughout</li>
-				<li>Supplier coordination, timelines and run sheets managed with care</li>
-				<li>Calm, professional delivery on the day when timings shift</li>
+			<p>Behind every calm, beautiful day is careful planning you never have to see.</p>
+			<ul class="ovents-way-pillars" id="why-heading" aria-label="<?php esc_attr_e( 'How we plan', 'ovents' ); ?>">
+				<li class="ovents-way-pillars__item">
+					<h3 class="ovents-way-pillars__name">Planning</h3>
+					<p class="ovents-way-pillars__promise">The groundwork behind a seamless day.</p>
+					<p class="ovents-way-pillars__tags">Suppliers · Budgets · Timelines</p>
+				</li>
+				<li class="ovents-way-pillars__item">
+					<h3 class="ovents-way-pillars__name">Design &amp; styling</h3>
+					<p class="ovents-way-pillars__promise">Your vision, brought to life.</p>
+					<p class="ovents-way-pillars__tags">Florals · Tablescapes · Décor</p>
+				</li>
+				<li class="ovents-way-pillars__item">
+					<h3 class="ovents-way-pillars__name">On-the-day coordination</h3>
+					<p class="ovents-way-pillars__promise">So you can be present.</p>
+					<p class="ovents-way-pillars__tags">Run sheets · Suppliers · Guest flow</p>
+				</li>
 			</ul>
 			<p class="ovents-way__cta">
 				<a class="btn btn-primary" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
@@ -113,8 +123,8 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 
 <section class="section section--testimonials" id="testimonials" aria-labelledby="testimonials-heading">
 	<div class="wrap testimonial-section">
-		<h2 id="testimonials-heading">Trusted by couples, families and brands</h2>
-		<p class="sub">A selection of reflections from weddings, celebrations and corporate events we have had the honour to deliver.</p>
+		<h2 id="testimonials-heading">In their words</h2>
+		<p class="sub">A few words from people we have planned with.</p>
 		<div class="testimonial-carousel" data-testimonial-carousel>
 			<div class="testimonial-carousel__controls">
 				<button type="button" class="testimonial-carousel__arrow testimonial-carousel__arrow--prev" data-carousel-prev aria-label="<?php esc_attr_e( 'Previous testimonial', 'ovents' ); ?>">
@@ -145,8 +155,8 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 <section class="territory-panel territory-panel--split" aria-labelledby="territory-heading">
 	<div class="wrap territory-split">
 		<div class="territory-split__copy">
-			<h2 id="territory-heading">Event planner based in London, serving the UK</h2>
-			<p>Rooted in London, we plan and coordinate weddings, private parties and corporate events across the UK with one consistent standard of poise and precision.</p>
+			<h2 id="territory-heading">An event planner in London, working across the UK</h2>
+			<p>From London, we plan weddings, corporate events and private parties across the UK — the same calm standard, wherever the day is held.</p>
 			<p class="territory-tag">Based in London &middot; UK-wide</p>
 		</div>
 		<div class="territory-split__map">
@@ -158,22 +168,22 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 <section class="section section--narrow section--faq-home" aria-labelledby="home-faq-heading">
 	<div class="wrap faq-home-layout">
 		<div class="faq-home-intro">
-			<h2 id="home-faq-heading">Common questions</h2>
-			<p class="faq-home-description">From where we work to how we begin, a few helpful details for planning your event.</p>
-			<a class="faq-home-link" href="<?php echo esc_url( $home . '/faq/' ); ?>">Explore all FAQs <span aria-hidden="true">&rarr;</span></a>
+			<h2 id="home-faq-heading">A few questions, answered</h2>
+			<p class="faq-home-description">Where we work, how we begin, and what we plan.</p>
+			<a class="faq-home-link" href="<?php echo esc_url( $home . '/faq/' ); ?>">See all FAQs <span aria-hidden="true">&rarr;</span></a>
 		</div>
 		<div class="faq faq-home-questions">
 		<details>
 			<summary>Where is Ovents based?</summary>
-			<p>We are based in London and plan events across the UK.</p>
+			<p>We’re based in London, and we plan events across the UK.</p>
 		</details>
 		<details>
 			<summary>How do we enquire?</summary>
-			<p>Use our <a href="<?php echo esc_url( $home . '/contact/' ); ?>">contact form</a> with your date, location and event type.</p>
+			<p>Use our <a href="<?php echo esc_url( $home . '/contact/' ); ?>">contact form</a>, and tell us your date, location and event type if you have them.</p>
 		</details>
 		<details>
 			<summary>Do you plan weddings and corporate events?</summary>
-			<p>Yes. We offer wedding planning and coordination, corporate events and private parties. See our <a href="#services">services</a> or contact us to discuss your event.</p>
+			<p>Yes. We plan weddings, corporate events and private parties. Look at our <a href="#services">services</a>, or get in touch and tell us about your day.</p>
 		</details>
 		</div>
 	</div>

@@ -34,8 +34,7 @@ $links = array(
 ?>
 <nav class="service-related-links" aria-labelledby="service-related-heading">
 	<div class="service-related-links__panel">
-		<p id="service-related-heading" class="service-related-links__title label-gold"><?php esc_html_e( 'Explore further', 'ovents' ); ?></p>
-		<p class="service-related-links__lead"><?php esc_html_e( 'More ways we help you celebrate and plan with confidence.', 'ovents' ); ?></p>
+		<h2 id="service-related-heading" class="visually-hidden"><?php esc_html_e( 'Other ways we plan', 'ovents' ); ?></h2>
 		<ul class="service-related-links__list">
 			<?php
 			foreach ( $links as $slug => $link ) {

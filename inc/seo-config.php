@@ -17,39 +17,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 function ovents_seo_config() {
 	return array(
 		'home'             => array(
-			'title'       => 'Event Planner London & Across the UK | Ovents',
-			'description' => 'London-based event planners offering wedding planning, corporate event management and private celebrations across the UK. Enquire with Ovents today.',
-			'h1'          => 'Luxury weddings and corporate events, planned from London across the UK',
+			'title'       => 'Luxury Event Planner London & the UK | Ovents',
+			'description' => 'A luxury wedding, party and corporate event planner in London, working across the UK. Wherever you’re starting from, we’ll take it from there.',
+			'h1'          => 'Luxury wedding and event planners in London',
 		),
 		'weddings'         => array(
 			'title'       => 'Luxury Wedding Planner London & UK | Ovents',
-			'description' => 'Wedding planning and on-the-day coordination in London and across the UK. Enquire about personalised wedding support from Ovents.',
-			'h1'          => 'Wedding planning and coordination',
+			'description' => 'A luxury wedding planner in London, working across the UK. Full planning or on-the-day coordination, shaped around you.',
+			'h1'          => 'Luxury wedding planners in London',
 		),
 		'corporate-events' => array(
-			'title'       => 'Corporate Event Planners London & UK | Ovents',
-			'description' => 'Corporate event planners in London for conferences, launches, gala dinners and Christmas parties. Full planning or on-the-day coordination across the UK.',
-			'h1'          => 'Corporate event planners in London, working across the UK',
+			'title'       => 'Corporate Event Planner London & UK | Ovents',
+			'description' => 'Discreet, polished corporate events in London and across the UK, planned for clients, colleagues and partners.',
+			'h1'          => 'Corporate event planners in London',
 		),
 		'parties'          => array(
 			'title'       => 'Private Party Planner London & UK | Ovents',
-			'description' => 'Private party planning for birthdays, anniversaries and special celebrations across London and the UK. Plan your occasion with Ovents.',
-			'h1'          => 'Private party planning',
+			'description' => 'A party planner in London, working across the UK. Birthdays, anniversaries and private celebrations, planned so you can enjoy them.',
+			'h1'          => 'Private party planners in London',
 		),
 		'about'            => array(
-			'title'       => 'About Ovents | London-Based Event Planners',
-			'description' => 'Get to know Ovents, a London-based wedding and event planning company providing personalised planning and coordination across the UK.',
-			'h1'          => 'Meet the planners behind Ovents',
+			'title'       => 'About Ovents | Luxury Event Planners in London',
+			'description' => 'Meet Titilope Fagbore and the Ovents team — luxury wedding and event planners in London, working across the UK.',
+			'h1'          => 'Luxury event planners in London',
 		),
 		'contact'          => array(
-			'title'       => 'Contact Ovents | Wedding & Event Enquiries',
-			'description' => 'Planning a wedding, corporate event or private celebration? Contact Ovents to discuss your event and request a consultation.',
-			'h1'          => "Let's Plan Your Event",
+			'title'       => 'Contact Ovents | Luxury Event Planner London',
+			'description' => 'Planning a wedding, corporate event or private celebration? Get in touch with Ovents, a luxury event planner in London.',
+			'h1'          => 'Let’s plan your event',
 		),
 		'faq'              => array(
 			'title'       => 'Event Planning FAQs | Ovents',
-			'description' => 'Find answers to common questions about wedding planning, event coordination, corporate events and private celebrations with Ovents.',
-			'h1'          => 'Frequently Asked Questions',
+			'description' => 'Answers to common questions about wedding, corporate and party planning with Ovents, a London event planner working across the UK.',
+			'h1'          => 'Event planning FAQs',
 		),
 		'portfolio'        => array(
 			'title'       => 'Portfolio | Luxury Weddings, Parties and Events | Ovents',
@@ -123,19 +123,5 @@ function ovents_seo_for_request() {
 		return null;
 	}
 	$config = ovents_seo_config();
-	return isset( $config[ $slug ] ) ? $config[ $slug ] : null;
-}
-
-/**
- * Production site URL for canonicals (launch domain).
- */
-function ovents_canonical_base() {
-	if ( ovents_is_local_env() ) {
-		return untrailingslashit( home_url() );
-	}
-	$host = isset( $_SERVER['HTTP_HOST'] ) ? strtolower( (string) wp_unslash( $_SERVER['HTTP_HOST'] ) ) : '';
-	if ( false !== strpos( $host, 'brandnoddev.com' ) ) {
-		return untrailingslashit( home_url() );
-	}
-	return 'https://www.ovents.co.uk';
+	return $config[ $slug ] ?? null;
 }

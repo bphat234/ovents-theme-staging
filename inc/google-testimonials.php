@@ -157,7 +157,7 @@ function ovents_render_star_rating( $rating ) {
  */
 function ovents_render_google_review_cta( $label = '' ) {
 	if ( '' === $label ) {
-		$label = __( 'Read our reviews on Google', 'ovents' );
+		$label = __( 'Read our Google reviews', 'ovents' );
 	}
 	printf(
 		'<p class="google-review-cta"><a class="btn btn-primary" href="%1$s" rel="noopener noreferrer" target="_blank" data-track="review_link_click">%2$s</a></p>',
@@ -308,12 +308,12 @@ function ovents_render_testimonial_proof_section( $tag, $extra_html = '' ) {
 
 	$headers = array(
 		'weddings' => array(
-			'title' => __( 'What couples say', 'ovents' ),
-			'lead'  => __( 'Verbatim Google reviews from wedding clients.', 'ovents' ),
+			'title' => __( 'In their words', 'ovents' ),
+			'lead'  => __( 'Words from couples we have planned with.', 'ovents' ),
 		),
 		'parties'  => array(
-			'title' => __( 'What hosts say', 'ovents' ),
-			'lead'  => __( 'Verbatim Google reviews from private party and family events.', 'ovents' ),
+			'title' => __( 'In their words', 'ovents' ),
+			'lead'  => __( 'Words from people we have planned parties with.', 'ovents' ),
 		),
 	);
 	$heading_id = 'proof-reviews-' . sanitize_key( $tag );

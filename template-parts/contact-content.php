@@ -13,7 +13,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section id="page-content" class="section section--inner section--contact" aria-labelledby="contact-intro-heading">
 	<div class="wrap inner-split inner-split--contact">
 		<aside class="inner-split__copy content-prose contact-sidebar" aria-label="<?php esc_attr_e( 'Contact options and process', 'ovents' ); ?>">
-			<h2 id="contact-intro-heading"><?php esc_html_e( 'Your plans, our attention', 'ovents' ); ?></h2>
+			<h2 id="contact-intro-heading"><?php esc_html_e( 'A luxury event planner in London, ready when you are.', 'ovents' ); ?></h2>
 			<p class="contact-response-note"><?php esc_html_e( 'We reply within one to two business days.', 'ovents' ); ?></p>
 
 			<div class="contact-channels">
@@ -47,21 +47,21 @@ get_template_part( 'template-parts/inner', 'hero' );
 						<span class="contact-process__step" aria-hidden="true">1</span>
 						<div>
 							<strong><?php esc_html_e( 'Enquiry', 'ovents' ); ?></strong>
-							<p><?php esc_html_e( 'Tell us about your date, location and priorities.', 'ovents' ); ?></p>
+							<p><?php esc_html_e( 'Tell us about your date, location and what matters most, if you have them.', 'ovents' ); ?></p>
 						</div>
 					</li>
 					<li>
 						<span class="contact-process__step" aria-hidden="true">2</span>
 						<div>
 							<strong><?php esc_html_e( 'Free consultation', 'ovents' ); ?></strong>
-							<p><?php esc_html_e( 'We explore scope, timing and how we can help.', 'ovents' ); ?></p>
+							<p><?php esc_html_e( 'We talk through the shape of the event, the timing, and how we can help. The consultation is free.', 'ovents' ); ?></p>
 						</div>
 					</li>
 					<li>
 						<span class="contact-process__step" aria-hidden="true">3</span>
 						<div>
 							<strong><?php esc_html_e( 'Itemised proposal', 'ovents' ); ?></strong>
-							<p><?php esc_html_e( 'Transparent next steps, with no obligation.', 'ovents' ); ?></p>
+							<p><?php esc_html_e( 'An itemised proposal and clear next steps, with no obligation.', 'ovents' ); ?></p>
 						</div>
 					</li>
 				</ol>
@@ -75,7 +75,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 
 		<div class="inner-split__form contact-form-panel" id="enquiry-form">
 			<h2 class="contact-form-panel__title"><?php esc_html_e( 'Enquiry form', 'ovents' ); ?></h2>
-			<p class="form-intro"><?php esc_html_e( 'Prefer to write? Share your plans below and we will be in touch.', 'ovents' ); ?></p>
+			<p class="form-intro"><?php esc_html_e( 'Prefer to write? Share your plans below, and we will be in touch.', 'ovents' ); ?></p>
 			<?php echo do_shortcode( '[ovents_enquiry_form]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</div>
 	</div>

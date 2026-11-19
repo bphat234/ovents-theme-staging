@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning — weddings, corporate and private celebrations.
-Version: 2.9.17
+Version: 2.9.18
 Text Domain: ovents
 */
 
@@ -1184,6 +1184,32 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .ovents-way__why-label {
 	margin: 1.75rem 0 0.75rem;
+}
+.ovents-way-pillars {
+	list-style: none;
+	margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+	padding: 0;
+	display: grid;
+	gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+.ovents-way-pillars__name {
+	margin: 0 0 0.35rem;
+	font-family: var(--display);
+	font-size: var(--type-card-title);
+	font-weight: 500;
+}
+.ovents-way-pillars__promise {
+	margin: 0 0 0.35rem;
+}
+.ovents-way-pillars__tags {
+	margin: 0;
+	font-size: var(--text-p2);
+	letter-spacing: 0.06em;
+	color: var(--ink-muted);
+}
+.founder-at-work__title {
+	margin: 0 0 clamp(1.25rem, 3vw, 2rem);
+	text-align: center;
 }
 .ovents-way__copy .check-list {
 	margin: 0 0 1.5rem;
@@ -3758,9 +3784,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .portfolio-home__grid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: clamp(1rem, 2.5vw, 1.75rem);
-	max-width: min(1180px, 100%);
+	max-width: min(880px, 100%);
 	margin-inline: auto;
 }
 .portfolio-home__cta,

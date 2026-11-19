@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_CONTENT_VERSION', '1.9.1' );
+define( 'OVENTS_CONTENT_VERSION', '2.0.0' );
 
 add_action( 'after_switch_theme', 'ovents_on_activate' );
 add_action( 'init', 'ovents_maybe_reseed', 20 );

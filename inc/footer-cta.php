@@ -33,8 +33,8 @@ function ovents_show_footer_cta() {
 function ovents_footer_cta_config() {
 	$config = array(
 		'eyebrow'        => '',
-		'title'          => __( 'Let’s plan something exceptional', 'ovents' ),
-		'text'           => __( 'Tell us about your event, your ideas and what matters most.', 'ovents' ),
+		'title'          => __( 'Let’s plan something you’ll remember for years.', 'ovents' ),
+		'text'           => __( 'Tell us what you’re planning. Wherever you’re starting from, we’ll take it from there.', 'ovents' ),
 		'primary_url'    => home_url( '/contact/' ),
 		'primary_label'  => __( 'Book a free consultation', 'ovents' ),
 		'heading_id'     => 'footer-cta-heading',
@@ -46,10 +46,10 @@ function ovents_footer_cta_config() {
 		$config = array_merge(
 			$config,
 			array(
-				'title'          => __( 'Book a free discovery call', 'ovents' ),
-				'text'           => __( 'Tell us what you\'re planning – the date, the guests and what success looks like. We\'ll reply within one to two business days to arrange your free discovery call, then send a tailored proposal and quote, with no obligation.', 'ovents' ),
+				'title'          => __( 'Let’s plan something you’ll remember for years.', 'ovents' ),
+				'text'           => __( 'Tell us what you’re planning — the date, the guests, and what a good day looks like. We’ll reply within one to two business days to arrange a free discovery call, then send a tailored proposal and quote, with no obligation.', 'ovents' ),
 				'primary_url'    => ovents_corporate_contact_url(),
-				'primary_label'  => __( 'Book a free discovery call', 'ovents' ),
+				'primary_label'  => __( 'Book a discovery call', 'ovents' ),
 				'heading_id'     => 'corp-closing-heading',
 				'variant'        => 'corporate',
 				'show_corporate' => true,

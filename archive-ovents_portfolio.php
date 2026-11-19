@@ -24,7 +24,7 @@ $query   = ovents_portfolio_archive_query();
 		array(
 			'title'      => __( 'Selected celebrations', 'ovents' ),
 			'image_name' => 'hero-erica-samuel-sweetheart-table',
-			'lead'       => __( 'Weddings, private celebrations and events we have planned across the UK.', 'ovents' ),
+			'lead'       => __( 'Weddings, private celebrations and events, planned from London across the UK.', 'ovents' ),
 			'show_ctas'  => false,
 		)
 	);

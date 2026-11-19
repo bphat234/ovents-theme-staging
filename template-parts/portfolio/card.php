@@ -16,7 +16,7 @@ $type    = $meta['type_label'] ?: ucfirst( $meta['event_type'] );
 $compact = ! empty( $args['compact'] );
 $sizes   = $compact
 	? '(max-width: 720px) 92vw, (max-width: 1100px) 45vw, 22vw'
-	: '(max-width: 720px) 92vw, 30vw';
+	: '(max-width: 720px) 92vw, 45vw';
 $url     = get_permalink( $post );
 ?>
 <article class="portfolio-lookbook-card<?php echo $compact ? ' portfolio-lookbook-card--archive' : ''; ?>">
