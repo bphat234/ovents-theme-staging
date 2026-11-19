@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.11' );
+define( 'OVENTS_VERSION', '2.9.12' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -65,7 +65,7 @@ add_action(
 	function () {
 		wp_enqueue_style(
 			'ovents-fonts',
-			'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Google+Sans:wght@400;500&display=swap',
+			'https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap',
 			array(),
 			null
 		);

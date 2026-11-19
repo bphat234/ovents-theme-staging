@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning — weddings, corporate and private celebrations.
-Version: 2.9.11
+Version: 2.9.12
 Text Domain: ovents
 */
 
@@ -16,7 +16,7 @@ Text Domain: ovents
 	--gold-light: #c4ab6a;
 	--white: #ffffff;
 	--line: rgba(28, 27, 26, 0.14);
-	--display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+	--display: "Playfair Display", Georgia, "Times New Roman", serif;
 	--body: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--wrap: min(1600px, 92vw);
 	--header-h: 72px;
@@ -24,18 +24,20 @@ Text Domain: ovents
 	--hero-inner-pad-bottom: clamp(2.5rem, 6vw, 4rem);
 	/* Live Wix service strip media height at 1920px viewport */
 	--service-strip-height: clamp(360px, calc(100vw * 678 / 1920), 678px);
-	/* Display: Cormorant Garamond / body: Google Sans */
-	--h1: 92px;
-	--h2: 45px;
-	--hero-title: 58px;
-	--h3: 43px;
-	--h4: 32px;
-	--h5: 25px;
-	--h6: 22px;
-	--text-p1: 17px;
+	/* Display: Playfair Display / body: Google Sans */
+	--type-hero-h1: clamp(2.4rem, 5vw, 4.25rem);
+	--type-section-h2: clamp(1.9rem, 3.4vw, 3rem);
+	--type-card-title: clamp(1.6rem, 2.4vw, 2.25rem);
+	--h1: 68px;
+	--h2: 48px;
+	--h3: 38px;
+	--h4: 28px;
+	--h5: 22px;
+	--h6: 20px;
+	--text-p1: 16px;
 	--text-p2: 14px;
 	--text-p3: 14px;
-	--menu-overlay: 53px;
+	--menu-overlay: 47px;
 	/* Editorial photos: rounded lower corners only (Wix parity) */
 	--img-radius-bottom: 0 0 clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem);
 	/* Hairline elevation (Apple-like): prefer borders; shadows stay minimal */
@@ -63,30 +65,31 @@ a:hover { color: var(--ink); }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--display);
+	font-weight: 400;
 	font-synthesis: none;
+	letter-spacing: 0;
 	line-height: 1.15;
 }
 h1 {
-	font-size: var(--h1);
-	font-weight: 500;
-	letter-spacing: 0.01em;
+	font-size: var(--type-hero-h1);
 	line-height: 1.1;
+	text-wrap: balance;
 }
 h2 {
-	font-size: var(--h2);
-	font-weight: 500;
-	letter-spacing: 0.01em;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+	text-wrap: balance;
 }
-h3 {
-	font-size: var(--h3);
-	font-weight: 600;
-}
-h4, h5, h6 {
-	font-weight: 500;
-}
+h3 { font-size: var(--h3); }
 h4 { font-size: var(--h4); }
 h5 { font-size: var(--h5); }
 h6 { font-size: var(--h6); }
+
+@media (min-width: 1024px) {
+	:root {
+		--text-p1: 17px;
+	}
+}
 
 .text-p2,
 .hero-rail,
@@ -444,8 +447,8 @@ body.has-inner-hero-header .site-chrome:not(.is-scrolled) .icon-link {
 	font-family: var(--display);
 	font-size: clamp(1.75rem, 6vw, var(--menu-overlay));
 	line-height: 1.15;
-	font-weight: 500;
-	letter-spacing: 0.06em;
+	font-weight: 400;
+	letter-spacing: 0;
 	text-transform: uppercase;
 	color: #fff;
 	text-decoration: none;
@@ -675,25 +678,27 @@ body.nav-open .site-chrome {
 .hero h2.hero-title {
 	margin: 0 0 1.25rem;
 	font-family: var(--display);
-	font-size: clamp(2.2rem, 6.1vw, var(--h2));
-	font-weight: 500;
+	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	letter-spacing: 0;
 	line-height: 1.1;
+	text-wrap: balance;
 }
 .hero h1.hero-title.hero-title--primary {
-	font-size: clamp(2.05rem, 5.6vw, var(--hero-title));
+	font-size: var(--type-hero-h1);
 	text-transform: none;
-	letter-spacing: 0.02em;
 	color: #fff;
 	line-height: 1.1;
 	margin: 0 auto clamp(1rem, 2.5vw, 1.5rem);
 	width: 100%;
 	max-width: 42rem;
 }
+.hero h2.hero-title {
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+}
 @media (min-width: 768px) {
 	.hero h1.hero-title.hero-title--primary {
-		font-size: clamp(1.85rem, 4vw, 3.2rem);
 		margin-bottom: clamp(0.75rem, 2vw, 1.15rem);
 	}
 }
@@ -712,15 +717,18 @@ body.nav-open .site-chrome {
 .hero-title--service {
 	color: #fff;
 	margin: 0 0 1rem;
-	font-size: clamp(1.75rem, 4.5vw, var(--h2));
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	letter-spacing: 0;
+	text-wrap: balance;
 }
 .hero .lead {
 	font-weight: 400;
-	line-height: 1.75;
+	font-size: clamp(1rem, 1.3vw, 1.15rem);
+	line-height: 1.7;
 	margin: 0 auto clamp(1.5rem, 4vw, 2.25rem);
-	max-width: 34rem;
+	max-width: 34em;
 	opacity: 0.95;
 }
 .hero-ctas {
@@ -825,10 +833,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .intro-copy h2 {
 	margin: 0 0 1.35rem;
 	font-family: var(--display);
-	font-weight: 500;
-	font-size: clamp(2.6rem, 6.1vw, 3.75rem);
-	letter-spacing: 0.01em;
-	line-height: 1.16;
+	font-weight: 400;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+	letter-spacing: 0;
 	text-wrap: balance;
 }
 .intro-heading__line {
@@ -916,11 +924,12 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .service-strip h2 {
 	margin: 0 0 0.75rem;
 	font-family: var(--display);
-	font-weight: 500;
-	font-size: clamp(1.5rem, 2.7vw, var(--h2));
-	line-height: 1.14;
+	font-weight: 400;
+	font-size: var(--type-card-title);
+	line-height: 1.15;
 	text-transform: none;
-	letter-spacing: 0.01em;
+	letter-spacing: 0;
+	text-wrap: balance;
 }
 .service-strip__foot {
 	width: 100%;
@@ -955,8 +964,8 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .section--testimonials h2 {
 	max-width: 44rem;
 	margin: 0 auto 1.25rem;
-	font-size: clamp(2rem, 3.7vw, 3.25rem);
-	line-height: 1.16;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
 	text-wrap: balance;
 }
 .section--testimonials .sub {
@@ -1112,7 +1121,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	border-radius: 2px;
 	font-family: var(--display);
 	font-style: italic;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .section--ovents-way {
@@ -1129,9 +1138,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .ovents-way__copy h2 {
 	margin: 0 0 1.1rem;
-	font-size: clamp(2.15rem, 4.25vw, 2.85rem);
-	letter-spacing: 0.012em;
-	line-height: 1.16;
+	font-size: var(--type-section-h2);
+	letter-spacing: 0;
+	line-height: 1.15;
 	text-wrap: balance;
 }
 .ovents-way__title-line {
@@ -1181,7 +1190,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .faq-home-intro .label-gold { margin: 0 0 1.1rem; }
 .faq-home-intro h2 {
-	font-size: clamp(2rem, 3.7vw, 3.25rem);
+	font-size: var(--type-section-h2);
 	line-height: 1.15;
 	margin: 0 0 1.25rem;
 	text-wrap: balance;
@@ -1219,7 +1228,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .faq-page-intro .label-gold { margin: 0 0 1.1rem; }
 .faq-page-intro h2 {
-	font-size: clamp(2rem, 3.7vw, 3.25rem);
+	font-size: var(--type-section-h2);
 	line-height: 1.15;
 	margin: 0 0 1.25rem;
 	text-wrap: balance;
@@ -1445,8 +1454,8 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .cta-band h2 {
 	max-width: 50rem;
 	margin: 0 auto 1.5rem;
-	font-size: clamp(2.25rem, 4.8vw, 4rem);
-	line-height: 1.1;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
 	text-wrap: balance;
 }
 .cta-band p {
@@ -1575,9 +1584,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .content-prose h2 {
 	margin: 0 0 1rem;
-	font-size: clamp(1.75rem, 3.5vw, var(--h2));
-	line-height: 1.14;
-	letter-spacing: 0.012em;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+	letter-spacing: 0;
+	text-wrap: balance;
 }
 .content-prose h3 {
 	margin: 1.75rem 0 0.65rem;
@@ -1722,9 +1732,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .journal-card__body .link-explore { margin-top: auto; }
 .journal-card h2 {
 	margin: 0 0 0.65rem;
-	font-size: clamp(1.6rem, 3vw, 2rem);
+	font-size: var(--type-card-title);
 	line-height: 1.15;
-	letter-spacing: 0.012em;
+	letter-spacing: 0;
+	text-wrap: balance;
 }
 .journal-card h2 a {
 	color: var(--ink);
@@ -1754,13 +1765,14 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .single-post .inner-hero__title {
 	max-width: min(34rem, 100%);
-	font-size: clamp(2.1rem, 4vw, 3.15rem);
+	font-size: var(--type-hero-h1);
 }
 .journal-single h1 {
 	margin: 0 0 1.25rem;
-	font-size: clamp(2.1rem, 4.5vw, 3rem);
-	line-height: 1.12;
-	letter-spacing: 0.012em;
+	font-size: var(--type-hero-h1);
+	line-height: 1.1;
+	letter-spacing: 0;
+	text-wrap: balance;
 }
 .journal-single__figure {
 	margin: 0 0 1.5rem;
@@ -1932,8 +1944,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .parties-celebrations__header h2 {
 	margin: 0 0 1rem;
-	font-size: clamp(1.85rem, 3.5vw, 2.65rem);
-	line-height: 1.14;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+	text-wrap: balance;
 }
 .parties-celebrations__lead {
 	margin: 0;
@@ -1954,9 +1967,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .section--corporate-types .corporate-event-types-accordion summary {
 	font-family: var(--display);
-	font-weight: 500;
+	font-weight: 400;
 	font-size: clamp(1.2rem, 2.2vw, var(--h4));
 	line-height: 1.2;
+	letter-spacing: 0;
 }
 .section--corporate-details .corporate-inline-cta {
 	margin: clamp(2.25rem, 4.5vw, 3.25rem) 0 0;
@@ -2222,7 +2236,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .celebration-list li strong {
 	font-family: var(--display);
 	font-size: 1.15rem;
-	font-weight: 500;
+	font-weight: 400;
 	color: var(--ink);
 }
 .celebration-list li span {
@@ -2260,8 +2274,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .values-header .inner-section-title {
 	margin: 0;
-	font-size: clamp(2rem, 4vw, 2.85rem);
-	line-height: 1.12;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+	text-wrap: balance;
 }
 .value-grid {
 	display: grid;
@@ -2298,9 +2313,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	margin: 0 0 1rem;
 	font-family: var(--display);
 	font-size: clamp(1.35rem, 2.1vw, 1.65rem);
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 1.2;
-	letter-spacing: 0.015em;
+	letter-spacing: 0;
 }
 .value-card p {
 	margin: 0;
@@ -2360,9 +2375,12 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	background: var(--cream);
 }
 .page-hero h1 {
-	font-weight: 500;
+	font-size: var(--type-hero-h1);
+	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	letter-spacing: 0;
+	line-height: 1.1;
+	text-wrap: balance;
 	margin: 0;
 }
 .page-content { padding: 2.5rem 0 4rem; }
@@ -2720,10 +2738,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .inner-hero__title {
 	margin: 0 0 1rem;
 	max-width: 21ch;
-	font-size: clamp(2.4rem, 5vw, 4.5rem);
-	line-height: 1.08;
+	font-size: var(--type-hero-h1);
+	line-height: 1.1;
 	text-transform: none;
-	letter-spacing: -0.025em;
+	letter-spacing: 0;
 	text-wrap: balance;
 }
 .inner-hero__lead {
@@ -2861,10 +2879,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .section--portfolio-selected .portfolio-card__title {
 	margin: 0.85rem 0 0.4rem;
 	font-family: var(--display);
-	font-size: clamp(1.2rem, 2.1vw, 1.5rem);
-	font-weight: 600;
-	line-height: 1.28;
-	letter-spacing: 0.015em;
+	font-size: var(--type-card-title);
+	font-weight: 400;
+	line-height: 1.15;
+	letter-spacing: 0;
 	text-wrap: balance;
 	color: var(--ink);
 }
@@ -2897,7 +2915,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 		padding-inline: 0;
 	}
 	.service-strip h2 {
-		font-size: clamp(1.75rem, 4.5vw, var(--h2));
+		font-size: var(--type-card-title);
 	}
 	.service-strip__copy {
 		max-width: 38rem;
@@ -2951,14 +2969,6 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 @media (min-width: 721px) {
 	[data-insta-toggle] { display: none; }
-}
-@media (max-width: 900px) {
-	:root {
-		--h1: clamp(46px, 11vw, 92px);
-		--h2: clamp(31px, 6.5vw, 45px);
-		--h3: clamp(29px, 5.5vw, 43px);
-		--h4: clamp(24px, 4.5vw, 32px);
-	}
 }
 
 @media (max-width: 600px) {
@@ -3023,7 +3033,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 @media (max-width: 600px) {
 	.inner-hero { min-height: 440px; }
 	.inner-hero__overlay { padding-top: calc(var(--header-h) + 1.75rem); }
-	.inner-hero__title { font-size: clamp(2.15rem, 9.5vw, 3rem); max-width: 100%; }
+	.inner-hero__title { max-width: 100%; }
 	.inner-hero__ctas { align-items: stretch; }
 	.inner-hero__ctas .btn { width: 100%; }
 	.inner-page .inner-split--contact { gap: 2.5rem; }
@@ -3276,7 +3286,7 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	font-family: var(--display);
 	font-size: 1.15rem;
 	font-style: italic;
-	font-weight: 500;
+	font-weight: 400;
 	border-left: 3px solid var(--gold);
 	padding-left: 1rem;
 }
@@ -3310,8 +3320,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .corporate-reviews__header .inner-section-title,
 .service-reviews__header .inner-section-title {
 	margin: 0 0 1rem;
-	font-size: clamp(2rem, 4vw, 2.5rem);
-	line-height: 1.12;
+	font-size: var(--type-section-h2);
+	line-height: 1.15;
+	text-wrap: balance;
 }
 .corporate-reviews__lead,
 .service-reviews__lead {
@@ -3581,8 +3592,9 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 }
 .section--corporate-coverage .corporate-coverage__copy h2 {
 	margin: 0 0 1rem;
-	font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+	font-size: var(--type-section-h2);
 	line-height: 1.15;
+	text-wrap: balance;
 }
 .section--corporate-coverage .corporate-coverage__copy p {
 	margin: 0 0 1rem;
