@@ -14,6 +14,24 @@ define( 'OVENTS_CONTENT_VERSION', '2.0.0' );
 add_action( 'after_switch_theme', 'ovents_on_activate' );
 add_action( 'init', 'ovents_maybe_reseed', 20 );
 add_action( 'init', 'ovents_ensure_reading_settings', 5 );
+add_action( 'init', 'ovents_maybe_flush_rewrites', 999 );
+
+/**
+ * Flush permalinks when theme version changes (deploys register CPT /portfolio/ without manual save).
+ */
+function ovents_maybe_flush_rewrites() {
+	if ( ! defined( 'OVENTS_VERSION' ) ) {
+		return;
+	}
+	if ( get_option( 'ovents_rewrite_version', '' ) === OVENTS_VERSION ) {
+		return;
+	}
+	if ( function_exists( 'ovents_portfolio_remove_conflicting_page' ) ) {
+		ovents_portfolio_remove_conflicting_page();
+	}
+	flush_rewrite_rules( false );
+	update_option( 'ovents_rewrite_version', OVENTS_VERSION );
+}
 
 function ovents_on_activate() {
 	ovents_seed_pages();
