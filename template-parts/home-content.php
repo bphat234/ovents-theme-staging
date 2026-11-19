@@ -30,7 +30,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	</div>
 </section>
 
-<section class="section section--intro" id="intro" aria-labelledby="intro-heading">
+<section class="section section--intro home-band home-band--light" id="intro" aria-labelledby="intro-heading">
 	<div class="wrap intro-copy">
 		<h2 id="intro-heading">
 			<span class="intro-heading__line">Every event starts</span>
@@ -44,7 +44,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 
 <?php get_template_part( 'template-parts/portfolio/home', 'section' ); ?>
 
-<section class="services-grid" id="services" aria-label="Our services">
+<section class="services-grid home-band home-band--light" id="services" aria-label="Our services">
 	<article class="service-strip" aria-labelledby="weddings-heading">
 		<?php ovents_render_manifest_image( $service_img['weddings'], array( 'img_class' => 'service-strip__media' ) ); ?>
 		<div class="service-strip__scrim" aria-hidden="true"></div>
@@ -88,7 +88,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	</article>
 </section>
 
-<section class="section section--ovents-way" aria-labelledby="ovents-way-heading">
+<section class="section section--ovents-way home-band home-band--dark" aria-labelledby="ovents-way-heading">
 	<div class="wrap ovents-way-split">
 		<figure class="ovents-way__media">
 			<?php ovents_render_manifest_image( 'content-tablescape-herbs' ); ?>
@@ -120,7 +120,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	</div>
 </section>
 
-<section class="section section--testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+<section class="section section--testimonials home-band home-band--light" id="testimonials" aria-labelledby="testimonials-heading">
 	<div class="wrap testimonial-section">
 		<h2 id="testimonials-heading">In their words</h2>
 		<p class="sub">A few words from people we have planned with.</p>
@@ -143,7 +143,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	</div>
 </section>
 
-<section class="territory-panel territory-panel--split" aria-labelledby="territory-heading">
+<section class="territory-panel territory-panel--split home-band home-band--dark" aria-labelledby="territory-heading">
 	<div class="wrap territory-split">
 		<div class="territory-split__copy">
 			<h2 id="territory-heading">An event planner in London, working across the UK</h2>
@@ -156,7 +156,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	</div>
 </section>
 
-<section class="section section--narrow section--faq-home" aria-labelledby="home-faq-heading">
+<section class="section section--narrow section--faq-home home-band home-band--light" aria-labelledby="home-faq-heading">
 	<div class="wrap faq-home-layout">
 		<div class="faq-home-intro">
 			<h2 id="home-faq-heading">A few questions, answered</h2>

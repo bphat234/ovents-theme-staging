@@ -11,7 +11,7 @@ if ( count( $posts ) < 1 ) {
 }
 $insta = ovents_instagram_profile_url();
 ?>
-<section class="section section--portfolio-home" id="portfolio" aria-labelledby="portfolio-home-heading">
+<section class="section section--portfolio-home home-band home-band--dark" id="portfolio" aria-labelledby="portfolio-home-heading">
 	<div class="portfolio-home portfolio-home--align-services">
 		<h2 id="portfolio-home-heading" class="portfolio-home__heading">Selected celebrations</h2>
 		<div class="portfolio-home__grid">
