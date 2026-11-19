@@ -8,7 +8,6 @@ $home = untrailingslashit( home_url() );
 $img  = static function ( $file ) {
 	return esc_url( get_theme_file_uri( 'assets/img/' . ltrim( $file, '/' ) ) );
 };
-$insta_url   = ovents_instagram_profile_url();
 $service_img = ovents_home_service_images();
 $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding & Event Planning in London and Across the UK';
 ?>
@@ -141,14 +140,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	</div>
 </section>
 
-<section class="section section--portfolio-insta section--studio" id="studio" aria-labelledby="studio-heading">
-	<div class="wrap">
-		<h2 id="studio-heading" class="centered">Moments from our studio</h2>
-		<p class="sub centered">Follow our latest weddings, parties and corporate productions on Instagram.</p>
-		<p class="insta-handle centered"><a href="<?php echo esc_url( $insta_url ); ?>" rel="noopener noreferrer" target="_blank"><?php echo esc_html( ovents_instagram_handle() ); ?></a></p>
-		<?php ovents_render_instagram_grid( array( 'visible' => 6, 'show_actions' => true ) ); ?>
-	</div>
-</section>
+<?php get_template_part( 'template-parts/portfolio/home', 'section' ); ?>
 
 <section class="territory-panel territory-panel--split" aria-labelledby="territory-heading">
 	<div class="wrap territory-split">

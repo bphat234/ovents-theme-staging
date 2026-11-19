@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_CONTENT_VERSION', '1.8.0' );
+define( 'OVENTS_CONTENT_VERSION', '1.9.0' );
 
 add_action( 'after_switch_theme', 'ovents_on_activate' );
 add_action( 'init', 'ovents_maybe_reseed', 20 );
@@ -31,6 +31,10 @@ function ovents_maybe_reseed() {
 	ovents_seed_pages();
 	ovents_seed_posts();
 	ovents_seed_menu();
+	delete_option( 'ovents_portfolio_seeded_v2' );
+	if ( function_exists( 'ovents_seed_portfolio_events' ) ) {
+		ovents_seed_portfolio_events();
+	}
 	update_option( 'ovents_content_version', OVENTS_CONTENT_VERSION );
 	flush_rewrite_rules();
 }
@@ -86,29 +90,12 @@ function ovents_migrate_legacy_slugs() {
 }
 
 /**
- * Ensure a published portfolio page uses the portfolio template.
+ * CPT archive owns /portfolio/ — remove conflicting page if present.
  */
 function ovents_ensure_portfolio_page() {
-	$page = get_page_by_path( 'portfolio' );
-	if ( $page && 'trash' === $page->post_status ) {
-		wp_untrash_post( (int) $page->ID );
-		$page = get_post( (int) $page->ID );
+	if ( function_exists( 'ovents_portfolio_remove_conflicting_page' ) ) {
+		ovents_portfolio_remove_conflicting_page();
 	}
-	if ( ! $page ) {
-		$id = wp_insert_post(
-			array(
-				'post_title'  => 'Portfolio',
-				'post_name'   => 'portfolio',
-				'post_status' => 'publish',
-				'post_type'   => 'page',
-			)
-		);
-		if ( $id && ! is_wp_error( $id ) ) {
-			update_post_meta( (int) $id, '_wp_page_template', 'page-portfolio.php' );
-		}
-		return;
-	}
-	update_post_meta( (int) $page->ID, '_wp_page_template', 'page-portfolio.php' );
 }
 
 function ovents_seed_pages() {

@@ -45,23 +45,6 @@ function ovents_case_study_published_count() {
 	return (int) $q->found_posts;
 }
 
-/**
- * Noindex portfolio page until at least two real case studies exist.
- */
-add_action(
-	'wp_head',
-	function () {
-		if ( ! is_page( 'portfolio' ) ) {
-			return;
-		}
-		if ( ovents_case_study_published_count() >= 2 ) {
-			return;
-		}
-		echo '<meta name="robots" content="noindex, nofollow">' . "\n";
-	},
-	0
-);
-
 add_action(
 	'after_switch_theme',
 	'ovents_seed_case_study_placeholders'

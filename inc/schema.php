@@ -141,3 +141,66 @@ function ovents_echo_about_founder_schema() {
 }
 
 add_action( 'wp_head', 'ovents_echo_about_founder_schema', 21 );
+
+/**
+ * JSON-LD for a single portfolio event (CreativeWork + ImageGallery).
+ */
+function ovents_echo_portfolio_event_schema() {
+	if ( ! is_singular( OVENTS_PORTFOLIO_CPT ) ) {
+		return;
+	}
+	$post = get_queried_object();
+	if ( ! $post instanceof WP_Post || ! function_exists( 'ovents_portfolio_get_meta' ) ) {
+		return;
+	}
+	$meta  = ovents_portfolio_get_meta( $post );
+	$slug  = $meta['event_slug'] ?: $post->post_name;
+	$intro = ovents_portfolio_visible_intro( $meta );
+	$url   = get_permalink( $post );
+	$cover = get_theme_file_uri( 'assets/img/portfolio/' . $slug . '/' . $meta['cover_stem'] . '-1200.jpg' );
+
+	$images = array( $cover );
+	if ( ! empty( $meta['gallery'] ) && is_array( $meta['gallery'] ) ) {
+		foreach ( $meta['gallery'] as $item ) {
+			if ( empty( $item['stem'] ) ) {
+				continue;
+			}
+			$images[] = get_theme_file_uri( 'assets/img/portfolio/' . $slug . '/' . $item['stem'] . '-1600.jpg' );
+		}
+	}
+
+	$node = array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'CreativeWork',
+		'name'        => get_the_title( $post ),
+		'url'         => $url,
+		'image'       => $cover,
+		'description' => $intro,
+		'associatedMedia' => array(
+			'@type'      => 'ImageGallery',
+			'name'       => get_the_title( $post ),
+			'image'      => $images,
+		),
+		'isPartOf'    => array(
+			'@id' => untrailingslashit( home_url() ) . '/#organization',
+		),
+	);
+
+	if ( trim( $meta['photographer'] ) ) {
+		$node['creator'] = array(
+			'@type' => 'Organization',
+			'name'  => $meta['photographer'],
+		);
+	}
+
+	if ( 'the-planners-table' === $post->post_name && ! empty( $meta['schema_date'] ) ) {
+		$node['startDate'] = $meta['schema_date'];
+		$node['organizer'] = array(
+			'@id' => untrailingslashit( home_url() ) . '/#organization',
+		);
+	}
+
+	echo '<script type="application/ld+json">' . wp_json_encode( $node, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+}
+
+add_action( 'wp_head', 'ovents_echo_portfolio_event_schema', 22 );

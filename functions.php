@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.13' );
+define( 'OVENTS_VERSION', '2.9.14' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -24,6 +24,7 @@ require_once get_template_directory() . '/inc/inner-layout.php';
 require_once get_template_directory() . '/inc/setup.php';
 require_once get_template_directory() . '/inc/nav.php';
 require_once get_template_directory() . '/inc/contact-form.php';
+require_once get_template_directory() . '/inc/portfolio.php';
 require_once get_template_directory() . '/inc/schema.php';
 require_once get_template_directory() . '/inc/seo.php';
 require_once get_template_directory() . '/inc/breadcrumbs.php';
@@ -85,6 +86,18 @@ add_action(
 				'strategy'  => 'defer',
 			)
 		);
+		if ( is_singular( OVENTS_PORTFOLIO_CPT ) ) {
+			wp_enqueue_script(
+				'ovents-portfolio',
+				get_theme_file_uri( 'assets/js/portfolio.js' ),
+				array(),
+				OVENTS_VERSION,
+				array(
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				)
+			);
+		}
 	}
 );
 

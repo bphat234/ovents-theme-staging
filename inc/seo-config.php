@@ -52,9 +52,9 @@ function ovents_seo_config() {
 			'h1'          => 'Frequently Asked Questions',
 		),
 		'portfolio'        => array(
-			'title'       => 'Our Weddings & Events Portfolio | Ovents',
-			'description' => 'Explore weddings, celebrations and industry events from Ovents across London and the UK.',
-			'h1'          => 'Our portfolio',
+			'title'       => 'Portfolio | Luxury Weddings, Parties and Events | Ovents',
+			'description' => 'Selected weddings, private celebrations and events planned by Ovents, the London luxury event planner working across the UK.',
+			'h1'          => 'Selected celebrations',
 		),
 		'blog'             => array(
 			'title'       => 'The Ovents Journal | Ovents',
@@ -99,6 +99,25 @@ function ovents_seo_slug() {
  * @return array{title: string, description: string, h1?: string}|null
  */
 function ovents_seo_for_request() {
+	if ( function_exists( 'ovents_portfolio_get_meta' ) && is_post_type_archive( OVENTS_PORTFOLIO_CPT ) ) {
+		$row = ovents_seo_config()['portfolio'] ?? null;
+		return $row ? array(
+			'title'       => $row['title'],
+			'description' => $row['description'],
+		) : null;
+	}
+	if ( function_exists( 'ovents_portfolio_get_meta' ) && is_singular( OVENTS_PORTFOLIO_CPT ) ) {
+		$post = get_queried_object();
+		if ( $post instanceof WP_Post ) {
+			$meta = ovents_portfolio_get_meta( $post );
+			$type = $meta['type_label'] ?: __( 'Event', 'ovents' );
+			$desc = $meta['meta_desc'] ?: wp_strip_all_tags( ovents_portfolio_visible_intro( $meta ) );
+			return array(
+				'title'       => get_the_title( $post ) . ' | ' . $type . ' | Ovents',
+				'description' => $desc,
+			);
+		}
+	}
 	$slug = ovents_seo_slug();
 	if ( '' === $slug ) {
 		return null;
