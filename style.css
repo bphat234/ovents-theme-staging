@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning — weddings, corporate and private celebrations.
-Version: 2.9.18
+Version: 2.9.19
 Text Domain: ovents
 */
 
@@ -3775,6 +3775,12 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .section--portfolio-home {
 	padding-block: clamp(3.5rem, 8vw, 5.5rem);
 }
+.portfolio-home--align-services {
+	width: min(1720px, 96vw);
+	max-width: 100%;
+	margin-inline: auto;
+	box-sizing: border-box;
+}
 .portfolio-home__heading {
 	margin: 0 0 clamp(2rem, 4vw, 2.75rem);
 	text-align: center;
@@ -3785,8 +3791,8 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 .portfolio-home__grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: clamp(1rem, 2.5vw, 1.75rem);
-	max-width: min(880px, 100%);
+	gap: clamp(0.75rem, 1.75vw, 1.25rem);
+	width: 100%;
 	margin-inline: auto;
 }
 .portfolio-home__cta,
@@ -3877,7 +3883,10 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	}
 }
 @media (max-width: 900px) {
-	.portfolio-home__grid,
+	.portfolio-home__grid {
+		grid-template-columns: 1fr;
+		max-width: none;
+	}
 	.portfolio-archive__grid {
 		grid-template-columns: 1fr;
 		max-width: min(22rem, 92vw);
