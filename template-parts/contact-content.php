@@ -13,7 +13,6 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section id="page-content" class="section section--inner section--contact" aria-labelledby="contact-intro-heading">
 	<div class="wrap inner-split inner-split--contact">
 		<aside class="inner-split__copy content-prose contact-sidebar" aria-label="<?php esc_attr_e( 'Contact options and process', 'ovents' ); ?>">
-			<p class="label-gold"><?php esc_html_e( 'Start a conversation', 'ovents' ); ?></p>
 			<h2 id="contact-intro-heading"><?php esc_html_e( 'Your plans, our attention', 'ovents' ); ?></h2>
 			<p class="contact-response-note"><?php esc_html_e( 'We reply within one to two business days.', 'ovents' ); ?></p>
 

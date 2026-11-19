@@ -289,7 +289,6 @@ function ovents_render_testimonial_proof_section( $tag, $extra_html = '' ) {
 		<section class="section section--inner section--proof section--service-reviews" aria-label="<?php esc_attr_e( 'Client proof', 'ovents' ); ?>">
 			<div class="wrap service-reviews-wrap">
 				<header class="service-reviews__header">
-					<p class="label-gold"><?php esc_html_e( 'Kind words', 'ovents' ); ?></p>
 					<h2 class="inner-section-title"><?php esc_html_e( 'Client feedback', 'ovents' ); ?></h2>
 				</header>
 				<div class="content-prose content-prose--center">
@@ -326,7 +325,6 @@ function ovents_render_testimonial_proof_section( $tag, $extra_html = '' ) {
 	<section class="section section--inner section--proof section--service-reviews" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
 		<div class="wrap service-reviews-wrap">
 			<header class="service-reviews__header">
-				<p class="label-gold"><?php esc_html_e( 'Kind words', 'ovents' ); ?></p>
 				<h2 id="<?php echo esc_attr( $heading_id ); ?>" class="inner-section-title"><?php echo esc_html( $header['title'] ); ?></h2>
 				<?php if ( ! empty( $header['lead'] ) ) : ?>
 					<p class="service-reviews__lead"><?php echo esc_html( $header['lead'] ); ?></p>

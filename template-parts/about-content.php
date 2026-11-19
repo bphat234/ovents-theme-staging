@@ -55,7 +55,6 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section class="section section--inner section--values" aria-labelledby="about-values-heading">
 	<div class="wrap values-wrap">
 		<header class="values-header">
-			<p class="label-gold">What guides us</p>
 			<h2 id="about-values-heading" class="inner-section-title">Our values</h2>
 		</header>
 		<div class="value-grid">
@@ -74,7 +73,6 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</div>
 		<?php if ( function_exists( 'ovents_google_testimonials_for_about_page' ) ) : ?>
 		<div class="about-reviews-block">
-			<p class="label-gold"><?php esc_html_e( 'Kind words', 'ovents' ); ?></p>
 			<?php
 			ovents_render_testimonial_bare_carousel( ovents_google_testimonials_for_about_page() );
 			?>
@@ -92,7 +90,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 			<?php ovents_render_manifest_image( 'content-blossom-backdrop' ); ?>
 		</figure>
 		<div class="promise-split__copy">
-			<h2 id="promise-heading" class="label-gold promise-heading">Our promise</h2>
+			<h2 id="promise-heading" class="promise-heading">Our promise</h2>
 			<p>At Ovents, we aim to provide a professional, quality service that surpasses your expectations.</p>
 			<p>We use your feedback to improve our service and explain the scope of our support clearly at every stage.</p>
 			<p class="promise-split__cta">

@@ -17,11 +17,8 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		<?php ovents_render_home_hero_picture(); ?>
 	</div>
 	<div class="hero-overlay" aria-hidden="true"></div>
-	<p class="hero-rail hero-rail--left" aria-hidden="true">London HQ &middot; UK-wide</p>
-	<p class="hero-rail hero-rail--right" aria-hidden="true">Weddings &middot; Parties &middot; Corporate</p>
 	<div class="hero-inner">
 		<div class="hero-inner__head">
-			<p class="hero-eyebrow">Bespoke event excellence</p>
 			<h1 class="hero-title hero-title--primary"><?php echo esc_html( $home_h1 ); ?></h1>
 		</div>
 		<div class="hero-inner__foot">
@@ -36,7 +33,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 
 <section class="section section--intro" id="intro" aria-labelledby="intro-heading">
 	<div class="wrap intro-copy">
-		<p class="label-gold">Event planning &amp; coordination</p>
 		<h2 id="intro-heading">
 			<span class="intro-heading__line">Your vision,</span>
 			<span class="intro-heading__line">orchestrated with care</span>
@@ -97,7 +93,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<?php ovents_render_manifest_image( 'content-tablescape-herbs' ); ?>
 		</figure>
 		<div class="ovents-way__copy">
-			<p class="label-gold">The Ovents way</p>
 			<h2 id="ovents-way-heading">
 				<span class="ovents-way__title-line">Bespoke excellence in</span>
 				<span class="ovents-way__title-line">every detail</span>
@@ -119,7 +114,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 
 <section class="section section--testimonials" id="testimonials" aria-labelledby="testimonials-heading">
 	<div class="wrap testimonial-section">
-		<p class="label-gold">Kind words</p>
 		<h2 id="testimonials-heading">Trusted by couples, families and brands</h2>
 		<p class="sub">A selection of reflections from weddings, celebrations and corporate events we have had the honour to deliver.</p>
 		<div class="testimonial-carousel" data-testimonial-carousel>
@@ -149,7 +143,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 
 <section class="section section--portfolio-insta section--studio" id="studio" aria-labelledby="studio-heading">
 	<div class="wrap">
-		<p class="label-gold centered">Behind the scenes</p>
 		<h2 id="studio-heading" class="centered">Moments from our studio</h2>
 		<p class="sub centered">Follow our latest weddings, parties and corporate productions on Instagram.</p>
 		<p class="insta-handle centered"><a href="<?php echo esc_url( $insta_url ); ?>" rel="noopener noreferrer" target="_blank"><?php echo esc_html( ovents_instagram_handle() ); ?></a></p>
@@ -160,7 +153,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 <section class="territory-panel territory-panel--split" aria-labelledby="territory-heading">
 	<div class="wrap territory-split">
 		<div class="territory-split__copy">
-			<p class="label-gold">Our territory</p>
 			<h2 id="territory-heading">Event planner based in London, serving the UK</h2>
 			<p>Rooted in London, we plan and coordinate weddings, private parties and corporate events across the UK with one consistent standard of poise and precision.</p>
 			<p class="territory-tag">Based in London &middot; UK-wide</p>
@@ -174,7 +166,6 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 <section class="section section--narrow section--faq-home" aria-labelledby="home-faq-heading">
 	<div class="wrap faq-home-layout">
 		<div class="faq-home-intro">
-			<p class="label-gold">A little clarity</p>
 			<h2 id="home-faq-heading">Common questions</h2>
 			<p class="faq-home-description">From where we work to how we begin, a few helpful details for planning your event.</p>
 			<a class="faq-home-link" href="<?php echo esc_url( $home . '/faq/' ); ?>">Explore all FAQs <span aria-hidden="true">&rarr;</span></a>

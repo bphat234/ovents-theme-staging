@@ -248,7 +248,6 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section class="section section--inner section--inner-alt section--corporate-coverage" aria-labelledby="corp-coverage-heading">
 	<div class="wrap territory-split corporate-coverage-split">
 		<div class="territory-split__copy corporate-coverage__copy">
-			<p class="label-gold"><?php esc_html_e( 'Where we work', 'ovents' ); ?></p>
 			<h2 id="corp-coverage-heading">Based in London, planning across the UK</h2>
 			<p>We're based in London and plan events across the UK, including Essex, Surrey, Hertfordshire, Kent and Sussex. From city venues to countryside estates, we'll coordinate suppliers, travel and timings wherever your event is held.</p>
 			<p>If you're looking for an event management company in London that can also travel with you, let's talk.</p>

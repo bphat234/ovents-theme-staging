@@ -37,7 +37,7 @@ function ovents_use_hero_chrome() {
 function ovents_get_inner_hero_args( $args = array() ) {
 	$home = untrailingslashit( home_url() );
 	$defaults = array(
-		'eyebrow'    => 'London-based · UK-wide',
+		'eyebrow'    => '',
 		'title'      => ovents_page_h1(),
 		'lead'       => '',
 		'image'      => 'intro.jpg',
@@ -54,7 +54,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		$defaults = array_merge(
 			$defaults,
 			array(
-				'eyebrow'   => 'Insights & inspiration',
+				'eyebrow'   => '',
 				'title'     => 'The Ovents Journal',
 				'image'     => 'intro.jpg',
 				'lead'      => 'Practical guidance from our planners on weddings, parties, corporate occasions and the details that make celebrations feel effortless.',
@@ -65,15 +65,11 @@ function ovents_get_inner_hero_args( $args = array() ) {
 
 	if ( is_singular( 'post' ) ) {
 		$cats    = get_the_category();
-		$eyebrow = 'The Ovents Journal';
-		if ( ! empty( $cats ) && 'uncategorized' !== $cats[0]->slug ) {
-			$eyebrow = $cats[0]->name;
-		}
 		$thumb    = get_the_post_thumbnail_url( get_queried_object_id(), 'full' );
 		$defaults = array_merge(
 			$defaults,
 			array(
-				'eyebrow'   => $eyebrow,
+				'eyebrow'   => '',
 				'title'     => get_the_title(),
 				'lead'      => wp_trim_words( get_the_excerpt(), 24 ),
 				'image'     => 'intro.jpg',
@@ -88,7 +84,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		$defaults = array_merge(
 			$defaults,
 			array(
-				'eyebrow'   => 'The Ovents Journal',
+				'eyebrow'   => '',
 				'title'     => $term instanceof WP_Term ? $term->name : 'Journal',
 				'image'     => 'intro.jpg',
 				'lead'      => 'Articles in this category.',
@@ -101,7 +97,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		$slug = get_post_field( 'post_name', get_queried_object_id() );
 		$map  = array(
 			'about'     => array(
-				'eyebrow'         => 'About Ovents',
+				'eyebrow'         => '',
 				'image'           => 'about-hero.jpg',
 				'lead'            => 'A London-based team providing wedding and event planning across the UK.',
 				'show_secondary'  => true,
@@ -109,7 +105,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'secondary_url'   => $home . '/portfolio/',
 			),
 			'weddings'  => array(
-				'eyebrow'         => 'Weddings',
+				'eyebrow'         => '',
 				'image'           => 'weddings-hero.jpg',
 				'lead'            => 'Bespoke wedding planning and coordination across the UK.',
 				'show_secondary'  => true,
@@ -117,7 +113,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'secondary_url'   => $home . '/faq/#faq-weddings',
 			),
 			'corporate-events' => array(
-				'eyebrow'         => 'Corporate',
+				'eyebrow'         => '',
 				'image'           => 'corporate-hero.jpg',
 				'lead'            => 'Calm, precise planning for conferences, launches, gala dinners and Christmas parties.',
 				'contact'         => $home . '/contact/?type=corporate',
@@ -128,7 +124,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'cta_note'        => "We'll reply within one to two business days.",
 			),
 			'parties'   => array(
-				'eyebrow'         => 'Private parties',
+				'eyebrow'         => '',
 				'image'           => 'parties-hero.jpg',
 				'lead'            => 'Stylish private celebrations curated with seamless planning.',
 				'show_secondary'  => true,
@@ -136,19 +132,19 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'secondary_url'   => $home . '/faq/#faq-parties',
 			),
 			'contact'   => array(
-				'eyebrow'     => 'Get in touch',
+				'eyebrow'     => '',
 				'show_ctas'   => false,
 				'image'       => 'contact-hero.jpg',
 				'lead'        => 'Tell us about your event and we will be in touch.',
 			),
 			'blog'      => array(
-				'eyebrow'   => 'Insights & inspiration',
+				'eyebrow'   => '',
 				'image'     => 'intro.jpg',
 				'lead'      => 'Practical guidance from our planners on weddings, parties, corporate occasions and the details that make celebrations feel effortless.',
 				'show_ctas' => false,
 			),
 			'faq'       => array(
-				'eyebrow'   => 'Planning with Ovents',
+				'eyebrow'   => '',
 				'show_ctas' => false,
 				'image'     => 'faq-hero.jpg',
 				'lead'      => 'Answers to common questions about planning with Ovents.',
@@ -160,13 +156,13 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'show_ctas' => false,
 			),
 			'privacy-policy' => array(
-				'eyebrow'   => 'Your data',
+				'eyebrow'   => '',
 				'image'     => 'faq-hero.jpg',
 				'lead'      => 'How we collect, use and protect your personal information when you enquire or book with us.',
 				'show_ctas' => false,
 			),
 			'terms-of-use' => array(
-				'eyebrow'   => 'Website use',
+				'eyebrow'   => '',
 				'image'     => 'faq-hero.jpg',
 				'lead'      => 'Terms for using this site and submitting event planning enquiries.',
 				'show_ctas' => false,

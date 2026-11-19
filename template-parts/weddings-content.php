@@ -56,7 +56,6 @@ ovents_render_testimonial_proof_section( 'weddings' );
 <section class="section section--inner section--inner-alt section--parties-details section--weddings-details" aria-labelledby="weddings-includes-heading">
 	<div class="wrap">
 		<header class="weddings-details__header">
-			<p class="label-gold">What we look after</p>
 			<h2 id="weddings-includes-heading">What our wedding services include</h2>
 		</header>
 		<div class="inner-split weddings-details-split inner-split--media-end">

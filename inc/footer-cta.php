@@ -32,7 +32,7 @@ function ovents_show_footer_cta() {
  */
 function ovents_footer_cta_config() {
 	$config = array(
-		'eyebrow'        => 'Based in London · UK-wide',
+		'eyebrow'        => '',
 		'title'          => __( 'Let’s plan something exceptional', 'ovents' ),
 		'text'           => __( 'Tell us about your event, your ideas and what matters most.', 'ovents' ),
 		'primary_url'    => home_url( '/contact/' ),

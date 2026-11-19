@@ -13,7 +13,6 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section id="page-content" class="section section--inner section--inner-alt section--faq-page" aria-labelledby="faq-page-heading">
 	<div class="wrap faq-page-layout">
 		<aside class="faq-page-intro">
-			<p class="label-gold">Before we begin</p>
 			<h2 id="faq-page-heading">Planning with confidence</h2>
 			<p class="faq-page-description">Find the essentials about our services, the support we offer and how to get started.</p>
 			<nav class="faq-page-nav" aria-label="<?php esc_attr_e( 'FAQ categories', 'ovents' ); ?>">

@@ -14,7 +14,9 @@ $is_corporate = ! empty( $cta['show_corporate'] );
 ?>
 <section class="cta-band site-footer__cta<?php echo $is_corporate ? ' cta-band--corporate' : ''; ?>" aria-labelledby="<?php echo esc_attr( (string) $cta['heading_id'] ); ?>">
 	<div class="wrap cta-band__inner">
-		<p class="label-gold cta-band__eyebrow"><?php echo esc_html( $cta['eyebrow'] ); ?></p>
+		<?php if ( ! empty( $cta['eyebrow'] ) ) : ?>
+			<p class="label-gold cta-band__eyebrow"><?php echo esc_html( $cta['eyebrow'] ); ?></p>
+		<?php endif; ?>
 		<h2 id="<?php echo esc_attr( (string) $cta['heading_id'] ); ?>"><?php echo esc_html( $cta['title'] ); ?></h2>
 		<p><?php echo esc_html( $cta['text'] ); ?></p>
 		<div class="cta-band__actions">

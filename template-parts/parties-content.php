@@ -91,7 +91,6 @@ ovents_render_testimonial_proof_section( 'parties' );
 <section class="section section--inner section--inner-alt section--parties-details section--service-details" aria-labelledby="parties-venue-heading">
 	<div class="wrap">
 		<header class="service-details__header">
-			<p class="label-gold">What we look after</p>
 			<h2 id="parties-venue-heading">A celebration that feels like you</h2>
 		</header>
 		<div class="inner-feature-grid">

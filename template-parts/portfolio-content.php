@@ -43,7 +43,6 @@ $selected = array(
 ?>
 <section id="page-content" class="section section--inner section--portfolio-intro">
 	<div class="wrap content-prose content-prose--center">
-		<p class="label-gold">Selected celebrations</p>
 		<p>Real weddings, parties and an Ovents-organised industry lunch and learn. More case studies will appear here as they are approved for publication.</p>
 	</div>
 </section>
