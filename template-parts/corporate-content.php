@@ -29,8 +29,8 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</figure>
 		<div class="inner-split__copy content-prose">
 			<h2 id="corp-planning-heading">Planned with care, and with discretion.</h2>
-			<p>We are a London-based planning team. The same care we bring to a wedding or a private celebration — timings, suppliers, the feel of the room — is the care we bring to your company event.</p>
-			<p>A company event still needs a clear plan, a realistic budget, reliable suppliers and someone calm in charge on the day. We take on the organising — timelines, venues, suppliers, guest flow and run sheets — so your team can look after your guests, your message and your business.</p>
+			<p>We are a London-based planning team. The same care we bring to a wedding or a private celebration, from timings and suppliers to the feel of the room, is the care we bring to your company event.</p>
+			<p>A company event still needs a clear plan, a realistic budget, reliable suppliers and someone calm in charge on the day. We take on the organising: timelines, venues, suppliers, guest flow and run sheets, so your team can look after your guests, your message and your business.</p>
 			<p>Whether you need a planning partner from the first conversation, or a hands-on team for the event itself, we will shape the work around your brief and your budget. Our approach is the same for <a href="<?php echo esc_url( $home . '/weddings/' ); ?>">luxury weddings</a> and <a href="<?php echo esc_url( $home . '/parties/' ); ?>">private parties</a>.</p>
 		</div>
 	</div>
@@ -84,7 +84,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 			</article>
 			<article class="value-card">
 				<h3>Venue and supplier coordination</h3>
-				<p>We find venues and suppliers to suit your brief, or work with the ones you already use. We settle questions before the day, and we work alongside your in-house team, agencies and AV partners — so you have one point of contact.</p>
+				<p>We find venues and suppliers to suit your brief, or work with the ones you already use. We settle questions before the day, and we work alongside your in-house team, agencies and AV partners, so you have one point of contact.</p>
 			</article>
 			<article class="value-card">
 				<h3>Guest experience and on-the-day delivery</h3>
@@ -107,7 +107,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 				<?php if ( '' !== $price_full ) : ?>
 					<p class="value-card__from">From <?php echo esc_html( $price_full ); ?></p>
 				<?php endif; ?>
-				<p>For organisations that want planning from the first conversation. We come in early, find the right options and suppliers, and then look after the timeline, the budget, invitations and RSVPs, the itinerary and seating, supplier liaison and the day itself — with communication by email and phone throughout.</p>
+				<p>For organisations that want planning from the first conversation. We come in early, find the right options and suppliers, and then look after the timeline, the budget, invitations and RSVPs, the itinerary and seating, supplier liaison and the day itself, with communication by email and phone throughout.</p>
 				<a class="link-explore" href="<?php echo esc_url( ovents_corporate_contact_url( 'full' ) ); ?>">Book a discovery call</a>
 			</article>
 			<article class="value-card">
@@ -161,7 +161,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 		<div class="inner-split__copy content-prose">
 			<h2 id="corp-why-heading">Why plan with Ovents</h2>
 			<ul class="corporate-why-list">
-				<li><strong>The same care, in every brief.</strong> We plan weddings, private celebrations and team events, and we bring that same discipline — timings, suppliers, guest care — to your corporate event.</li>
+				<li><strong>The same care, in every brief.</strong> We plan weddings, private celebrations and team events, and we bring that same discipline, from timings and suppliers to guest care, to your corporate event.</li>
 				<li><strong>Where the details matter.</strong> A wedding or a private party leaves no room for a second attempt. That is the standard we bring to your company event.</li>
 				<li><strong>Calm, dependable communication.</strong> You will have clear replies by email, phone or WhatsApp, within one to two business days.</li>
 				<li><strong>A budget you can see.</strong> We help you stay within budget, with a tracker you can follow.</li>
@@ -180,7 +180,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</header>
 		<div class="content-prose corporate-recent-event__copy">
 			<p>In April 2026, Ovents organised The Planner&rsquo;s Table, a lunch and learn for wedding and event suppliers.</p>
-			<p>Guests joined us for a seated lunch, an industry session and time to connect. We planned the timelines, liaised with suppliers on the day and kept the schedule moving — the same organisation we bring to a client celebration.</p>
+			<p>Guests joined us for a seated lunch, an industry session and time to connect. We planned the timelines, liaised with suppliers on the day and kept the schedule moving, with the same organisation we bring to a client celebration.</p>
 		</div>
 		<div class="planners-table-grid" aria-label="<?php esc_attr_e( 'Photographs from The Planner’s Table', 'ovents' ); ?>">
 			<?php

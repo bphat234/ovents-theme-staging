@@ -68,8 +68,8 @@ get_template_part( 'template-parts/inner', 'hero' );
 			</div>
 
 			<div class="contact-meta">
-				<p class="contact-meta__line"><strong><?php esc_html_e( 'Areas we serve', 'ovents' ); ?></strong> — <?php esc_html_e( 'London and UK-wide, including Essex, Hertfordshire, Surrey, Kent and Sussex.', 'ovents' ); ?></p>
-				<p class="contact-meta__line"><strong><?php esc_html_e( 'Office hours', 'ovents' ); ?></strong> — <?php esc_html_e( '9am to 5pm, Monday to Friday', 'ovents' ); ?></p>
+				<p class="contact-meta__line"><strong><?php esc_html_e( 'Areas we serve', 'ovents' ); ?></strong>: <?php esc_html_e( 'London and UK-wide, including Essex, Hertfordshire, Surrey, Kent and Sussex.', 'ovents' ); ?></p>
+				<p class="contact-meta__line"><strong><?php esc_html_e( 'Office hours', 'ovents' ); ?></strong>: <?php esc_html_e( '9am to 5pm, Monday to Friday', 'ovents' ); ?></p>
 			</div>
 		</aside>
 

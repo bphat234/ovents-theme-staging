@@ -29,7 +29,7 @@ $query   = ovents_portfolio_archive_query();
 		)
 	);
 	?>
-	<div class="wrap portfolio-archive__head">
+	<section class="section section--portfolio-home portfolio-archive__body portfolio-home portfolio-home--align-services" aria-label="<?php esc_attr_e( 'Portfolio grid', 'ovents' ); ?>">
 		<nav class="portfolio-archive__filters" aria-label="<?php esc_attr_e( 'Filter portfolio', 'ovents' ); ?>">
 			<?php foreach ( $filters as $key => $label ) : ?>
 				<?php
@@ -39,18 +39,18 @@ $query   = ovents_portfolio_archive_query();
 				<a class="portfolio-archive__filter<?php echo $active ? ' is-active' : ''; ?>" href="<?php echo esc_url( $href ); ?>"><?php echo esc_html( $label ); ?></a>
 			<?php endforeach; ?>
 		</nav>
-	</div>
-	<div class="wrap portfolio-archive__grid">
-		<?php
-		if ( $query->have_posts() ) {
-			while ( $query->have_posts() ) {
-				$query->the_post();
-				get_template_part( 'template-parts/portfolio/card', null, array( 'post' => get_post(), 'compact' => true ) );
+		<div class="portfolio-home__grid portfolio-archive__grid">
+			<?php
+			if ( $query->have_posts() ) {
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					get_template_part( 'template-parts/portfolio/card', null, array( 'post' => get_post() ) );
+				}
+				wp_reset_postdata();
 			}
-			wp_reset_postdata();
-		}
-		?>
-	</div>
+			?>
+		</div>
+	</section>
 </main>
 <?php
 get_footer();

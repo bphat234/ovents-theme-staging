@@ -47,7 +47,7 @@ function ovents_footer_cta_config() {
 			$config,
 			array(
 				'title'          => __( 'Let’s plan something you’ll remember for years.', 'ovents' ),
-				'text'           => __( 'Tell us what you’re planning — the date, the guests, and what a good day looks like. We’ll reply within one to two business days to arrange a free discovery call, then send a tailored proposal and quote, with no obligation.', 'ovents' ),
+				'text'           => __( 'Tell us what you’re planning: the date, the guests, and what a good day looks like. We’ll reply within one to two business days to arrange a free discovery call, then send a tailored proposal and quote, with no obligation.', 'ovents' ),
 				'primary_url'    => ovents_corporate_contact_url(),
 				'primary_label'  => __( 'Book a discovery call', 'ovents' ),
 				'heading_id'     => 'corp-closing-heading',

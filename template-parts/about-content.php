@@ -56,7 +56,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 					<span class="founder-gap"><?php echo esc_html( $founder_gap_2 ); ?></span>
 				<?php endif; ?>
 			</p>
-			<p><?php esc_html_e( 'Beyond client events, Titilope is investing in the wider events community. In April 2026, Ovents organised The Planner’s Table, a lunch and learn for event professionals, wedding planners, coordinators and creatives — honest conversations and practical sessions.', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Beyond client events, Titilope is investing in the wider events community. In April 2026, Ovents organised The Planner’s Table, a lunch and learn for event professionals, wedding planners, coordinators and creatives, for honest conversations and practical sessions.', 'ovents' ); ?></p>
 			<?php
 			$founder_gap_3 = '[Optional quote in her own words.]';
 			if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_3 ) ) :
@@ -103,7 +103,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 		<div class="value-grid">
 			<article class="value-card">
 				<h3>Dependability</h3>
-				<p>Timelines, suppliers and the feel of the room, held with a calm hand — including when the plan has to move.</p>
+				<p>Timelines, suppliers and the feel of the room, held with a calm hand, including when the plan has to move.</p>
 			</article>
 			<article class="value-card">
 				<h3>Customer commitment</h3>
@@ -130,12 +130,28 @@ get_template_part( 'template-parts/inner', 'hero' );
 <section class="section section--promise" aria-labelledby="promise-heading">
 	<div class="wrap promise-split">
 		<figure class="promise-split__media">
-			<?php ovents_render_manifest_image( 'content-blossom-backdrop' ); ?>
+			<?php
+			ob_start();
+			ovents_render_manifest_image( 'content-blossom-backdrop' );
+			$promise_img = trim( (string) ob_get_clean() );
+			if ( '' !== $promise_img ) {
+				echo $promise_img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			} elseif ( function_exists( 'ovents_manifest_image_jpeg_url' ) ) {
+				$promise_src = ovents_manifest_image_jpeg_url( 'content-blossom-backdrop' );
+				if ( $promise_src ) {
+					printf(
+						'<img class="promise-split__img" src="%s" width="800" height="1000" alt="%s" loading="lazy" decoding="async">',
+						esc_url( $promise_src ),
+						esc_attr__( 'Event room lit in purple, with a blossom-covered backdrop and banquet chairs.', 'ovents' )
+					);
+				}
+			}
+			?>
 		</figure>
 		<div class="promise-split__copy">
 			<h2 id="promise-heading" class="promise-heading">Our promise</h2>
 			<p>We aim to give you a calm, considered service, and to be a quiet presence you can trust.</p>
-			<p>We explain clearly, at every stage, what is included — and we listen to your feedback along the way.</p>
+			<p>We explain clearly, at every stage, what is included, and we listen to your feedback along the way.</p>
 			<p class="promise-split__cta">
 				<a class="link-cta" href="<?php echo esc_url( $home . '/contact/' ); ?>">Book a free consultation</a>
 			</p>

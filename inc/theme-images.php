@@ -41,6 +41,19 @@ function ovents_theme_manifest_image( $name ) {
 }
 
 /**
+ * Whether a theme image file exists under assets/img/.
+ *
+ * @param string $relative_path Path relative to assets/img/.
+ */
+function ovents_theme_img_readable( $relative_path ) {
+	$relative_path = ltrim( (string) $relative_path, '/' );
+	if ( '' === $relative_path ) {
+		return false;
+	}
+	return is_readable( get_theme_file_path( 'assets/img/' . $relative_path ) );
+}
+
+/**
  * Output a <picture> for a manifest image.
  *
  * @param string               $name Manifest name.
@@ -75,6 +88,9 @@ function ovents_render_manifest_image( $name, $args = array() ) {
 			continue;
 		}
 		$path   = (string) $out['path'];
+		if ( ! ovents_theme_img_readable( $path ) ) {
+			continue;
+		}
 		$format = isset( $out['format'] ) ? (string) $out['format'] : '';
 		$w      = isset( $out['width'] ) ? (int) $out['width'] : 0;
 
@@ -94,6 +110,10 @@ function ovents_render_manifest_image( $name, $args = array() ) {
 				$webp_800 = $path;
 			}
 		}
+	}
+
+	if ( '' === $jpg_path && '' === $webp_800 && '' === $webp_1200 && '' === $webp_1600 && '' === $webp_2400 ) {
+		return;
 	}
 
 	$base_uri = get_theme_file_uri( 'assets/img/' );
@@ -341,7 +361,7 @@ function ovents_manifest_image_jpeg_url( $name ) {
 		if ( 'mobile' === $role ) {
 			continue;
 		}
-		if ( ( 'jpeg' === $format || 'jpg' === $format ) && ! empty( $out['path'] ) ) {
+		if ( ( 'jpeg' === $format || 'jpg' === $format ) && ! empty( $out['path'] ) && ovents_theme_img_readable( $out['path'] ) ) {
 			return get_theme_file_uri( 'assets/img/' . $out['path'] );
 		}
 	}

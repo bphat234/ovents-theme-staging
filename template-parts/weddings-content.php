@@ -37,7 +37,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 			</article>
 			<article class="service-tier">
 				<h3>Lite planning</h3>
-				<p>Support at the stage you need most — refining a plan you have started, coordinating key suppliers, or joining part-way through.</p>
+				<p>Support at the stage you need most: refining a plan you have started, coordinating key suppliers, or joining part-way through.</p>
 				<a class="link-explore" href="<?php echo esc_url( $home . '/contact/' ); ?>">Enquire about Lite planning</a>
 			</article>
 			<article class="service-tier">

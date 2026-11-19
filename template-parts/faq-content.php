@@ -126,7 +126,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 				</details>
 				<details>
 					<summary>What information should we include in an enquiry?</summary>
-					<p>Your event type, preferred date, location, approximate guest numbers, and the level of support you need — full planning, Lite planning, or on-the-day coordination.</p>
+					<p>Your event type, preferred date, location, approximate guest numbers, and the level of support you need: full planning, Lite planning, or on-the-day coordination.</p>
 				</details>
 				<details>
 					<summary>How quickly will you respond?</summary>

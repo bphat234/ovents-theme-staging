@@ -36,9 +36,9 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<span class="intro-heading__line">Every event starts</span>
 			<span class="intro-heading__line">differently.</span>
 		</h2>
-		<p>Some begin with a date, some with a venue, some with just an idea.</p>
+		<p>Some of you come with a date, some with a venue, some with only an idea.</p>
 		<p>Wherever you’re starting from, we’ll take it from there.</p>
-		<p class="intro-process">We plan luxury weddings, corporate events and private parties from London, across the UK.</p>
+		<p class="intro-process">We offer luxury event planning and coordination for weddings, private parties and corporate occasions, so you can be present for the moments that matter.</p>
 	</div>
 </section>
 
@@ -92,21 +92,18 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 			<?php ovents_render_manifest_image( 'content-tablescape-herbs' ); ?>
 		</figure>
 		<div class="ovents-way__copy">
-			<h2 id="ovents-way-heading">
-				<span class="ovents-way__title-line">Behind a</span>
-				<span class="ovents-way__title-line">seamless day.</span>
-			</h2>
+			<h2 id="ovents-way-heading">Behind a seamless day.</h2>
 			<p>Behind every calm, beautiful day is careful planning you never have to see.</p>
 			<ul class="ovents-way-pillars" id="why-heading" aria-label="<?php esc_attr_e( 'How we plan', 'ovents' ); ?>">
 				<li class="ovents-way-pillars__item">
-					<h3 class="ovents-way-pillars__name">Planning</h3>
-					<p class="ovents-way-pillars__promise">The groundwork behind a seamless day.</p>
-					<p class="ovents-way-pillars__tags">Suppliers · Budgets · Timelines</p>
+					<h3 class="ovents-way-pillars__name">Full planning</h3>
+					<p class="ovents-way-pillars__promise">From the first idea to the final run sheet.</p>
+					<p class="ovents-way-pillars__tags">Budgets · Supplier sourcing · Timelines</p>
 				</li>
 				<li class="ovents-way-pillars__item">
-					<h3 class="ovents-way-pillars__name">Design &amp; styling</h3>
-					<p class="ovents-way-pillars__promise">Your vision, brought to life.</p>
-					<p class="ovents-way-pillars__tags">Florals · Tablescapes · Décor</p>
+					<h3 class="ovents-way-pillars__name">Partial planning</h3>
+					<p class="ovents-way-pillars__promise">Expert support where you need it.</p>
+					<p class="ovents-way-pillars__tags">Supplier shortlists · Planning check-ins · Logistics</p>
 				</li>
 				<li class="ovents-way-pillars__item">
 					<h3 class="ovents-way-pillars__name">On-the-day coordination</h3>
@@ -156,7 +153,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 	<div class="wrap territory-split">
 		<div class="territory-split__copy">
 			<h2 id="territory-heading">An event planner in London, working across the UK</h2>
-			<p>From London, we plan weddings, corporate events and private parties across the UK — the same calm standard, wherever the day is held.</p>
+			<p>From London, we plan and coordinate weddings, corporate events and private parties across the UK, with the same calm standard, wherever the day is held.</p>
 			<p class="territory-tag">Based in London &middot; UK-wide</p>
 		</div>
 		<div class="territory-split__map">
@@ -183,7 +180,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		</details>
 		<details>
 			<summary>Do you plan weddings and corporate events?</summary>
-			<p>Yes. We plan weddings, corporate events and private parties. Look at our <a href="#services">services</a>, or get in touch and tell us about your day.</p>
+			<p>Yes. We offer event planning and coordination for weddings, corporate events and private parties. Look at our <a href="#services">services</a>, or get in touch and tell us about your day.</p>
 		</details>
 		</div>
 	</div>

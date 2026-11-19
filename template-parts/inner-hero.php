@@ -15,22 +15,50 @@ $image     = (string) $config['image'];
 $image_url = (string) $config['image_url'];
 $show_ctas = ! empty( $config['show_ctas'] );
 $contact   = (string) $config['contact'];
+
+$hero_bg_markup   = '';
+$hero_bg_rendered = false;
+if ( ! empty( $config['image_name'] ) && function_exists( 'ovents_render_manifest_image' ) ) {
+	ob_start();
+	ovents_render_manifest_image(
+		(string) $config['image_name'],
+		array(
+			'img_class'     => 'inner-hero__bg',
+			'loading'       => 'eager',
+			'fetchpriority' => 'high',
+			'sizes'         => '100vw',
+		)
+	);
+	$hero_bg_markup = trim( (string) ob_get_clean() );
+	if ( '' !== $hero_bg_markup ) {
+		$hero_bg_rendered = true;
+	}
+}
 ?>
 <section class="inner-hero" aria-labelledby="inner-hero-heading">
-	<?php if ( ! empty( $config['image_name'] ) && function_exists( 'ovents_render_manifest_image' ) ) : ?>
-		<?php
-		ovents_render_manifest_image(
-			(string) $config['image_name'],
-			array(
-				'img_class'     => 'inner-hero__bg',
-				'loading'       => 'eager',
-				'fetchpriority' => 'high',
-				'sizes'         => '100vw',
-			)
-		);
-		?>
+	<?php if ( $hero_bg_rendered ) : ?>
+		<?php echo $hero_bg_markup; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- picture markup from theme. ?>
 	<?php else : ?>
-	<img class="inner-hero__bg" src="<?php echo $image_url !== '' ? esc_url( $image_url ) : $img( $image ); ?>" width="1920" height="900" loading="eager" fetchpriority="high" alt="" role="presentation">
+		<?php
+		$hero_src = $image_url;
+		if ( '' === $hero_src && function_exists( 'ovents_manifest_image_jpeg_url' ) && ! empty( $config['image_name'] ) ) {
+			$hero_src = ovents_manifest_image_jpeg_url( (string) $config['image_name'] );
+		}
+		if ( '' === $hero_src ) {
+			$legacy = $image;
+			if ( function_exists( 'ovents_theme_img_readable' ) && ! ovents_theme_img_readable( $legacy ) && ! empty( $config['image_name'] ) ) {
+				foreach ( array( '-1200.jpg', '-800.jpg' ) as $suffix ) {
+					$candidate = (string) $config['image_name'] . $suffix;
+					if ( ovents_theme_img_readable( $candidate ) ) {
+						$legacy = $candidate;
+						break;
+					}
+				}
+			}
+			$hero_src = $img( $legacy );
+		}
+		?>
+		<img class="inner-hero__bg" src="<?php echo esc_url( $hero_src ); ?>" width="1920" height="900" loading="eager" fetchpriority="high" alt="" role="presentation">
 	<?php endif; ?>
 	<div class="inner-hero__shade" aria-hidden="true"></div>
 	<div class="inner-hero__overlay">

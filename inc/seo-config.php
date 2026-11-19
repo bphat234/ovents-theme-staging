@@ -18,7 +18,7 @@ function ovents_seo_config() {
 	return array(
 		'home'             => array(
 			'title'       => 'Luxury Event Planner London & the UK | Ovents',
-			'description' => 'A luxury wedding, party and corporate event planner in London, working across the UK. Wherever you’re starting from, we’ll take it from there.',
+			'description' => 'Luxury event planning and coordination in London and across the UK. Weddings, parties and corporate events, planned so you can be present.',
 			'h1'          => 'Luxury wedding and event planners in London',
 		),
 		'weddings'         => array(
@@ -38,7 +38,7 @@ function ovents_seo_config() {
 		),
 		'about'            => array(
 			'title'       => 'About Ovents | Luxury Event Planners in London',
-			'description' => 'Meet Titilope Fagbore and the Ovents team — luxury wedding and event planners in London, working across the UK.',
+			'description' => 'Meet Titilope Fagbore and the Ovents team, luxury wedding and event planners in London, working across the UK.',
 			'h1'          => 'Luxury event planners in London',
 		),
 		'contact'          => array(
