@@ -17,8 +17,19 @@ $filters = array(
 $query   = ovents_portfolio_archive_query();
 ?>
 <main id="main" class="inner-page portfolio-archive">
+	<?php
+	get_template_part(
+		'template-parts/inner',
+		'hero',
+		array(
+			'title'      => __( 'Selected celebrations', 'ovents' ),
+			'image_name' => 'hero-erica-samuel-sweetheart-table',
+			'lead'       => __( 'Weddings, private celebrations and events we have planned across the UK.', 'ovents' ),
+			'show_ctas'  => false,
+		)
+	);
+	?>
 	<div class="wrap portfolio-archive__head">
-		<h1 class="portfolio-archive__title">Selected celebrations</h1>
 		<nav class="portfolio-archive__filters" aria-label="<?php esc_attr_e( 'Filter portfolio', 'ovents' ); ?>">
 			<?php foreach ( $filters as $key => $label ) : ?>
 				<?php

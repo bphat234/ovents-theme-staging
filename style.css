@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning — weddings, corporate and private celebrations.
-Version: 2.9.14
+Version: 2.9.15
 Text Domain: ovents
 */
 
@@ -3835,14 +3835,8 @@ main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
 	}
 }
 
-.portfolio-archive {
-	padding-block: clamp(3.5rem, 7vw, 5rem);
-}
-.portfolio-archive__title {
-	margin: 0 0 1.5rem;
-	text-align: center;
-	font-size: var(--type-section-h2);
-	line-height: 1.15;
+.portfolio-archive__head {
+	padding-top: clamp(1.5rem, 4vw, 2.5rem);
 }
 .portfolio-archive__filters {
 	display: flex;

@@ -28,6 +28,9 @@ function ovents_use_hero_chrome() {
 	if ( is_page( array( 'weddings', 'corporate-events', 'parties', 'about', 'contact', 'faq', 'blog', 'portfolio', 'privacy-policy', 'terms-of-use' ) ) ) {
 		return true;
 	}
+	if ( defined( 'OVENTS_PORTFOLIO_CPT' ) && ( is_post_type_archive( OVENTS_PORTFOLIO_CPT ) || is_singular( OVENTS_PORTFOLIO_CPT ) ) ) {
+		return true;
+	}
 	return false;
 }
 
