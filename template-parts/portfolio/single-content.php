@@ -17,6 +17,7 @@ $lightbox_urls = array();
 ?>
 <article class="portfolio-single">
 	<div class="portfolio-single__hero">
+		<div class="portfolio-single__hero-scrim" aria-hidden="true"></div>
 		<?php
 		ovents_portfolio_render_image(
 			$slug,

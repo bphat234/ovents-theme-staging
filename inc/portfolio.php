@@ -431,6 +431,19 @@ function ovents_seed_portfolio_events() {
 
 add_action( 'init', 'ovents_seed_portfolio_events', 100 );
 
+add_filter(
+	'body_class',
+	function ( $classes ) {
+		if ( is_post_type_archive( OVENTS_PORTFOLIO_CPT ) ) {
+			$classes[] = 'ovents-portfolio-archive';
+		}
+		if ( is_singular( OVENTS_PORTFOLIO_CPT ) ) {
+			$classes[] = 'ovents-portfolio-single';
+		}
+		return $classes;
+	}
+);
+
 add_action(
 	'add_meta_boxes',
 	function () {
