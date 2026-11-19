@@ -91,7 +91,14 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 <section class="section section--ovents-way home-band home-band--dark" aria-labelledby="ovents-way-heading">
 	<div class="wrap ovents-way-split">
 		<figure class="ovents-way__media">
-			<?php ovents_render_manifest_image( 'content-tablescape-herbs' ); ?>
+			<?php
+			ovents_render_manifest_image(
+				'ovents-team-at-event',
+				array(
+					'sizes' => '(max-width: 720px) 92vw, 45vw',
+				)
+			);
+			?>
 		</figure>
 		<div class="ovents-way__copy">
 			<h2 id="ovents-way-heading">Behind a seamless day.</h2>

@@ -668,6 +668,47 @@
     ]
   },
   {
+    "name": "ovents-team-at-event",
+    "source": "",
+    "source_file": "",
+    "crop_px": "800x1000",
+    "aspect": 0.8,
+    "fx": 0.5,
+    "fy": 0.0,
+    "object_position": "center top",
+    "alt": "The Ovents team at a wedding reception",
+    "credit": "",
+    "category": "content",
+    "folder": "",
+    "notes": "Home section--ovents-way media (replaces content-tablescape-herbs). 4:5 crop.",
+    "outputs": [
+      {
+        "path": "ovents-team-at-event-1080.webp",
+        "width": 1080,
+        "height": 1350,
+        "bytes": 178398,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "ovents-team-at-event-800.webp",
+        "width": 800,
+        "height": 1000,
+        "bytes": 113314,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "ovents-team-at-event-800.jpg",
+        "width": 800,
+        "height": 1000,
+        "bytes": 156406,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
     "name": "content-erica-samuel-sweetheart-table",
     "source": "D23",
     "source_file": "/workspace/drive-photos/D23.jpg",

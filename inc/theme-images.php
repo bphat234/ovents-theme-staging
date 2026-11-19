@@ -77,6 +77,7 @@ function ovents_render_manifest_image( $name, $args = array() ) {
 
 	$jpg_path    = '';
 	$webp_800    = '';
+	$webp_1080   = '';
 	$webp_1200   = '';
 	$webp_1600   = '';
 	$webp_2400   = '';
@@ -104,6 +105,8 @@ function ovents_render_manifest_image( $name, $args = array() ) {
 				$webp_2400 = $path;
 			} elseif ( 1600 === $w ) {
 				$webp_1600 = $path;
+			} elseif ( 1080 === $w ) {
+				$webp_1080 = $path;
 			} elseif ( 1200 === $w ) {
 				$webp_1200 = $path;
 			} elseif ( 800 === $w && '' === $webp_800 ) {
@@ -112,7 +115,7 @@ function ovents_render_manifest_image( $name, $args = array() ) {
 		}
 	}
 
-	if ( '' === $jpg_path && '' === $webp_800 && '' === $webp_1200 && '' === $webp_1600 && '' === $webp_2400 ) {
+	if ( '' === $jpg_path && '' === $webp_800 && '' === $webp_1080 && '' === $webp_1200 && '' === $webp_1600 && '' === $webp_2400 ) {
 		return;
 	}
 
@@ -139,6 +142,9 @@ function ovents_render_manifest_image( $name, $args = array() ) {
 	$webp_srcset = array();
 	if ( $webp_800 ) {
 		$webp_srcset[] = esc_url( $base_uri . $webp_800 ) . ' 800w';
+	}
+	if ( $webp_1080 ) {
+		$webp_srcset[] = esc_url( $base_uri . $webp_1080 ) . ' 1080w';
 	}
 	if ( $webp_1600 ) {
 		$webp_srcset[] = esc_url( $base_uri . $webp_1600 ) . ' 1600w';
