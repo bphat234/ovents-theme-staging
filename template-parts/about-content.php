@@ -36,33 +36,17 @@ get_template_part( 'template-parts/inner', 'hero' );
 			</picture>
 		</figure>
 		<div class="founder-split__copy content-prose">
-			<h2 id="founder-heading"><?php esc_html_e( 'Titilope Fagbore, founder of Ovents', 'ovents' ); ?></h2>
-			<p>
-				<?php esc_html_e( 'Titilope founded Ovents with a simple belief: every celebration deserves to feel effortless for the people at its heart.', 'ovents' ); ?>
-				<?php
-				$founder_gap_1 = '[How and when she started Ovents.]';
-				if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_1 ) ) :
-					?>
-					<span class="founder-gap"><?php echo esc_html( $founder_gap_1 ); ?></span>
-				<?php endif; ?>
-			</p>
-			<p><?php esc_html_e( 'Based in London and planning events across the UK, she and her team plan and coordinate luxury weddings, corporate events and private parties. From the first conversation to the last guest leaving, she looks after every detail, so her clients can simply be present.', 'ovents' ); ?></p>
-			<p>
-				<?php esc_html_e( 'Her approach is personal and hands-on.', 'ovents' ); ?>
-				<?php
-				$founder_gap_2 = '[One or two lines on her style.]';
-				if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_2 ) ) :
-					?>
-					<span class="founder-gap"><?php echo esc_html( $founder_gap_2 ); ?></span>
-				<?php endif; ?>
-			</p>
-			<p><?php esc_html_e( 'Beyond client events, Titilope is investing in the wider events community. In April 2026, Ovents organised The Planner’s Table, a lunch and learn for event professionals, wedding planners, coordinators and creatives, for honest conversations and practical sessions.', 'ovents' ); ?></p>
-			<?php
-			$founder_gap_3 = '[Optional quote in her own words.]';
-			if ( function_exists( 'ovents_portfolio_intro_is_placeholder' ) && ! ovents_portfolio_intro_is_placeholder( $founder_gap_3 ) ) :
-				?>
-				<p class="founder-gap"><?php echo esc_html( $founder_gap_3 ); ?></p>
-			<?php endif; ?>
+			<h2 id="founder-heading"><?php esc_html_e( 'Meet Titilope Fagbore, Founder of Ovents', 'ovents' ); ?></h2>
+			<p><?php esc_html_e( 'Titilope founded Ovents with a simple belief: every celebration deserves to feel effortless for the people at its heart. What began as helping friends and family bring their events to life naturally grew into a passion for creating meaningful, beautifully executed experiences. She discovered that her greatest joy was not just bringing people together, but creating the structure and calm that allows them to fully enjoy the moment. And so, Ovents was born.', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Based in London and planning events across the UK, Titilope and her team deliver weddings, corporate events and private celebrations. From the first conversation to the final guest departure, she brings creativity, thoughtful preparation and meticulous coordination to every occasion.', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Her approach is personal, intentional and detail-led. She takes time to understand not just how clients want their events to look, but how they want them to feel. She believes exceptional event management is often found in the details nobody notices, and never compromises on preparation, communication or genuine care.', 'ovents' ); ?></p>
+			<p><?php esc_html_e( 'Beyond client events, Titilope is passionate about strengthening the events community. In April 2026, Ovents hosted The Planner’s Table, bringing together event professionals, planners and creatives for honest conversations, shared experiences and practical learning. A reflection of her belief that the industry thrives when people grow together.', 'ovents' ); ?></p>
+			<figure class="founder-quote">
+				<p class="founder-quote__label"><?php esc_html_e( 'In her words', 'ovents' ); ?></p>
+				<blockquote>
+					<p><?php esc_html_e( 'What I love most is knowing that people can be fully present in moments they’ll remember for a lifetime, because someone is taking care of everything behind the scenes. That’s the real beauty of what we do.', 'ovents' ); ?></p>
+				</blockquote>
+			</figure>
 		</div>
 	</div>
 </section>
