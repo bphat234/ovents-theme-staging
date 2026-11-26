@@ -24,13 +24,6 @@
 		if (backdrop) backdrop.hidden = !open;
 		document.body.classList.toggle('nav-open', open);
 		document.body.style.overflow = open ? 'hidden' : '';
-		if (!open) {
-			document.querySelectorAll('.menu-wix__services.is-expanded').forEach(function (li) {
-				li.classList.remove('is-expanded');
-				var btn = li.querySelector('[data-menu-expand]');
-				if (btn) btn.setAttribute('aria-expanded', 'false');
-			});
-		}
 	}
 
 	if (toggle && nav) {
@@ -68,16 +61,6 @@
 		});
 	}
 
-	document.addEventListener('click', function (e) {
-		var btn = e.target.closest('[data-menu-expand]');
-		if (!btn || !nav || !nav.contains(btn)) return;
-		e.preventDefault();
-		e.stopPropagation();
-		var row = btn.closest('.menu-wix__services');
-		if (!row) return;
-		var expanded = row.classList.toggle('is-expanded');
-		btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-	});
 
 	var instaGrid = document.querySelector('[data-insta-grid]');
 	var instaToggle = document.querySelector('[data-insta-toggle]');

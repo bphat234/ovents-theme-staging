@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.brandnoddev.com/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.58
+Version: 2.9.60
 Text Domain: ovents
 */
 
@@ -215,18 +215,12 @@ h6 { font-size: var(--h6); }
 	transition: opacity 0.3s ease;
 }
 .site-chrome--hero.is-scrolled::before {
-	background: linear-gradient(
-		180deg,
-		rgba(0, 0, 0, 0.88) 0%,
-		rgba(0, 0, 0, 0.62) 45%,
-		rgba(0, 0, 0, 0.28) 78%,
-		rgba(0, 0, 0, 0) 100%
-	);
+	opacity: 0;
 }
 .site-chrome.is-scrolled.site-chrome--hero {
-	background: transparent;
-	border-bottom: 0;
-	box-shadow: none;
+	background: rgba(0, 0, 0, 0.92);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 .site-chrome--inner {
 	background: var(--cream);
@@ -389,6 +383,128 @@ body.has-inner-hero-header .site-chrome:not(.is-scrolled) .icon-link {
 	line-height: 0;
 }
 
+.header-nav-desktop {
+	display: none;
+}
+
+.menu-desktop {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.menu-desktop a {
+	font-family: var(--body);
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--white);
+	text-decoration: none;
+	transition: color 0.2s ease;
+	position: relative;
+	display: inline-block;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.menu-desktop a:hover {
+	color: var(--gold-light);
+}
+
+.menu-desktop a:focus-visible {
+	outline: 2px solid var(--gold-light);
+	outline-offset: 4px;
+	border-radius: 2px;
+}
+
+.menu-desktop a[aria-current="page"] {
+	color: var(--gold-light);
+}
+
+.btn-enquire {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 2px;
+	padding: 0.65rem 1.5rem;
+	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-enquire:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.65);
+	color: var(--white);
+}
+
+.has-inner-header .menu-desktop a {
+	color: var(--ink);
+}
+
+.has-inner-header .menu-desktop a:hover {
+	color: var(--gold);
+}
+
+.has-inner-header .menu-desktop a[aria-current="page"] {
+	color: var(--gold);
+}
+
+.has-inner-header .btn-enquire {
+	border-color: rgba(28, 27, 26, 0.3);
+}
+
+.has-inner-header .btn-enquire:hover {
+	background: rgba(28, 27, 26, 0.04);
+	border-color: rgba(28, 27, 26, 0.5);
+	color: var(--ink);
+}
+
+.site-chrome.is-scrolled.site-chrome--hero .menu-desktop a {
+	color: var(--white);
+}
+
+.site-chrome.is-scrolled.site-chrome--hero .menu-desktop a:hover {
+	color: var(--gold-light);
+}
+
+.site-chrome.is-scrolled.site-chrome--hero .menu-desktop a[aria-current="page"] {
+	color: var(--gold-light);
+}
+
+.site-chrome.is-scrolled.site-chrome--hero .btn-enquire {
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.site-chrome.is-scrolled.site-chrome--hero .btn-enquire:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.65);
+	color: var(--white);
+}
+
+.site-chrome.is-scrolled.site-chrome--inner .menu-desktop a {
+	color: var(--ink);
+}
+
+.site-chrome.is-scrolled.site-chrome--inner .menu-desktop a:hover {
+	color: var(--gold);
+}
+
+.site-chrome.is-scrolled.site-chrome--inner .menu-desktop a[aria-current="page"] {
+	color: var(--gold);
+}
+
+.site-chrome.is-scrolled.site-chrome--inner .btn-enquire {
+	border-color: rgba(28, 27, 26, 0.3);
+}
+
+.site-chrome.is-scrolled.site-chrome--inner .btn-enquire:hover {
+	background: rgba(28, 27, 26, 0.04);
+	border-color: rgba(28, 27, 26, 0.5);
+	color: var(--ink);
+}
+
 .lucide {
 	flex-shrink: 0;
 	stroke: currentColor;
@@ -474,8 +590,7 @@ body.has-inner-hero-header .site-chrome:not(.is-scrolled) .icon-link {
 	align-items: center;
 	gap: 1.125rem;
 }
-.menu-wix a,
-.menu-wix__toggle {
+.menu-wix a {
 	font-family: var(--display);
 	font-size: clamp(1.75rem, 6vw, var(--menu-overlay));
 	line-height: 1.15;
@@ -484,45 +599,12 @@ body.has-inner-hero-header .site-chrome:not(.is-scrolled) .icon-link {
 	text-transform: uppercase;
 	color: #fff;
 	text-decoration: none;
-	background: transparent;
-	border: 0;
-	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
-	gap: 0.35rem;
 	padding: 0;
 }
-.menu-wix a:hover,
-.menu-wix__toggle:hover {
+.menu-wix a:hover {
 	color: var(--gold-light);
-}
-.menu-wix__services {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.menu-wix__sub {
-	list-style: none;
-	margin: 0.75rem 0 0;
-	padding: 0;
-	display: none;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.65rem;
-}
-.menu-wix__services.is-expanded > .menu-wix__sub {
-	display: flex;
-}
-.menu-wix__sub a {
-	font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-	min-height: 44px;
-	letter-spacing: 0.06em;
-}
-.menu-wix__chevron {
-	transition: transform 0.25s ease;
-}
-.menu-wix__services.is-expanded .menu-wix__chevron {
-	transform: rotate(180deg);
 }
 .menu-wix__social {
 	margin-top: 0.75rem;
@@ -3180,6 +3262,27 @@ body.home .territory-panel.home-band--dark {
 	body { padding-bottom: 3.25rem; }
 	.whatsapp-float {
 		bottom: calc(3.25rem + var(--whatsapp-float-gap, 24px));
+	}
+}
+@media (min-width: 1024px) {
+	.header-bar {
+		grid-template-columns: 1fr auto 1fr;
+		gap: clamp(1.5rem, 3vw, 3rem);
+	}
+	.header-nav-desktop {
+		display: flex;
+		align-items: center;
+	}
+	.header-nav-desktop--right {
+		justify-content: flex-end;
+	}
+	.header-contacts,
+	.nav-toggle {
+		display: none;
+	}
+	.brand {
+		grid-column: 2;
+		grid-row: 1;
 	}
 }
 @media (max-width: 720px) {

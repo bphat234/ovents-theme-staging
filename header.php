@@ -25,9 +25,24 @@ $is_hero_header = ovents_use_hero_chrome();
 				<?php echo ovents_icon( 'mail' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</a>
 		</div>
+		<nav class="header-nav-desktop" aria-label="Main">
+			<ul class="menu-desktop">
+				<li><a href="<?php echo esc_url( home_url( '/weddings/' ) ); ?>"<?php echo ( is_page( 'weddings' ) ? ' aria-current="page"' : '' ); ?>>Weddings</a></li>
+				<li><a href="<?php echo esc_url( home_url( '/corporate-events/' ) ); ?>"<?php echo ( is_page( 'corporate-events' ) ? ' aria-current="page"' : '' ); ?>>Corporate</a></li>
+				<li><a href="<?php echo esc_url( home_url( '/parties/' ) ); ?>"<?php echo ( is_page( 'parties' ) ? ' aria-current="page"' : '' ); ?>>Parties</a></li>
+			</ul>
+		</nav>
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/logo-header-white.png' ) ); ?>" width="150" height="150" alt="Ovents LTD" decoding="async">
 		</a>
+		<nav class="header-nav-desktop header-nav-desktop--right" aria-label="Secondary">
+			<ul class="menu-desktop">
+				<li><a href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>"<?php echo ( defined( 'OVENTS_PORTFOLIO_CPT' ) && ( is_post_type_archive( OVENTS_PORTFOLIO_CPT ) || is_singular( OVENTS_PORTFOLIO_CPT ) ) ? ' aria-current="page"' : '' ); ?>>Portfolio</a></li>
+				<li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"<?php echo ( is_page( 'about' ) ? ' aria-current="page"' : '' ); ?>>About</a></li>
+				<li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"<?php echo ( is_page( 'blog' ) || is_singular( 'post' ) || is_home() ? ' aria-current="page"' : '' ); ?>>Journal</a></li>
+				<li><a class="btn-enquire" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"<?php echo ( is_page( 'contact' ) ? ' aria-current="page"' : '' ); ?>>Enquire</a></li>
+			</ul>
+		</nav>
 		<button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
 			<span class="nav-toggle-icon" aria-hidden="true">
 				<?php echo ovents_icon( 'menu', array( 'width' => 22, 'height' => 22 ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

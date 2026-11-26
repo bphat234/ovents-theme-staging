@@ -12,19 +12,12 @@ $home = untrailingslashit( home_url() );
 	</button>
 	<div class="site-nav__inner">
 		<ul class="menu-wix">
+			<li><a href="<?php echo esc_url( $home . '/weddings/' ); ?>">Weddings</a></li>
+			<li><a href="<?php echo esc_url( $home . '/corporate-events/' ); ?>">Corporate</a></li>
+			<li><a href="<?php echo esc_url( $home . '/parties/' ); ?>">Parties</a></li>
+			<li><a href="<?php echo esc_url( $home . '/portfolio/' ); ?>">Portfolio</a></li>
 			<li><a href="<?php echo esc_url( $home . '/about/' ); ?>">About</a></li>
-			<li class="menu-wix__services">
-				<button type="button" class="menu-wix__toggle" aria-expanded="false" data-menu-expand>
-					<span>Services</span>
-					<?php echo ovents_icon( 'chevron-down', array( 'width' => 20, 'height' => 20, 'class' => 'menu-wix__chevron' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-				</button>
-				<ul class="menu-wix__sub">
-					<li><a href="<?php echo esc_url( $home . '/weddings/' ); ?>">Weddings</a></li>
-					<li><a href="<?php echo esc_url( $home . '/corporate-events/' ); ?>">Corporate</a></li>
-					<li><a href="<?php echo esc_url( $home . '/parties/' ); ?>">Parties</a></li>
-				</ul>
-			</li>
-			<li><a href="<?php echo esc_url( $home . '/blog/' ); ?>">Blog</a></li>
+			<li><a href="<?php echo esc_url( $home . '/blog/' ); ?>">Journal</a></li>
 			<li><a href="<?php echo esc_url( $home . '/faq/' ); ?>">FAQ</a></li>
 			<li><a href="<?php echo esc_url( $home . '/contact/' ); ?>">Contact</a></li>
 			<li class="menu-wix__social">
