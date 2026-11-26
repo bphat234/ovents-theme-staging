@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.64' );
+define( 'OVENTS_VERSION', '2.9.65' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -123,12 +123,13 @@ add_action(
 	1
 );
 
-if ( ovents_should_block_crawlers() ) {
-	add_filter(
-		'pre_option_blog_public',
-		static function () {
+add_filter(
+	'pre_option_blog_public',
+	static function ( $pre ) {
+		if ( function_exists( 'ovents_should_block_crawlers' ) && ovents_should_block_crawlers() ) {
 			return '0';
 		}
-	);
-}
+		return $pre;
+	}
+);
 
