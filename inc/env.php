@@ -28,7 +28,7 @@ function ovents_is_local_env() {
 }
 
 /**
- * Staging on brandnoddev.com.
+ * Non-production Hostinger preview hosts (legacy brandnoddev subdomain removed).
  */
 function ovents_is_staging_env() {
 	if ( defined( 'OVENTS_STAGING' ) && OVENTS_STAGING ) {
