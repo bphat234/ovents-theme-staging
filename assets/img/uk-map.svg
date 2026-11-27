@@ -10,7 +10,7 @@
     <path d="M350 350 L100 365"/>
     <path d="M350 350 L235 440"/>
   </g>
-  <g fill="#1c1b1a" stroke="#f5f1ea" stroke-width="2">
+  <g fill="#1c1b1a" stroke="#f7f3ec" stroke-width="2">
     <circle cx="175" cy="70" r="5.5"/>
     <circle cx="355" cy="90" r="5.5"/>
     <circle cx="70" cy="190" r="5.5"/>
@@ -29,7 +29,7 @@
     <text x="235" y="472" text-anchor="middle">BRISTOL</text>
   </g>
   <circle cx="350" cy="350" r="15" stroke="#9a8448" stroke-opacity="0.2"/>
-  <circle cx="350" cy="350" r="8" fill="#9a8448" stroke="#f5f1ea" stroke-width="2.5"/>
+  <circle cx="350" cy="350" r="8" fill="#9a8448" stroke="#f7f3ec" stroke-width="2.5"/>
   <text x="350" y="326" text-anchor="middle" fill="#786532" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="2.5">LONDON</text>
   <text x="350" y="385" text-anchor="middle" fill="#625d55" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.5">OUR HOME BASE</text>
   <text x="280" y="522" text-anchor="middle" fill="#625d55" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">England · Scotland · Wales · Northern Ireland</text>

@@ -3,20 +3,24 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.84
+Version: 2.9.85
 Text Domain: ovents
 */
 
 :root {
-	--cream: #f5f1ea;
-	--cream-dark: #ebe5dc;
-	--silver: #e8e6e2;
+	/* Editorial light surfaces (warm white + cream bands) */
+	--surface-white: #ffffff;
+	--surface-cream: #f7f3ec;
+	--border-warm: #e8e1d5;
+	--cream: var(--surface-cream);
+	--cream-dark: var(--surface-cream);
+	--silver: var(--surface-white);
 	--ink: #1c1b1a;
 	--black: #000000;
 	--gold: #9a8448;
 	--gold-light: #c4ab6a;
-	--white: #ffffff;
-	--line: rgba(28, 27, 26, 0.14);
+	--white: var(--surface-white);
+	--line: var(--border-warm);
 	--display: "Playfair Display", Georgia, "Times New Roman", serif;
 	--body: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	/* Site grid: header, main sections, footer share --wrap */
@@ -224,8 +228,8 @@ h6 { font-size: var(--h6); }
 	overflow: hidden;
 }
 .site-chrome--inner {
-	background: var(--cream);
-	border-bottom: 1px solid var(--line);
+	background: var(--surface-white);
+	border-bottom: 1px solid var(--border-warm);
 	position: sticky;
 	top: 0;
 	transition: box-shadow 0.25s ease;
@@ -916,12 +920,12 @@ body.nav-open .site-chrome {
 	text-align: center;
 }
 
-/* Home: explicit bands (home-content.php) — avoids nth-child drift and split-section tint. */
-body.home .home-band--light {
-	background-color: var(--cream);
+/* Home: explicit white/cream bands (home-content.php) — no adjacent same tint. */
+body.home .home-band--white {
+	background-color: var(--surface-white);
 }
-body.home .home-band--dark {
-	background-color: var(--silver);
+body.home .home-band--cream {
+	background-color: var(--surface-cream);
 }
 body.home main > section {
 	display: flow-root;
@@ -934,12 +938,51 @@ body.home main > section.services-grid {
 	display: grid;
 }
 
-/* Inner templates: alternating section backgrounds after the page hero. */
+/* Inner templates: alternating warm white / cream after the page hero. */
 body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n) {
-	background-color: var(--cream);
+	background-color: var(--surface-cream);
 }
 body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) {
-	background-color: var(--silver);
+	background-color: var(--surface-white);
+}
+
+/* Cards and elevated surfaces: invert against the parent section band. */
+:is(
+	.home-band--cream,
+	body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n)
+) :is(
+	.testimonial-carousel .testimonial,
+	.service-tier,
+	.value-card,
+	.testimonial--review-card,
+	.inner-split__form,
+	.contact-channel,
+	.enquiry-thanks,
+	.inner-page .portfolio-card:not(.portfolio-card--selected)
+) {
+	background: var(--surface-white);
+	border-color: var(--border-warm);
+}
+:is(
+	.home-band--white,
+	body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1)
+) :is(
+	.service-tier,
+	.value-card,
+	.testimonial--review-card,
+	.inner-split__form,
+	.contact-channel,
+	.inner-page .portfolio-card:not(.portfolio-card--selected)
+) {
+	background: var(--surface-cream);
+	border-color: var(--border-warm);
+}
+:is(
+	.home-band--white,
+	body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1)
+) .testimonial-carousel .testimonial {
+	background: var(--surface-cream);
+	border: 1px solid var(--border-warm);
 }
 
 .section--promise {
@@ -1184,8 +1227,8 @@ body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child
 	margin: 0;
 	padding: clamp(1.5rem, 2.8vw, 2.5rem);
 	text-align: left;
-	background: #fffcf7;
-	border: 1px solid #e3dbcf;
+	background: var(--surface-white);
+	border: 1px solid var(--border-warm);
 	border-top: 2px solid var(--gold);
 	border-radius: 2px;
 	display: flex;
@@ -1314,11 +1357,6 @@ body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child
 	color: #3d3a36;
 }
 
-body.home .section--portfolio-home.home-band--dark,
-body.home .section--ovents-way.home-band--dark,
-body.home .territory-panel.home-band--dark {
-	background-color: var(--silver);
-}
 .ovents-way-split {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1530,7 +1568,7 @@ body.home .territory-panel.home-band--dark {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid #d7cfc1;
+	border-top: 1px solid var(--border-warm);
 }
 .faq-page-nav a {
 	display: block;
@@ -1562,7 +1600,7 @@ body.home .territory-panel.home-band--dark {
 .faq-page-group + .faq-page-group {
 	margin-top: clamp(2.25rem, 4vw, 3rem);
 	padding-top: clamp(2.25rem, 4vw, 3rem);
-	border-top: 1px solid #d7cfc1;
+	border-top: 1px solid var(--border-warm);
 }
 @media (max-width: 900px) {
 	.faq-page-layout { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1573,7 +1611,7 @@ body.home .territory-panel.home-band--dark {
 		gap: 0.35rem 1.25rem;
 		border-top: 0;
 		padding-bottom: 0.5rem;
-		border-bottom: 1px solid #d7cfc1;
+		border-bottom: 1px solid var(--border-warm);
 	}
 	.faq-page-nav a {
 		padding: 0.35rem 0;
@@ -2724,7 +2762,7 @@ body.home .territory-panel.home-band--dark {
 .service-related-links__pill:focus-visible {
 	color: #786532;
 	border-color: var(--gold);
-	background: #fffcf7;
+	background: var(--surface-cream);
 	transform: translateY(-1px);
 }
 .service-related-links__pill:focus-visible {
@@ -2794,13 +2832,13 @@ body.home .territory-panel.home-band--dark {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid #d7cfc1;
+	border-top: 1px solid var(--border-warm);
 }
 .celebration-list li {
 	display: grid;
 	gap: 0.35rem;
 	padding: 1.1rem 0;
-	border-bottom: 1px solid #d7cfc1;
+	border-bottom: 1px solid var(--border-warm);
 }
 .celebration-list li strong {
 	font-family: var(--display);
@@ -2858,8 +2896,8 @@ body.home .territory-panel.home-band--dark {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background: var(--white);
-	border: 1px solid rgba(0, 0, 0, 0.06);
+	background: var(--surface-white);
+	border: 1px solid var(--border-warm);
 	border-radius: 16px;
 	padding: clamp(2rem, 3.5vw, 2.75rem) clamp(1.5rem, 2.5vw, 2.1rem);
 	text-align: left;
@@ -2972,12 +3010,36 @@ body.home .territory-panel.home-band--dark {
 .faq summary { cursor: pointer; font-weight: 400; }
 :is(.section--faq-home, .inner-page) .faq details {
 	border: 0;
-	border-bottom: 1px solid #d7cfc1;
+	border-bottom: 1px solid var(--border-warm);
 	background: transparent;
 	padding: 0;
 	margin: 0;
 }
-:is(.section--faq-home, .inner-page) .faq details:first-child { border-top: 1px solid #d7cfc1; }
+:is(.section--faq-home, .inner-page) .faq details:first-child { border-top: 1px solid var(--border-warm); }
+.home-band--white .faq-home-questions details {
+	border: 1px solid var(--border-warm);
+	background: var(--surface-cream);
+	padding: 0 1rem;
+	margin-bottom: 0.5rem;
+	border-radius: 2px;
+}
+.home-band--white .faq-home-questions details:first-child {
+	border-top: 1px solid var(--border-warm);
+}
+body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n) .faq details {
+	border: 1px solid var(--border-warm);
+	background: var(--surface-white);
+	padding: 1rem 1.25rem;
+	margin-bottom: 0.5rem;
+	border-radius: 2px;
+}
+body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) .faq details {
+	border: 1px solid var(--border-warm);
+	background: var(--surface-cream);
+	padding: 1rem 1.25rem;
+	margin-bottom: 0.5rem;
+	border-radius: 2px;
+}
 :is(.section--faq-home, .inner-page) .faq summary {
 	list-style: none;
 	display: flex;
@@ -3339,10 +3401,10 @@ body.home .territory-panel.home-band--dark {
 	margin-top: 1.5rem;
 }
 .service-tier {
-	border: 1px solid #ded5c6;
+	border: 1px solid var(--border-warm);
 	border-top: 2px solid var(--gold);
 	padding: 2rem 1.75rem;
-	background: #fffcf7;
+	background: var(--surface-white);
 	text-align: left;
 	display: flex;
 	flex-direction: column;
@@ -3627,10 +3689,10 @@ body.home .territory-panel.home-band--dark {
 .inner-page .approach-steps li { counter-increment: planning-step; border-top: 1px solid #cfc2aa; padding-top: 1.25rem; font-size: 1rem; }
 .inner-page .approach-steps li::before { content: "0" counter(planning-step); display: block; color: #786532; font-size: 0.8rem; letter-spacing: 0.15em; margin-bottom: 0.75rem; }
 .inner-page .approach-steps strong { display: block; font-family: var(--display); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--ink); }
-.inner-split__form { min-width: 0; background: #fffcf7; border: 1px solid #ded5c6; border-top: 2px solid var(--gold); padding: clamp(1.25rem, 3vw, 2.5rem); }
+.inner-split__form { min-width: 0; background: var(--surface-white); border: 1px solid var(--border-warm); border-top: 2px solid var(--gold); padding: clamp(1.25rem, 3vw, 2.5rem); }
 .inner-split__form h2 { margin: 0 0 0.75rem; font-size: 1.75rem; }
 .form-intro { color: #625d55; font-size: 0.9rem; margin: 0 0 2rem; }
-.inner-page .portfolio-card:not(.portfolio-card--selected) { background: #fffcf7; border: 1px solid var(--line); padding-bottom: 1.5rem; }
+.inner-page .portfolio-card:not(.portfolio-card--selected) { background: var(--surface-white); border: 1px solid var(--border-warm); padding-bottom: 1.5rem; }
 .inner-page .portfolio-card:not(.portfolio-card--selected) > :not(img) { margin-inline: 1.5rem; }
 .inner-page .portfolio-card:not(.portfolio-card--selected) h3 { font-size: 1.65rem; line-height: 1.25; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 .inner-page .portfolio-card:not(.portfolio-card--selected) p { font-size: 0.95rem; line-height: 1.75; }
@@ -3662,13 +3724,13 @@ body.home .territory-panel.home-band--dark {
 .enquiry-field--consent input { width: auto; margin-top: 0.2rem; }
 .field-error { color: #9a2f2f; font-size: 0.85rem; margin: 0.35rem 0 0; }
 .enquiry-errors { background: #fff5f5; border: 1px solid #e8c4c4; padding: 1rem; margin-bottom: 1rem; }
-.enquiry-thanks { padding: 1.5rem; background: #f5f1ea; border: 1px solid var(--line); }
+.enquiry-thanks { padding: 1.5rem; background: var(--surface-cream); border: 1px solid var(--border-warm); }
 /* Contact page sidebar */
 .contact-sidebar h2 { margin-bottom: 0.75rem; }
 .contact-response-note {
 	margin: 0 0 1.75rem;
 	padding: 0.65rem 0.9rem;
-	background: #fffcf7;
+	background: var(--surface-cream);
 	border-left: 3px solid var(--gold);
 	font-size: 0.95rem;
 	line-height: 1.5;
@@ -3684,8 +3746,8 @@ body.home .territory-panel.home-band--dark {
 	align-items: center;
 	gap: 1rem;
 	padding: 0.85rem 1rem;
-	background: #fffcf7;
-	border: 1px solid var(--line);
+	background: var(--surface-white);
+	border: 1px solid var(--border-warm);
 	border-radius: 2px;
 	text-decoration: none;
 	color: var(--ink);
@@ -3693,7 +3755,7 @@ body.home .territory-panel.home-band--dark {
 }
 .contact-channel:hover {
 	border-color: var(--gold);
-	background: #fff;
+	background: var(--surface-white);
 	color: var(--ink);
 }
 .contact-channel__icon {
@@ -3763,8 +3825,8 @@ body.home .territory-panel.home-band--dark {
 .section--contact .inner-split__form.contact-form-panel {
 	min-width: 0;
 	padding: clamp(1.5rem, 3vw, 2.25rem);
-	background: #fffcf7;
-	border: 1px solid #ded5c6;
+	background: var(--surface-white);
+	border: 1px solid var(--border-warm);
 	border-top: 2px solid var(--gold);
 	box-shadow: none;
 }
@@ -4100,8 +4162,8 @@ body.home .territory-panel.home-band--dark {
 	position: relative;
 	margin: 0;
 	padding: clamp(1.65rem, 2.8vw, 2.25rem);
-	background: var(--white);
-	border: 1px solid rgba(0, 0, 0, 0.06);
+	background: var(--surface-white);
+	border: 1px solid var(--border-warm);
 	border-radius: 16px;
 	display: flex;
 	flex-direction: column;
@@ -4441,7 +4503,7 @@ body.home .territory-panel.home-band--dark {
 	padding-block: clamp(1.5rem, 4vw, 2.5rem) var(--type-section-pad);
 }
 body.ovents-portfolio-archive main > section.portfolio-archive__body {
-	background-color: var(--silver);
+	background-color: var(--surface-cream);
 }
 .portfolio-archive__filters {
 	display: flex;
