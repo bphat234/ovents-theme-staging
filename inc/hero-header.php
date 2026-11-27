@@ -76,7 +76,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 			array(
 				'eyebrow'    => '',
 				'title'      => get_the_title(),
-				'lead'       => wp_trim_words( get_the_excerpt(), 24 ),
+				'lead'       => wp_strip_all_tags( get_the_excerpt() ),
 				'image'      => 'intro.jpg',
 				'image_name' => $thumb ? '' : 'intro',
 				'image_url'  => $thumb ? $thumb : '',

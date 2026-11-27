@@ -99,6 +99,25 @@ function ovents_seo_slug() {
  * @return array{title: string, description: string, h1?: string}|null
  */
 function ovents_seo_for_request() {
+	if ( is_category() ) {
+		$term = get_queried_object();
+		if ( $term instanceof WP_Term ) {
+			$raw_desc = term_description( $term );
+			if ( is_string( $raw_desc ) && '' !== trim( wp_strip_all_tags( $raw_desc ) ) ) {
+				$description = wp_strip_all_tags( $raw_desc );
+			} else {
+				$description = sprintf(
+					/* translators: %s: category name */
+					__( 'Journal articles about %s from Ovents, luxury event planners in London serving clients across the United Kingdom.', 'ovents' ),
+					$term->name
+				);
+			}
+			return array(
+				'title'       => $term->name . ' | Event Planning Journal | Ovents',
+				'description' => $description,
+			);
+		}
+	}
 	if ( function_exists( 'ovents_portfolio_get_meta' ) && is_post_type_archive( OVENTS_PORTFOLIO_CPT ) ) {
 		$row = ovents_seo_config()['portfolio'] ?? null;
 		return $row ? array(

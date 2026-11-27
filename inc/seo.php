@@ -78,12 +78,49 @@ if ( ovents_rank_math_active() ) {
 	add_filter(
 		'rank_math/json_ld',
 		function ( $data ) {
-			if ( isset( $data['breadcrumb'] ) ) {
-				unset( $data['breadcrumb'] );
+			if ( ! is_array( $data ) ) {
+				return $data;
+			}
+			unset( $data['breadcrumb'], $data['BreadcrumbList'] );
+			if ( isset( $data['@graph'] ) && is_array( $data['@graph'] ) ) {
+				$data['@graph'] = array_values(
+					array_filter(
+						$data['@graph'],
+						static function ( $piece ) {
+							if ( ! is_array( $piece ) ) {
+								return true;
+							}
+							$type = $piece['@type'] ?? '';
+							if ( is_array( $type ) ) {
+								return ! in_array( 'BreadcrumbList', $type, true );
+							}
+							return 'BreadcrumbList' !== $type;
+						}
+					)
+				);
 			}
 			return $data;
 		},
 		99
+	);
+	add_filter(
+		'rank_math/opengraph/type',
+		static function ( $type ) {
+			$slug = ovents_seo_slug();
+			$website_slugs = array(
+				'weddings',
+				'corporate-events',
+				'parties',
+				'faq',
+				'about',
+				'contact',
+			);
+			if ( in_array( $slug, $website_slugs, true ) ) {
+				return 'website';
+			}
+			return $type;
+		},
+		20
 	);
 	add_filter(
 		'rank_math/opengraph/facebook/image',
