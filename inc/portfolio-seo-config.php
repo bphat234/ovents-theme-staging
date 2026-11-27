@@ -36,3 +36,47 @@ function ovents_portfolio_seo_config() {
 		),
 	);
 }
+
+/**
+ * SEO row for a portfolio event (curated map or publish fallback).
+ *
+ * @param WP_Post $post Portfolio post.
+ * @return array{title: string, description: string, focus_keyword: string}|null
+ */
+function ovents_portfolio_seo_row_for_post( WP_Post $post ) {
+	$map = ovents_portfolio_seo_config();
+	if ( isset( $map[ $post->post_name ] ) ) {
+		return $map[ $post->post_name ];
+	}
+	if ( 'publish' !== $post->post_status ) {
+		return null;
+	}
+	if ( function_exists( 'ovents_portfolio_get_meta' ) ) {
+		$meta = ovents_portfolio_get_meta( $post );
+		$type = strtolower( (string) ( $meta['type_label'] ?? '' ) );
+		if ( false !== strpos( $type, 'wedding' ) ) {
+			$keyword = 'London wedding planning';
+		} elseif ( false !== strpos( $type, 'corporate' ) ) {
+			$keyword = 'corporate event planning London';
+		} else {
+			$keyword = 'luxury event portfolio London';
+		}
+		$display = get_the_title( $post );
+		return array(
+			'title'         => $display . ' | ' . ucwords( $keyword ) . ' | Ovents',
+			'description'   => $meta['meta_desc'] ?: wp_strip_all_tags( ovents_portfolio_visible_intro( $meta ) ),
+			'focus_keyword' => $keyword,
+		);
+	}
+	$keyword = 'luxury event portfolio London';
+	$display = get_the_title( $post );
+	return array(
+		'title'         => $display . ' | Luxury Event Portfolio London | Ovents',
+		'description'   => sprintf(
+			/* translators: %s: event title */
+			__( '%s — planned by Ovents, luxury event planners in London.', 'ovents' ),
+			$display
+		),
+		'focus_keyword' => $keyword,
+	);
+}

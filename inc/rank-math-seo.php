@@ -171,6 +171,16 @@ function ovents_rank_math_apply_seo_row( $post_id, $row ) {
 	if ( $post_id <= 0 || ! is_array( $row ) ) {
 		return;
 	}
+	if ( function_exists( 'ovents_rank_math_normalize_seo_row' ) ) {
+		$row = ovents_rank_math_normalize_seo_row( $row );
+	}
+	if ( ! empty( $row['focus_keyword'] ) && ! empty( $row['title'] ) && function_exists( 'ovents_seo_title_contains_focus_keyword' ) ) {
+		if ( ! ovents_seo_title_contains_focus_keyword( $row['title'], $row['focus_keyword'] ) ) {
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( sprintf( 'Ovents Rank Math sync: post %d title missing focus keyword', $post_id ) );
+			return;
+		}
+	}
 	if ( ! empty( $row['title'] ) ) {
 		update_post_meta( $post_id, 'rank_math_title', $row['title'] );
 	}
@@ -180,8 +190,6 @@ function ovents_rank_math_apply_seo_row( $post_id, $row ) {
 	if ( ! empty( $row['focus_keyword'] ) ) {
 		update_post_meta( $post_id, 'rank_math_focus_keyword', $row['focus_keyword'] );
 	} elseif ( array_key_exists( 'focus_keyword', $row ) && '' === $row['focus_keyword'] ) {
-		delete_post_meta( $post_id, 'rank_math_focus_keyword' );
-	} elseif ( ! array_key_exists( 'focus_keyword', $row ) ) {
 		delete_post_meta( $post_id, 'rank_math_focus_keyword' );
 	}
 }
@@ -213,36 +221,45 @@ function ovents_sync_rank_math_page_meta() {
 		ovents_rank_math_apply_seo_row( $page_id, $row );
 	}
 
-	foreach ( ovents_journal_seo_config() as $slug => $row ) {
-		$posts = get_posts(
-			array(
-				'name'           => $slug,
-				'post_type'      => 'post',
-				'post_status'    => array( 'publish', 'draft', 'future', 'private' ),
-				'posts_per_page' => 1,
-			)
-		);
-		if ( empty( $posts ) || ! $posts[0] instanceof WP_Post ) {
+	$journal_posts = get_posts(
+		array(
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => -1,
+			'orderby'        => 'ID',
+			'order'          => 'ASC',
+		)
+	);
+	foreach ( $journal_posts as $post ) {
+		if ( ! $post instanceof WP_Post || ! function_exists( 'ovents_journal_seo_row_for_post' ) ) {
 			continue;
 		}
-		ovents_rank_math_apply_seo_row( (int) $posts[0]->ID, $row );
+		$row = ovents_journal_seo_row_for_post( $post );
+		if ( is_array( $row ) ) {
+			ovents_rank_math_apply_seo_row( (int) $post->ID, $row );
+		}
 	}
 
 	if ( defined( 'OVENTS_PORTFOLIO_CPT' ) ) {
-		foreach ( ovents_portfolio_seo_config() as $slug => $row ) {
-			$posts = get_posts(
-				array(
-					'name'           => $slug,
-					'post_type'      => OVENTS_PORTFOLIO_CPT,
-					'post_status'    => 'publish',
-					'posts_per_page' => 1,
-					'fields'         => 'ids',
-				)
-			);
-			if ( empty( $posts ) ) {
+		$portfolio_posts = get_posts(
+			array(
+				'post_type'      => OVENTS_PORTFOLIO_CPT,
+				'post_status'    => 'publish',
+				'posts_per_page' => -1,
+				'orderby'        => 'ID',
+				'order'          => 'ASC',
+			)
+		);
+		foreach ( $portfolio_posts as $post ) {
+			if ( ! $post instanceof WP_Post ) {
 				continue;
 			}
-			ovents_rank_math_apply_seo_row( (int) $posts[0], $row );
+			$row = function_exists( 'ovents_portfolio_seo_row_for_post' )
+				? ovents_portfolio_seo_row_for_post( $post )
+				: null;
+			if ( is_array( $row ) ) {
+				ovents_rank_math_apply_seo_row( (int) $post->ID, $row );
+			}
 		}
 	}
 

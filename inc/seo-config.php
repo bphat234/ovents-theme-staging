@@ -71,14 +71,16 @@ function ovents_seo_config() {
 			'focus_keyword'  => 'event planning journal London',
 		),
 		'privacy-policy'   => array(
-			'title'       => 'Privacy Policy | Ovents',
-			'description' => 'UK GDPR privacy policy for Ovents LTD: what we collect, lawful bases, cookies, retention and your rights.',
-			'h1'          => 'Privacy policy',
+			'title'          => 'Privacy Policy Ovents | Ovents',
+			'description'    => 'UK GDPR privacy policy for Ovents LTD: what we collect, lawful bases, cookies, retention and your rights.',
+			'h1'             => 'Privacy policy',
+			'focus_keyword'  => 'privacy policy Ovents',
 		),
 		'terms-of-use'     => array(
-			'title'       => 'Terms of Use | Ovents',
-			'description' => 'Website terms of use for Ovents LTD, including acceptable use, liability and governing law.',
-			'h1'          => 'Terms of use',
+			'title'          => 'Terms of Use Ovents | Ovents',
+			'description'    => 'Website terms of use for Ovents LTD, including acceptable use, liability and governing law.',
+			'h1'             => 'Terms of use',
+			'focus_keyword'  => 'terms of use Ovents',
 		),
 	);
 }
@@ -116,13 +118,29 @@ function ovents_seo_title_contains_focus_keyword( $title, $keyword ) {
 	return false !== strpos( $title, $keyword );
 }
 
+/**
+ * Ensure SEO title contains focus_keyword when both are set.
+ *
+ * @param array<string, mixed> $row title, description, focus_keyword, etc.
+ * @return array<string, mixed>
+ */
+function ovents_rank_math_normalize_seo_row( array $row ) {
+	if ( empty( $row['focus_keyword'] ) || empty( $row['title'] ) ) {
+		return $row;
+	}
+	if ( ! ovents_seo_title_contains_focus_keyword( $row['title'], $row['focus_keyword'] ) ) {
+		$row['title'] = $row['focus_keyword'] . ' | ' . $row['title'];
+	}
+	return $row;
+}
+
 function ovents_seo_for_request() {
-	if ( is_singular( 'post' ) && function_exists( 'ovents_journal_seo_config' ) ) {
+	if ( is_singular( 'post' ) && function_exists( 'ovents_journal_seo_row_for_post' ) ) {
 		$post = get_queried_object();
 		if ( $post instanceof WP_Post ) {
-			$map = ovents_journal_seo_config();
-			if ( isset( $map[ $post->post_name ] ) ) {
-				return $map[ $post->post_name ];
+			$row = ovents_journal_seo_row_for_post( $post );
+			if ( is_array( $row ) && ! empty( $row['title'] ) ) {
+				return $row;
 			}
 		}
 	}

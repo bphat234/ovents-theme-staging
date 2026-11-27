@@ -51,3 +51,33 @@ function ovents_journal_seo_config() {
 		),
 	);
 }
+
+/**
+ * SEO row for a journal post (curated map or publish fallback).
+ *
+ * @param WP_Post $post Post object.
+ * @return array{title: string, description: string, focus_keyword: string}|null
+ */
+function ovents_journal_seo_row_for_post( WP_Post $post ) {
+	$map = ovents_journal_seo_config();
+	if ( isset( $map[ $post->post_name ] ) ) {
+		return $map[ $post->post_name ];
+	}
+	if ( 'publish' !== $post->post_status ) {
+		return null;
+	}
+	$keyword = strtolower( preg_replace( '/\s+/u', ' ', str_replace( '-', ' ', $post->post_name ) ) );
+	$phrase  = ucwords( $keyword );
+	$desc    = has_excerpt( $post )
+		? wp_strip_all_tags( get_the_excerpt( $post ) )
+		: sprintf(
+			/* translators: %s: post title phrase */
+			__( 'Event planning insights: %s from Ovents, luxury event planners in London.', 'ovents' ),
+			$phrase
+		);
+	return array(
+		'title'           => $phrase . ' | Ovents Journal',
+		'description'     => $desc,
+		'focus_keyword'   => $keyword,
+	);
+}

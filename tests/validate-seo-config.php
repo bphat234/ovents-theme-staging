@@ -19,8 +19,11 @@ foreach (
 ) {
 	foreach ( $map as $slug => $row ) {
 		if ( empty( $row['focus_keyword'] ) ) {
+			fwrite( STDERR, "FAIL [$label] $slug: missing focus_keyword\n" );
+			++$failed;
 			continue;
 		}
+		$row = ovents_rank_math_normalize_seo_row( $row );
 		if ( ! ovents_seo_title_contains_focus_keyword( $row['title'], $row['focus_keyword'] ) ) {
 			fwrite( STDERR, "FAIL [$label] $slug: keyword not in title\n" );
 			++$failed;
