@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function ovents_home_service_images() {
 	return array(
-		'weddings'  => 'card-service-weddings',
+		'weddings'  => 'content-erica-samuel-sweetheart-table',
 		'corporate' => 'card-service-corporate',
 		'parties'   => 'card-service-parties',
 	);

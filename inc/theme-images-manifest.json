@@ -721,7 +721,7 @@
     "credit": "V. Opoku Photography",
     "category": "content",
     "folder": "",
-    "notes": "Weddings \u2018What our wedding services include\u2019 media (replaces service-weddings.jpg in that slot). CSS aspect 4:5, object-position 42%.",
+    "notes": "Weddings page intro + home Weddings service strip. CSS aspect 4:5, object-position 42%.",
     "outputs": [
       {
         "path": "content-erica-samuel-sweetheart-table-1600.webp",
@@ -844,7 +844,7 @@
     "credit": "V. Opoku Photography",
     "category": "card",
     "folder": "",
-    "notes": "Home Weddings service strip (replaces service-weddings.jpg). Also used as the current portfolio hero file; after this change the portfolio hero should use hero-erica-samuel-sweetheart-table instead.",
+    "notes": "Legacy service-strip crop (forehead close-up). Home Weddings strip now uses content-erica-samuel-sweetheart-table.",
     "outputs": [
       {
         "path": "card-service-weddings-1600.webp",
