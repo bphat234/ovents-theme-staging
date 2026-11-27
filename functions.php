@@ -9,10 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.73' );
+define( 'OVENTS_VERSION', '2.9.75' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
+require_once get_template_directory() . '/inc/security-headers.php';
 require_once get_template_directory() . '/inc/icons.php';
 require_once get_template_directory() . '/inc/whatsapp.php';
 require_once get_template_directory() . '/inc/instagram.php';
@@ -114,7 +115,17 @@ add_action(
 			}
 		}
 		if ( ! has_site_icon() ) {
-			echo '<link rel="icon" href="' . esc_url( get_theme_file_uri( 'assets/img/logo.png' ) ) . '" sizes="192x192">' . "\n";
+			$favicon = get_theme_file_path( 'favicon.ico' );
+			if ( file_exists( $favicon ) ) {
+				echo '<link rel="icon" href="' . esc_url( get_theme_file_uri( 'favicon.ico' ) ) . '" sizes="any">' . "\n";
+			}
+			$apple_icon = get_theme_file_path( 'apple-touch-icon.png' );
+			if ( file_exists( $apple_icon ) ) {
+				echo '<link rel="apple-touch-icon" href="' . esc_url( get_theme_file_uri( 'apple-touch-icon.png' ) ) . '">' . "\n";
+			}
+			if ( ! file_exists( $favicon ) && ! file_exists( $apple_icon ) ) {
+				echo '<link rel="icon" href="' . esc_url( get_theme_file_uri( 'assets/img/logo.png' ) ) . '" sizes="192x192">' . "\n";
+			}
 		}
 		if ( ovents_should_block_crawlers() ) {
 			echo '<meta name="robots" content="noindex, nofollow">' . "\n";
@@ -132,4 +143,56 @@ add_filter(
 		return $pre;
 	}
 );
+
+add_action(
+	'template_redirect',
+	function () {
+		if ( is_author() ) {
+			wp_safe_redirect( home_url( '/blog/' ), 301 );
+			exit;
+		}
+	},
+	1
+);
+
+add_action(
+	'do_faviconico',
+	function () {
+		$favicon = get_theme_file_path( 'favicon.ico' );
+		if ( file_exists( $favicon ) && is_readable( $favicon ) ) {
+			header( 'Content-Type: image/x-icon' );
+			header( 'Content-Length: ' . filesize( $favicon ) );
+			header( 'Cache-Control: public, max-age=31536000, immutable' );
+			readfile( $favicon );
+			exit;
+		}
+	}
+);
+
+add_filter(
+	'rest_authentication_errors',
+	function ( $result ) {
+		if ( ! empty( $result ) ) {
+			return $result;
+		}
+		global $wp;
+		$route = $wp->query_vars['rest_route'] ?? '';
+		if ( preg_match( '#^/wp/v2/users(?:/\d+)?$#', $route ) ) {
+			if ( ! is_user_logged_in() ) {
+				return new WP_Error(
+					'rest_forbidden',
+					__( 'User enumeration is disabled for unauthenticated requests.', 'ovents' ),
+					array( 'status' => 401 )
+				);
+			}
+		}
+		return $result;
+	},
+	20
+);
+
+add_filter( 'xmlrpc_enabled', '__return_false' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'wp_generator' );
 

@@ -52,3 +52,65 @@ function ovents_faq_schema_items() {
 		),
 	);
 }
+
+/**
+ * Extract FAQ Q&A pairs from single post content (looks for <details><summary> blocks).
+ *
+ * @param WP_Post|null $post Post object.
+ * @return array<int, array{question: string, answer: string}>
+ */
+function ovents_extract_post_faq_items( $post ) {
+	if ( ! $post instanceof WP_Post || empty( $post->post_content ) ) {
+		return array();
+	}
+
+	$content = apply_filters( 'the_content', $post->post_content );
+	if ( ! is_string( $content ) || '' === trim( $content ) ) {
+		return array();
+	}
+
+	$items = array();
+	libxml_use_internal_errors( true );
+	$dom = new DOMDocument();
+	$dom->loadHTML( '<?xml encoding="UTF-8">' . $content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+	libxml_clear_errors();
+
+	$details_list = $dom->getElementsByTagName( 'details' );
+	if ( $details_list->length === 0 ) {
+		return array();
+	}
+
+	foreach ( $details_list as $details ) {
+		$summary_nodes = $details->getElementsByTagName( 'summary' );
+		if ( $summary_nodes->length === 0 ) {
+			continue;
+		}
+		$summary = $summary_nodes->item( 0 );
+		$question = trim( $summary->textContent );
+		if ( '' === $question ) {
+			continue;
+		}
+
+		$answer_parts = array();
+		foreach ( $details->childNodes as $child ) {
+			if ( $child->nodeName === 'summary' ) {
+				continue;
+			}
+			$text = trim( $child->textContent );
+			if ( '' !== $text ) {
+				$answer_parts[] = $text;
+			}
+		}
+		$answer = implode( ' ', $answer_parts );
+		if ( '' === $answer ) {
+			continue;
+		}
+
+		$items[] = array(
+			'question' => $question,
+			'answer'   => $answer,
+		);
+	}
+
+	return $items;
+}

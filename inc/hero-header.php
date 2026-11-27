@@ -44,6 +44,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		'title'      => ovents_page_h1(),
 		'lead'       => '',
 		'image'      => 'intro.jpg',
+		'image_name' => '',
 		'image_url'  => '',
 		'show_ctas'  => true,
 		'show_secondary' => false,
@@ -57,11 +58,12 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		$defaults = array_merge(
 			$defaults,
 			array(
-				'eyebrow'   => '',
-				'title'     => 'The Ovents Journal',
-				'image'     => 'intro.jpg',
-				'lead'      => 'Practical guidance from our planners on weddings, parties, corporate occasions and the details that make celebrations feel effortless.',
-				'show_ctas' => false,
+				'eyebrow'    => '',
+				'title'      => 'The Ovents Journal',
+				'image'      => 'intro.jpg',
+				'image_name' => 'intro',
+				'lead'       => 'Practical guidance from our planners on weddings, parties, corporate occasions and the details that make celebrations feel effortless.',
+				'show_ctas'  => false,
 			)
 		);
 	}
@@ -72,12 +74,13 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		$defaults = array_merge(
 			$defaults,
 			array(
-				'eyebrow'   => '',
-				'title'     => get_the_title(),
-				'lead'      => wp_trim_words( get_the_excerpt(), 24 ),
-				'image'     => 'intro.jpg',
-				'image_url' => $thumb ? $thumb : '',
-				'show_ctas' => false,
+				'eyebrow'    => '',
+				'title'      => get_the_title(),
+				'lead'       => wp_trim_words( get_the_excerpt(), 24 ),
+				'image'      => 'intro.jpg',
+				'image_name' => $thumb ? '' : 'intro',
+				'image_url'  => $thumb ? $thumb : '',
+				'show_ctas'  => false,
 			)
 		);
 	}
@@ -87,11 +90,12 @@ function ovents_get_inner_hero_args( $args = array() ) {
 		$defaults = array_merge(
 			$defaults,
 			array(
-				'eyebrow'   => '',
-				'title'     => $term instanceof WP_Term ? $term->name : 'Journal',
-				'image'     => 'intro.jpg',
-				'lead'      => 'Articles in this category.',
-				'show_ctas' => false,
+				'eyebrow'    => '',
+				'title'      => $term instanceof WP_Term ? $term->name : 'Journal',
+				'image'      => 'intro.jpg',
+				'image_name' => 'intro',
+				'lead'       => 'Articles in this category.',
+				'show_ctas'  => false,
 			)
 		);
 	}
@@ -141,16 +145,18 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'lead'        => 'Tell us what you’re planning. We’ll take it from there.',
 			),
 			'blog'      => array(
-				'eyebrow'   => '',
-				'image'     => 'intro.jpg',
-				'lead'      => 'Practical guidance from our planners on weddings, parties, corporate occasions and the details that make celebrations feel effortless.',
-				'show_ctas' => false,
+				'eyebrow'    => '',
+				'image'      => 'intro.jpg',
+				'image_name' => 'intro',
+				'lead'       => 'Practical guidance from our planners on weddings, parties, corporate occasions and the details that make celebrations feel effortless.',
+				'show_ctas'  => false,
 			),
 			'faq'       => array(
-				'eyebrow'   => '',
-				'show_ctas' => false,
-				'image'     => 'faq-hero.jpg',
-				'lead'      => 'Answers from a London event planner, working across the UK.',
+				'eyebrow'    => '',
+				'show_ctas'  => false,
+				'image'      => 'faq-hero.jpg',
+				'image_name' => 'faq-hero',
+				'lead'       => 'Answers from a London event planner, working across the UK.',
 			),
 			'portfolio' => array(
 				'eyebrow'   => '',
@@ -159,14 +165,16 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'show_ctas' => false,
 			),
 			'privacy-policy' => array(
-				'eyebrow'   => '',
-				'image'     => 'faq-hero.jpg',
-				'lead'      => 'How we collect, use and protect your personal information when you enquire or book with us.',
-				'show_ctas' => false,
+				'eyebrow'    => '',
+				'image'      => 'faq-hero.jpg',
+				'image_name' => 'faq-hero',
+				'lead'       => 'How we collect, use and protect your personal information when you enquire or book with us.',
+				'show_ctas'  => false,
 			),
 			'terms-of-use' => array(
-				'eyebrow'   => '',
-				'image'     => 'faq-hero.jpg',
+				'eyebrow'    => '',
+				'image'      => 'faq-hero.jpg',
+				'image_name' => 'faq-hero',
 				'lead'      => 'Terms for using this site and submitting event planning enquiries.',
 				'show_ctas' => false,
 			),

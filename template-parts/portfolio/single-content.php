@@ -78,6 +78,7 @@ $lightbox_urls = array();
 				foreach ( $portrait_buffer as $item ) {
 					$lightbox_urls[] = esc_url( get_theme_file_uri( 'assets/img/portfolio/' . $slug . '/' . $item['stem'] . '-1600.jpg' ) );
 					$idx            = count( $lightbox_urls ) - 1;
+					$item_alt       = ! empty( $item['alt'] ) ? $item['alt'] : get_the_title( $post );
 					echo '<figure class="portfolio-single__figure portfolio-single__figure--portrait portfolio-reveal">';
 					ovents_portfolio_render_image(
 						$slug,
@@ -88,7 +89,7 @@ $lightbox_urls = array();
 							'img_class' => 'portfolio-single__img',
 							'width'     => (int) $item['w'],
 							'height'    => (int) $item['h'],
-							'alt'       => $item['alt'],
+							'alt'       => $item_alt,
 							'class'     => 'portfolio-single__picture',
 						)
 					);
@@ -115,6 +116,7 @@ $lightbox_urls = array();
 				$flush_pair();
 				$lightbox_urls[] = esc_url( get_theme_file_uri( 'assets/img/portfolio/' . $slug . '/' . $item['stem'] . '-1600.jpg' ) );
 				$idx             = count( $lightbox_urls ) - 1;
+				$item_alt        = ! empty( $item['alt'] ) ? $item['alt'] : get_the_title( $post );
 				echo '<figure class="portfolio-single__figure portfolio-single__figure--landscape portfolio-reveal">';
 				ovents_portfolio_render_image(
 					$slug,
@@ -125,7 +127,7 @@ $lightbox_urls = array();
 						'img_class' => 'portfolio-single__img',
 						'width'     => (int) $item['w'],
 						'height'    => (int) $item['h'],
-						'alt'       => $item['alt'],
+						'alt'       => $item_alt,
 						'class'     => 'portfolio-single__picture',
 					)
 				);

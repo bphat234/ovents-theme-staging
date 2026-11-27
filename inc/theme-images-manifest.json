@@ -112,9 +112,17 @@
         "path": "hero-erica-samuel-bridge-2400.webp",
         "width": 2400,
         "height": 1339,
-        "bytes": 707906,
+        "bytes": 476160,
         "format": "webp",
-        "quality": 80
+        "quality": 52
+      },
+      {
+        "path": "hero-erica-samuel-bridge-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 289792,
+        "format": "webp",
+        "quality": 82
       },
       {
         "path": "hero-erica-samuel-bridge-1200.webp",
@@ -1969,9 +1977,17 @@
         "path": "hero-erica-samuel-vineyard-2400.webp",
         "width": 2400,
         "height": 1339,
-        "bytes": 758836,
+        "bytes": 493568,
         "format": "webp",
-        "quality": 80
+        "quality": 48
+      },
+      {
+        "path": "hero-erica-samuel-vineyard-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 330752,
+        "format": "webp",
+        "quality": 82
       },
       {
         "path": "hero-erica-samuel-vineyard-1200.webp",
@@ -2010,6 +2026,112 @@
         "bytes": 140600,
         "format": "webp",
         "quality": 80
+      }
+    ]
+  },
+  {
+    "name": "intro",
+    "source": "intro.jpg",
+    "source_file": "assets/img/intro.jpg",
+    "aspect": 1.5,
+    "object_position": "center center",
+    "alt": "Event planning workspace with notebook and coffee",
+    "category": "hero",
+    "folder": "",
+    "notes": "Blog and category archive hero image",
+    "outputs": [
+      {
+        "path": "intro-2400.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 318464,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "intro-1600.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 207872,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "intro-1200.webp",
+        "width": 900,
+        "height": 600,
+        "bytes": 138240,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "intro-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 84992,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "intro.jpg",
+        "width": 900,
+        "height": 600,
+        "bytes": 194560,
+        "format": "jpeg",
+        "quality": 85
+      }
+    ]
+  },
+  {
+    "name": "faq-hero",
+    "source": "faq-hero.jpg",
+    "source_file": "assets/img/faq-hero.jpg",
+    "aspect": 2.133,
+    "object_position": "center center",
+    "alt": "Elegant table setting with candles and florals",
+    "category": "hero",
+    "folder": "",
+    "notes": "FAQ page hero image",
+    "outputs": [
+      {
+        "path": "faq-hero-2400.webp",
+        "width": 1920,
+        "height": 900,
+        "bytes": 254976,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "faq-hero-1600.webp",
+        "width": 1600,
+        "height": 750,
+        "bytes": 144384,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "faq-hero-1200.webp",
+        "width": 1200,
+        "height": 563,
+        "bytes": 65536,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "faq-hero-800.webp",
+        "width": 800,
+        "height": 375,
+        "bytes": 37888,
+        "format": "webp",
+        "quality": 80
+      },
+      {
+        "path": "faq-hero.jpg",
+        "width": 1920,
+        "height": 900,
+        "bytes": 401408,
+        "format": "jpeg",
+        "quality": 85
       }
     ]
   }

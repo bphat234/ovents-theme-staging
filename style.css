@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.73
+Version: 2.9.75
 Text Domain: ovents
 */
 
@@ -654,6 +654,8 @@ body.nav-open .site-chrome {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	box-sizing: border-box;
+	min-height: 3.5rem;
 	padding: 0.85rem 1.75rem;
 	font-family: var(--body);
 	font-weight: 400;
@@ -3545,6 +3547,7 @@ body.home .territory-panel.home-band--dark {
 @media (max-width: 600px) {
 	.enquiry-fields { grid-template-columns: 1fr; }
 	.hero-ctas { flex-direction: column; align-items: stretch; }
+	.hero-ctas .btn { width: 100%; }
 	.footer-grid { grid-template-columns: 1fr; }
 }
 
@@ -3567,7 +3570,6 @@ body.home .territory-panel.home-band--dark {
 	opacity: 0.92;
 }
 .inner-hero__ctas { flex-wrap: wrap; gap: 0.85rem; }
-.inner-hero__ctas .btn { min-height: 3.5rem; }
 #page-content, #enquiry-form { scroll-margin-top: calc(var(--header-h) + 2rem); }
 .inner-page .faq { text-align: left; }
 .inner-page .faq h3 { margin: 2.5rem 0 1rem; font-size: 1.5rem; }
@@ -4674,4 +4676,49 @@ body.ovents-portfolio-archive main > section.portfolio-archive__body {
 }
 body.portfolio-lightbox-open {
 	overflow: hidden;
+}
+
+/* Mobile UX & Accessibility Improvements */
+@media (max-width: 480px) {
+	/* Ensure cookie banner doesn't cover content on mobile */
+	body.has-cookie-banner {
+		padding-bottom: 100px;
+	}
+	#cky-consent-container,
+	.cky-consent-bar,
+	[class*="cookie"][class*="banner"],
+	[class*="cookie"][class*="consent"] {
+		position: fixed !important;
+		bottom: 0 !important;
+	}
+	/* Add padding to contact page reply note when cookie banner is present */
+	.contact-form__note {
+		margin-bottom: 2rem;
+	}
+	/* Relax line-clamp on single post hero subtitle */
+	.inner-hero__lead {
+		-webkit-line-clamp: 4;
+		line-clamp: 4;
+	}
+}
+
+/* Footer / text links — WCAG tap target (not .btn; those use design-system min-height) */
+.footer-nav a,
+.footer-social a,
+.link-explore {
+	min-height: 24px;
+	padding-top: max(0.375rem, calc((24px - 1em) / 2));
+	padding-bottom: max(0.375rem, calc((24px - 1em) / 2));
+	display: inline-flex;
+	align-items: center;
+}
+
+.link-explore {
+	padding: 0.5rem 0;
+}
+
+/* Ensure footer links have proper spacing */
+.footer-nav li a {
+	padding: 0.5rem 0;
+	display: block;
 }

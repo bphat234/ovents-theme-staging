@@ -57,8 +57,8 @@ function ovents_seo_config() {
 			'h1'          => 'Selected celebrations',
 		),
 		'blog'             => array(
-			'title'       => 'The Ovents Journal | Ovents',
-			'description' => 'Planning tips and notes on weddings, corporate events and private celebrations from the Ovents team.',
+			'title'       => 'London Wedding & Event Planning Journal | Ovents',
+			'description' => 'Practical wedding, corporate event and private party planning guides from Ovents, luxury event planners in London serving clients across the UK.',
 			'h1'          => 'The Ovents Journal',
 		),
 		'privacy-policy'   => array(

@@ -30,6 +30,7 @@ add_action(
 			'/wedding-planning'              => '/weddings/',
 			'/private-parties'               => '/parties/',
 			'/weddings/wedding-coordination' => '/weddings/',
+			'/journal'                       => '/blog/',
 		);
 
 		if ( isset( $map[ $path ] ) ) {
