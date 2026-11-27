@@ -28,13 +28,26 @@ function ovents_schema_type_includes( $type, $seek ) {
  * @param array<string, mixed> $data Rank Math JSON-LD.
  * @return array<string, mixed>
  */
+function ovents_rank_math_is_static_marketing_view() {
+	if ( is_front_page() || is_page() ) {
+		return true;
+	}
+	if ( is_home() && ! is_front_page() ) {
+		return true;
+	}
+	if ( defined( 'OVENTS_PORTFOLIO_CPT' ) && is_post_type_archive( OVENTS_PORTFOLIO_CPT ) ) {
+		return true;
+	}
+	return false;
+}
+
 function ovents_rank_math_prune_json_ld( $data ) {
 	if ( ! is_array( $data ) ) {
 		return $data;
 	}
 	unset( $data['breadcrumb'], $data['BreadcrumbList'] );
 
-	$strip_article = is_front_page() || is_page() || ( is_home() && ! is_front_page() );
+	$strip_article = ovents_rank_math_is_static_marketing_view();
 	$strip_author  = $strip_article || is_post_type_archive();
 
 	if ( isset( $data['@graph'] ) && is_array( $data['@graph'] ) ) {
@@ -147,6 +160,15 @@ function ovents_seo_config_page_id( $slug ) {
 /**
  * One-time sync of Rank Math post meta from seo-config (does not overwrite existing values).
  */
+function ovents_rank_math_turn_off_page_article_schema( $page_id ) {
+	$page_id = (int) $page_id;
+	if ( $page_id <= 0 ) {
+		return;
+	}
+	update_post_meta( $page_id, 'rank_math_rich_snippet', 'off' );
+	delete_post_meta( $page_id, 'rank_math_schema_Article' );
+}
+
 function ovents_sync_rank_math_page_meta() {
 	if ( ! function_exists( 'ovents_rank_math_active' ) || ! ovents_rank_math_active() ) {
 		return;
@@ -161,6 +183,7 @@ function ovents_sync_rank_math_page_meta() {
 		if ( $page_id <= 0 ) {
 			continue;
 		}
+		ovents_rank_math_turn_off_page_article_schema( $page_id );
 		if ( ! empty( $row['focus_keyword'] ) && ! get_post_meta( $page_id, 'rank_math_focus_keyword', true ) ) {
 			update_post_meta( $page_id, 'rank_math_focus_keyword', $row['focus_keyword'] );
 		}
@@ -179,9 +202,19 @@ add_action( 'template_redirect', 'ovents_redirect_www_to_apex', 0 );
 add_action( 'template_redirect', 'ovents_redirect_author_archives', 1 );
 add_action( 'init', 'ovents_sync_rank_math_page_meta', 25 );
 
+add_action(
+	'wp',
+	static function () {
+		if ( ! function_exists( 'ovents_rank_math_active' ) || ! ovents_rank_math_active() ) {
+			return;
+		}
+		add_filter( 'rank_math/json_ld', 'ovents_rank_math_prune_json_ld', 999 );
+	},
+	5
+);
+
 if ( function_exists( 'ovents_rank_math_active' ) && ovents_rank_math_active() ) {
 	add_filter( 'rank_math/sitemap/enable_authors', '__return_false' );
-	add_filter( 'rank_math/json_ld', 'ovents_rank_math_prune_json_ld', 999 );
 	add_filter( 'rank_math/opengraph/type', 'ovents_rank_math_opengraph_type', 20 );
 	add_filter(
 		'rank_math/snippet/rich_snippet_article',
