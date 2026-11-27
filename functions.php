@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.75' );
+define( 'OVENTS_VERSION', '2.9.76' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';

@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.75
+Version: 2.9.76
 Text Domain: ovents
 */
 
@@ -2105,15 +2105,17 @@ body.home .territory-panel.home-band--dark {
 	padding-top: 2.5rem;
 }
 
-/* Single journal: article + sidebar as one centred block (no wide empty gutter). */
+/* Single journal: one column on small screens; article + right sidebar from 901px up. */
 .journal-layout--with-aside {
-	grid-template-columns: minmax(0, 1fr) minmax(13.5rem, 16rem);
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: clamp(2rem, 3.5vw, 3rem);
 	align-items: start;
 	padding-inline: clamp(1.25rem, 4vw, 3rem);
 }
 @media (min-width: 901px) {
 	.journal-layout--with-aside {
+		grid-template-columns: minmax(0, 1fr) minmax(13.5rem, 16rem);
 		max-width: min(72rem, 100%);
 		margin-inline: auto;
 		gap: clamp(3rem, 5vw, 5rem);
