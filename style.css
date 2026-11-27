@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.70
+Version: 2.9.71
 Text Domain: ovents
 */
 
@@ -2127,8 +2127,8 @@ body.home .territory-panel.home-band--dark {
 	max-width: none;
 }
 .journal-single__body {
-	--journal-leading: 1.65;
-	--journal-leading-loose: 1.72;
+	--journal-leading: 1.8;
+	--journal-leading-loose: 1.88;
 	max-width: 42em;
 	font-size: 1.125rem;
 	line-height: var(--journal-leading-loose);
@@ -2141,7 +2141,7 @@ body.home .territory-panel.home-band--dark {
 	font-size: 1.1875rem;
 	line-height: var(--journal-leading);
 	color: #2f2c29;
-	margin-bottom: 1.65rem;
+	margin-bottom: 1.85rem;
 }
 .journal-single__body > p:first-of-type::first-letter {
 	float: left;
@@ -2154,12 +2154,12 @@ body.home .territory-panel.home-band--dark {
 	color: var(--ink);
 }
 .journal-single__body p {
-	margin: 0 0 1.15em;
+	margin: 0 0 1.45em;
 	line-height: var(--journal-leading-loose);
 }
 .journal-single__body h2 {
-	margin: 2.25rem 0 0.85rem;
-	padding-top: 1.75rem;
+	margin: 2.5rem 0 1rem;
+	padding-top: 2rem;
 	border-top: 1px solid rgba(28, 27, 26, 0.08);
 	font-family: var(--display);
 	font-size: clamp(1.35rem, 1.6vw, 1.55rem);
@@ -2184,15 +2184,15 @@ body.home .territory-panel.home-band--dark {
 }
 .journal-single__body ul,
 .journal-single__body ol {
-	margin: 0.5rem 0 1.75rem;
+	margin: 0.75rem 0 2rem;
 	padding: 0;
 	list-style: none;
 }
 .journal-single__body li {
 	position: relative;
-	margin: 0 0 0.75rem;
+	margin: 0 0 1rem;
 	padding-left: 1.1rem;
-	line-height: var(--journal-leading);
+	line-height: var(--journal-leading-loose);
 	color: #4a4641;
 }
 .journal-single__body li:last-child { margin-bottom: 0; }
