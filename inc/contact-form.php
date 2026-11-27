@@ -169,6 +169,20 @@ function ovents_enquiry_send_mail( $fields ) {
 }
 
 /**
+ * Set From address and name for enquiry emails.
+ */
+add_filter( 'wp_mail_from', function( $from_email ) {
+	if ( ! is_email( $from_email ) ) {
+		return 'info@ovents.co.uk';
+	}
+	return 'info@ovents.co.uk';
+}, 10 );
+
+add_filter( 'wp_mail_from_name', function( $from_name ) {
+	return 'Ovents';
+}, 10 );
+
+/**
  * Render enquiry form markup.
  */
 function ovents_render_enquiry_form() {

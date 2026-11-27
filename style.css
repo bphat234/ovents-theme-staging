@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.65
+Version: 2.9.67
 Text Domain: ovents
 */
 
@@ -2027,7 +2027,15 @@ body.home .territory-panel.home-band--dark {
 	text-decoration: none;
 }
 .journal-card h2 a:hover { color: var(--gold); }
-.journal-card p { margin: 0 0 1.1rem; color: #3d3a36; line-height: 1.65; }
+.journal-card p {
+	margin: 0 0 1.1rem;
+	color: #4a4641;
+	line-height: 1.72;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
 .journal-card__meta {
 	margin: 0 0 0.65rem;
 	font-family: var(--body);
@@ -2069,8 +2077,149 @@ body.home .territory-panel.home-band--dark {
 	border-radius: 0;
 }
 .journal-single__body > *:first-child { margin-top: 0; }
-.journal-single__back { margin-top: 2rem; }
+.journal-single__back { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--line); }
 .journal-single__back .link-explore { color: var(--ink); border-bottom-color: rgba(28, 27, 26, 0.35); }
+
+/* Single journal: one calm reading column; sidebar follows the article. */
+.journal-layout--single {
+	grid-template-columns: 1fr;
+	max-width: min(40rem, 100%);
+	margin-inline: auto;
+	gap: 0;
+}
+.journal-layout--single .journal-aside {
+	position: static;
+	margin-top: clamp(2.5rem, 5vw, 3.5rem);
+	padding-top: 2rem;
+	border-top: 1px solid var(--line);
+	gap: 1.25rem;
+}
+.journal-layout--single .journal-aside__panel,
+.journal-layout--single .journal-aside__cta {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	box-shadow: none;
+}
+.journal-single__meta {
+	margin: 0 0 1.75rem;
+	font-size: 0.8125rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #8a847b;
+	line-height: 1.5;
+}
+.journal-single__meta a {
+	color: #786532;
+	text-decoration: none;
+	font-weight: 500;
+}
+.journal-single__meta a:hover { color: var(--ink); }
+.journal-single__meta time { color: #8a847b; font-weight: 400; }
+
+.content-prose--journal {
+	max-width: none;
+}
+.journal-single__body {
+	font-size: 1.0625rem;
+	line-height: 1.82;
+	color: #44403a;
+	hyphens: auto;
+}
+.journal-single__body > p:first-of-type {
+	font-size: 1.125rem;
+	line-height: 1.78;
+	color: #3a3632;
+	margin-bottom: 2rem;
+}
+.journal-single__body p {
+	margin: 0 0 1.35em;
+}
+.journal-single__body h2 {
+	margin: 2.5rem 0 1rem;
+	padding-top: 2rem;
+	border-top: 1px solid rgba(28, 27, 26, 0.1);
+	font-size: clamp(1.45rem, 2.2vw, 1.75rem);
+	line-height: 1.25;
+	letter-spacing: 0;
+	color: var(--ink);
+}
+.journal-single__body > p:first-of-type + h2,
+.journal-single__body > h2:first-child {
+	border-top: 0;
+	padding-top: 0;
+	margin-top: 0;
+}
+.journal-single__body h3 {
+	margin: 2rem 0 0.75rem;
+	font-size: 1.25rem;
+	line-height: 1.3;
+	color: var(--ink);
+}
+.journal-single__body ul,
+.journal-single__body ol {
+	margin: 0.5rem 0 1.75rem;
+	padding: 0;
+	list-style: none;
+}
+.journal-single__body li {
+	position: relative;
+	margin: 0 0 0.9rem;
+	padding-left: 1.1rem;
+	line-height: 1.78;
+	color: #4a4641;
+}
+.journal-single__body li:last-child { margin-bottom: 0; }
+.journal-single__body ul > li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.72em;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--gold);
+	opacity: 0.85;
+}
+.journal-single__body ol {
+	counter-reset: journal-ol;
+}
+.journal-single__body ol > li {
+	counter-increment: journal-ol;
+	padding-left: 1.65rem;
+}
+.journal-single__body ol > li::before {
+	content: counter(journal-ol) ".";
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 0.9em;
+	font-weight: 500;
+	color: #786532;
+}
+.journal-single__body a {
+	color: #786532;
+	text-decoration: underline;
+	text-decoration-color: rgba(120, 101, 50, 0.35);
+	text-underline-offset: 0.18em;
+}
+.journal-single__body a:hover {
+	color: var(--ink);
+	text-decoration-color: rgba(28, 27, 26, 0.4);
+}
+.journal-single__body blockquote {
+	margin: 2rem 0;
+	padding: 1.25rem 0 1.25rem 1.25rem;
+	border-left: 2px solid var(--gold);
+	font-family: var(--display);
+	font-size: 1.2rem;
+	line-height: 1.55;
+	color: #3a3632;
+}
+.journal-single__body img {
+	margin: 2rem 0;
+	border-radius: 0;
+}
 
 .content-prose .lead-intro {
 	font-size: var(--text-p1);

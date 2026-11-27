@@ -16,7 +16,11 @@ function ovents_ga4_measurement_id() {
 	if ( defined( 'OVENTS_GA4_ID' ) && OVENTS_GA4_ID ) {
 		return (string) OVENTS_GA4_ID;
 	}
-	return (string) apply_filters( 'ovents_ga4_measurement_id', '' );
+	$default_id = '';
+	if ( function_exists( 'ovents_is_production_env' ) && ovents_is_production_env() ) {
+		$default_id = 'G-3VTHG1EM0P';
+	}
+	return (string) apply_filters( 'ovents_ga4_measurement_id', $default_id );
 }
 
 add_action(
