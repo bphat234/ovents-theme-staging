@@ -181,6 +181,28 @@ add_action( 'init', 'ovents_sync_rank_math_page_meta', 25 );
 
 if ( function_exists( 'ovents_rank_math_active' ) && ovents_rank_math_active() ) {
 	add_filter( 'rank_math/sitemap/enable_authors', '__return_false' );
-	add_filter( 'rank_math/json_ld', 'ovents_rank_math_prune_json_ld', 99 );
+	add_filter( 'rank_math/json_ld', 'ovents_rank_math_prune_json_ld', 999 );
 	add_filter( 'rank_math/opengraph/type', 'ovents_rank_math_opengraph_type', 20 );
+	add_filter(
+		'rank_math/snippet/rich_snippet_article',
+		static function ( $include ) {
+			if ( is_front_page() || is_page() || ( is_home() && ! is_front_page() ) ) {
+				return false;
+			}
+			return $include;
+		},
+		10,
+		1
+	);
+	add_filter(
+		'rank_math/settings/snippet/type',
+		static function ( $type, $post_type ) {
+			if ( 'page' === $post_type ) {
+				return 'none';
+			}
+			return $type;
+		},
+		10,
+		2
+	);
 }
