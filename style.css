@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.67
+Version: 2.9.68
 Text Domain: ovents
 */
 
@@ -2080,26 +2080,14 @@ body.home .territory-panel.home-band--dark {
 .journal-single__back { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--line); }
 .journal-single__back .link-explore { color: var(--ink); border-bottom-color: rgba(28, 27, 26, 0.35); }
 
-/* Single journal: one calm reading column; sidebar follows the article. */
-.journal-layout--single {
-	grid-template-columns: 1fr;
+/* Single journal: main column capped for reading; categories / recent / CTA stay right. */
+.journal-layout--with-aside {
+	grid-template-columns: minmax(0, 1fr) minmax(15.5rem, 18.5rem);
+	gap: clamp(2rem, 4vw, 3.25rem);
+	align-items: start;
+}
+.journal-layout--with-aside .journal-single__main {
 	max-width: min(40rem, 100%);
-	margin-inline: auto;
-	gap: 0;
-}
-.journal-layout--single .journal-aside {
-	position: static;
-	margin-top: clamp(2.5rem, 5vw, 3.5rem);
-	padding-top: 2rem;
-	border-top: 1px solid var(--line);
-	gap: 1.25rem;
-}
-.journal-layout--single .journal-aside__panel,
-.journal-layout--single .journal-aside__cta {
-	background: transparent;
-	border: 0;
-	padding: 0;
-	box-shadow: none;
 }
 .journal-single__meta {
 	margin: 0 0 1.75rem;

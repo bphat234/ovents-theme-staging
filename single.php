@@ -14,7 +14,7 @@ get_header();
 		get_template_part( 'template-parts/inner', 'hero' );
 		?>
 		<article <?php post_class( 'section section--inner journal-single' ); ?>>
-			<div class="wrap journal-layout journal-layout--single">
+			<div class="wrap journal-layout journal-layout--with-aside">
 			<div class="journal-single__main content-prose content-prose--journal">
 				<p class="journal-single__meta">
 					<?php
