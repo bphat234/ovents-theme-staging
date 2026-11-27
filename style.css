@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.85
+Version: 2.9.86
 Text Domain: ovents
 */
 
@@ -3026,19 +3026,23 @@ body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child
 .home-band--white .faq-home-questions details:first-child {
 	border-top: 1px solid var(--border-warm);
 }
-body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n) .faq details {
+/* Boxed FAQ panels only on the dedicated FAQ page — service pages keep hairline rows. */
+body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n).section--faq-page .faq details {
 	border: 1px solid var(--border-warm);
 	background: var(--surface-white);
-	padding: 1rem 1.25rem;
+	padding: 0.65rem 1rem;
 	margin-bottom: 0.5rem;
 	border-radius: 2px;
 }
-body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1) .faq details {
+body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child(2n + 1).section--faq-page .faq details {
 	border: 1px solid var(--border-warm);
 	background: var(--surface-cream);
-	padding: 1rem 1.25rem;
+	padding: 0.65rem 1rem;
 	margin-bottom: 0.5rem;
 	border-radius: 2px;
+}
+.section--faq-page .faq summary {
+	padding: 0.65rem 0;
 }
 :is(.section--faq-home, .inner-page) .faq summary {
 	list-style: none;
@@ -3046,9 +3050,12 @@ body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.5rem;
-	padding: 1.5rem 0;
+	padding: 0.85rem 0;
 	font-size: clamp(1.0625rem, 1.7vw, 1.25rem);
-	line-height: 1.5;
+	line-height: 1.45;
+}
+.section--faq-home .faq-home-questions summary {
+	padding: 1rem 0;
 }
 :is(.section--faq-home, .inner-page) .faq summary::-webkit-details-marker { display: none; }
 :is(.section--faq-home, .inner-page) .faq summary::after {
@@ -3065,10 +3072,13 @@ body:not(.home) main > :is(section.hero, section.inner-hero) ~ section:nth-child
 .faq-home-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
 :is(.section--faq-home, .inner-page) .faq details p {
 	margin: 0;
-	padding: 0 2.75rem 1.5rem 0;
+	padding: 0 2.25rem 0.85rem 0;
 	color: #625d55;
 	font-size: 1rem;
-	line-height: 1.8;
+	line-height: 1.75;
+}
+.section--service-faq .faq details p {
+	padding-bottom: 0.75rem;
 }
 :is(.section--faq-home, .inner-page) .faq details p a { color: #786532; text-decoration: underline; text-underline-offset: 3px; }
 
