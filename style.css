@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.69
+Version: 2.9.70
 Text Domain: ovents
 */
 
@@ -2127,9 +2127,11 @@ body.home .territory-panel.home-band--dark {
 	max-width: none;
 }
 .journal-single__body {
+	--journal-leading: 1.65;
+	--journal-leading-loose: 1.72;
 	max-width: 42em;
 	font-size: 1.125rem;
-	line-height: 1.78;
+	line-height: var(--journal-leading-loose);
 	color: #3d3a36;
 	hyphens: auto;
 	text-rendering: optimizeLegibility;
@@ -2137,9 +2139,9 @@ body.home .territory-panel.home-band--dark {
 }
 .journal-single__body > p:first-of-type {
 	font-size: 1.1875rem;
-	line-height: 1.72;
+	line-height: var(--journal-leading);
 	color: #2f2c29;
-	margin-bottom: 1.75rem;
+	margin-bottom: 1.65rem;
 }
 .journal-single__body > p:first-of-type::first-letter {
 	float: left;
@@ -2152,7 +2154,8 @@ body.home .territory-panel.home-band--dark {
 	color: var(--ink);
 }
 .journal-single__body p {
-	margin: 0 0 1.25em;
+	margin: 0 0 1.15em;
+	line-height: var(--journal-leading-loose);
 }
 .journal-single__body h2 {
 	margin: 2.25rem 0 0.85rem;
@@ -2160,7 +2163,7 @@ body.home .territory-panel.home-band--dark {
 	border-top: 1px solid rgba(28, 27, 26, 0.08);
 	font-family: var(--display);
 	font-size: clamp(1.35rem, 1.6vw, 1.55rem);
-	line-height: 1.28;
+	line-height: 1.35;
 	letter-spacing: 0.01em;
 	font-weight: 400;
 	color: var(--ink);
@@ -2175,7 +2178,7 @@ body.home .territory-panel.home-band--dark {
 	margin: 1.75rem 0 0.65rem;
 	font-family: var(--display);
 	font-size: 1.2rem;
-	line-height: 1.32;
+	line-height: 1.38;
 	font-weight: 400;
 	color: var(--ink);
 }
@@ -2187,9 +2190,9 @@ body.home .territory-panel.home-band--dark {
 }
 .journal-single__body li {
 	position: relative;
-	margin: 0 0 0.9rem;
+	margin: 0 0 0.75rem;
 	padding-left: 1.1rem;
-	line-height: 1.78;
+	line-height: var(--journal-leading);
 	color: #4a4641;
 }
 .journal-single__body li:last-child { margin-bottom: 0; }
