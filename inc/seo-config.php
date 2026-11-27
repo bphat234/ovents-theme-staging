@@ -41,31 +41,31 @@ function ovents_seo_config() {
 			'focus_keyword'  => 'private party planner London',
 		),
 		'about'            => array(
-			'title'          => 'About Ovents | Luxury Event Planners in London',
+			'title'          => 'About Ovents | London Event Planners',
 			'description'    => 'Meet Titilope Fagbore and the Ovents team, luxury wedding and event planners in London, working across the UK.',
 			'h1'             => 'Luxury event planners in London',
 			'focus_keyword'  => 'London event planners',
 		),
 		'contact'          => array(
-			'title'          => 'Contact Ovents | Luxury Event Planner London',
+			'title'          => 'Contact Ovents | Event Planner London Contact',
 			'description'    => 'Planning a wedding, corporate event or private celebration? Get in touch with Ovents, a luxury event planner in London.',
 			'h1'             => 'Let’s plan your event',
 			'focus_keyword'  => 'event planner London contact',
 		),
 		'faq'              => array(
-			'title'          => 'Event Planning FAQs | Ovents',
+			'title'          => 'Event Planning FAQs London | Ovents',
 			'description'    => 'Answers to common questions about wedding, corporate and party planning with Ovents, a London event planner working across the UK.',
 			'h1'             => 'Event planning FAQs',
 			'focus_keyword'  => 'event planning FAQs London',
 		),
 		'portfolio'        => array(
-			'title'          => 'Portfolio | Luxury Weddings, Parties and Events | Ovents',
+			'title'          => 'Luxury Event Portfolio London | Ovents',
 			'description'    => 'Selected weddings, private celebrations and events planned by Ovents, the London luxury event planner working across the UK.',
 			'h1'             => 'Selected celebrations',
 			'focus_keyword'  => 'luxury event portfolio London',
 		),
 		'blog'             => array(
-			'title'          => 'London Wedding & Event Planning Journal | Ovents',
+			'title'          => 'Event Planning Journal London | Ovents',
 			'description'    => 'Practical wedding, corporate event and private party planning guides from Ovents, luxury event planners in London serving clients across the UK.',
 			'h1'             => 'The Ovents Journal',
 			'focus_keyword'  => 'event planning journal London',
@@ -107,7 +107,25 @@ function ovents_seo_slug() {
  *
  * @return array{title: string, description: string, h1?: string}|null
  */
+function ovents_seo_title_contains_focus_keyword( $title, $keyword ) {
+	$title   = strtolower( preg_replace( '/\s+/u', ' ', trim( (string) $title ) ) );
+	$keyword = strtolower( preg_replace( '/\s+/u', ' ', trim( (string) $keyword ) ) );
+	if ( '' === $keyword ) {
+		return true;
+	}
+	return false !== strpos( $title, $keyword );
+}
+
 function ovents_seo_for_request() {
+	if ( is_singular( 'post' ) && function_exists( 'ovents_journal_seo_config' ) ) {
+		$post = get_queried_object();
+		if ( $post instanceof WP_Post ) {
+			$map = ovents_journal_seo_config();
+			if ( isset( $map[ $post->post_name ] ) ) {
+				return $map[ $post->post_name ];
+			}
+		}
+	}
 	if ( is_category() ) {
 		$term = get_queried_object();
 		if ( $term instanceof WP_Term ) {
@@ -137,6 +155,12 @@ function ovents_seo_for_request() {
 	if ( function_exists( 'ovents_portfolio_get_meta' ) && is_singular( OVENTS_PORTFOLIO_CPT ) ) {
 		$post = get_queried_object();
 		if ( $post instanceof WP_Post ) {
+			if ( function_exists( 'ovents_portfolio_seo_config' ) ) {
+				$map = ovents_portfolio_seo_config();
+				if ( isset( $map[ $post->post_name ] ) ) {
+					return $map[ $post->post_name ];
+				}
+			}
 			$meta = ovents_portfolio_get_meta( $post );
 			$type = $meta['type_label'] ?: __( 'Event', 'ovents' );
 			$desc = $meta['meta_desc'] ?: wp_strip_all_tags( ovents_portfolio_visible_intro( $meta ) );

@@ -9,6 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+require_once get_template_directory() . '/inc/journal-seo-config.php';
+require_once get_template_directory() . '/inc/portfolio-seo-config.php';
+
 /**
  * Whether a schema @type value includes a given type.
  *
@@ -158,8 +161,31 @@ function ovents_seo_config_page_id( $slug ) {
 }
 
 /**
- * One-time sync of Rank Math post meta from seo-config (does not overwrite existing values).
+ * Write Rank Math SEO meta from a config row (theme source of truth).
+ *
+ * @param int                  $post_id Post ID.
+ * @param array<string, mixed> $row     title, description, focus_keyword (optional empty to clear).
  */
+function ovents_rank_math_apply_seo_row( $post_id, $row ) {
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 || ! is_array( $row ) ) {
+		return;
+	}
+	if ( ! empty( $row['title'] ) ) {
+		update_post_meta( $post_id, 'rank_math_title', $row['title'] );
+	}
+	if ( ! empty( $row['description'] ) ) {
+		update_post_meta( $post_id, 'rank_math_description', $row['description'] );
+	}
+	if ( ! empty( $row['focus_keyword'] ) ) {
+		update_post_meta( $post_id, 'rank_math_focus_keyword', $row['focus_keyword'] );
+	} elseif ( array_key_exists( 'focus_keyword', $row ) && '' === $row['focus_keyword'] ) {
+		delete_post_meta( $post_id, 'rank_math_focus_keyword' );
+	} elseif ( ! array_key_exists( 'focus_keyword', $row ) ) {
+		delete_post_meta( $post_id, 'rank_math_focus_keyword' );
+	}
+}
+
 function ovents_rank_math_turn_off_page_article_schema( $page_id ) {
 	$page_id = (int) $page_id;
 	if ( $page_id <= 0 ) {
@@ -184,14 +210,39 @@ function ovents_sync_rank_math_page_meta() {
 			continue;
 		}
 		ovents_rank_math_turn_off_page_article_schema( $page_id );
-		if ( ! empty( $row['focus_keyword'] ) && ! get_post_meta( $page_id, 'rank_math_focus_keyword', true ) ) {
-			update_post_meta( $page_id, 'rank_math_focus_keyword', $row['focus_keyword'] );
+		ovents_rank_math_apply_seo_row( $page_id, $row );
+	}
+
+	foreach ( ovents_journal_seo_config() as $slug => $row ) {
+		$posts = get_posts(
+			array(
+				'name'           => $slug,
+				'post_type'      => 'post',
+				'post_status'    => array( 'publish', 'draft', 'future', 'private' ),
+				'posts_per_page' => 1,
+			)
+		);
+		if ( empty( $posts ) || ! $posts[0] instanceof WP_Post ) {
+			continue;
 		}
-		if ( ! empty( $row['description'] ) && ! get_post_meta( $page_id, 'rank_math_description', true ) ) {
-			update_post_meta( $page_id, 'rank_math_description', $row['description'] );
-		}
-		if ( ! empty( $row['title'] ) && ! get_post_meta( $page_id, 'rank_math_title', true ) ) {
-			update_post_meta( $page_id, 'rank_math_title', $row['title'] );
+		ovents_rank_math_apply_seo_row( (int) $posts[0]->ID, $row );
+	}
+
+	if ( defined( 'OVENTS_PORTFOLIO_CPT' ) ) {
+		foreach ( ovents_portfolio_seo_config() as $slug => $row ) {
+			$posts = get_posts(
+				array(
+					'name'           => $slug,
+					'post_type'      => OVENTS_PORTFOLIO_CPT,
+					'post_status'    => 'publish',
+					'posts_per_page' => 1,
+					'fields'         => 'ids',
+				)
+			);
+			if ( empty( $posts ) ) {
+				continue;
+			}
+			ovents_rank_math_apply_seo_row( (int) $posts[0], $row );
 		}
 	}
 
