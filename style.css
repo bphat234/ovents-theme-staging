@@ -3,7 +3,7 @@ Theme Name: Ovents
 Theme URI: https://ovents.co.uk/
 Author: BrandNod
 Description: Luxury event planning: weddings, corporate and private celebrations.
-Version: 2.9.76
+Version: 2.9.78
 Text Domain: ovents
 */
 
@@ -218,9 +218,10 @@ h6 { font-size: var(--h6); }
 	opacity: 0;
 }
 .site-chrome.is-scrolled.site-chrome--hero {
-	background: rgba(0, 0, 0, 0.92);
+	background: #1c1b1a;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	overflow: hidden;
 }
 .site-chrome--inner {
 	background: var(--cream);
@@ -233,6 +234,7 @@ h6 { font-size: var(--h6); }
 	background: var(--white);
 	border-bottom: 1px solid rgba(28, 27, 26, 0.1);
 	box-shadow: var(--shadow-hairline);
+	overflow: hidden;
 }
 .site-chrome.is-scrolled .header-bar {
 	padding-top: 0.75rem;
@@ -428,7 +430,7 @@ body.has-inner-hero-header .site-chrome:not(.is-scrolled) .icon-link {
 
 .btn-enquire {
 	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-radius: 2px;
+	border-radius: 0;
 	padding: 0.65rem 1.5rem;
 	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
@@ -659,10 +661,12 @@ body.nav-open .site-chrome {
 	padding: 0.85rem 1.75rem;
 	font-family: var(--body);
 	font-weight: 400;
+	font-size: 0.875rem;
 	letter-spacing: 0.22em;
 	text-transform: uppercase;
 	text-decoration: none;
 	border: 1px solid transparent;
+	border-radius: 0;
 	cursor: pointer;
 	transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
@@ -690,7 +694,7 @@ body.nav-open .site-chrome {
 	--hero-height: clamp(32rem, calc(100vw * 9 / 16), min(56.25rem, 92svh));
 	position: relative;
 	height: var(--hero-height);
-	min-height: var(--hero-height);
+	min-height: 100svh;
 	max-height: 100svh;
 	display: flex;
 	align-items: flex-start;
@@ -699,13 +703,18 @@ body.nav-open .site-chrome {
 	overflow: hidden;
 	text-align: center;
 }
+@media (max-width: 900px) {
+	.hero {
+		min-height: calc(100svh - 52px);
+		max-height: none;
+	}
+}
 @media (max-width: 767px) {
 	.hero {
 		--hero-height: clamp(28rem, max(72svh, calc(100vw * 1.12)), 92svh);
 		flex-direction: column;
 		align-items: stretch;
 		justify-content: flex-start;
-		max-height: none;
 	}
 }
 .hero-media {
@@ -1810,6 +1819,10 @@ body.home .territory-panel.home-band--dark {
 	box-shadow: var(--shadow-ambient);
 	text-decoration: none;
 	transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+.page-template-page-corporate-events .whatsapp-float,
+.page-id-5 .whatsapp-float {
+	display: none;
 }
 .whatsapp-float:hover {
 	color: #fff;
@@ -3531,6 +3544,14 @@ body.home .territory-panel.home-band--dark {
 		grid-row: 1;
 	}
 }
+@media (min-width: 901px) {
+	.whatsapp-float {
+		--whatsapp-float-size: 44px;
+		--whatsapp-float-gap: 14px;
+		right: 14px;
+		bottom: 18px;
+	}
+}
 @media (max-width: 720px) {
 	.testimonial-carousel {
 		--testimonial-gap: 0.75rem;
@@ -3855,6 +3876,11 @@ body.home .territory-panel.home-band--dark {
 .consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; background: var(--ink); color: #fff; padding: 1rem 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
 .consent-banner[hidden] { display: none !important; }
 .consent-banner__actions { display: flex; gap: 0.5rem; }
+@media (max-width: 900px) {
+	.consent-banner { padding: 0.75rem 1rem; gap: 0.65rem; font-size: 0.875rem; }
+	.consent-banner__actions { flex-direction: row; width: 100%; }
+	.consent-banner__actions .btn { flex: 1; min-height: 2.75rem; padding: 0.6rem 1rem; font-size: 0.75rem; }
+}
 .about-quote {
 	margin-top: 2rem;
 	font-family: var(--display);
@@ -4697,10 +4723,47 @@ body.portfolio-lightbox-open {
 	.contact-form__note {
 		margin-bottom: 2rem;
 	}
-	/* Relax line-clamp on single post hero subtitle */
-	.inner-hero__lead {
-		-webkit-line-clamp: 4;
-		line-clamp: 4;
+}
+
+/* Mobile Call/WhatsApp/Enquire Button Clean-up (≤900px) */
+@media (max-width: 900px) {
+	/* Hide floating green WhatsApp bubble on mobile - clashes with luxury palette */
+	.whatsapp-float {
+		display: none;
+	}
+	
+	/* Hide Call/Email icons in mobile header - keep clean editorial look with centered logo + MENU */
+	.header-contacts {
+		display: none;
+	}
+	
+	/* Hide sticky bottom CALL | ENQUIRE bar on /contact/ page - don't crowd the enquiry form */
+	.page-template-page-contact .callbar,
+	.page-id-7 .callbar {
+		display: none !important;
+	}
+	body.page-template-page-contact,
+	body.page-id-7 {
+		padding-bottom: 0;
+	}
+}
+
+/* Compact mobile cookie banner - reduce padding to avoid swallowing screen space */
+@media (max-width: 768px) {
+	#cky-consent-container,
+	.cky-consent-bar {
+		padding: 0.75rem 1rem !important;
+	}
+	#cky-consent-container .cky-btn-customize,
+	#cky-consent-container .cky-btn-accept {
+		padding: 0.5rem 0.875rem !important;
+		font-size: 0.875rem !important;
+	}
+	.cky-notice-des,
+	.cky-notice-des p {
+		font-size: 0.8125rem !important;
+		line-height: 1.4 !important;
+		margin-bottom: 0.5rem !important;
 	}
 }
 

@@ -125,7 +125,7 @@ function ovents_get_inner_hero_args( $args = array() ) {
 				'lead'            => 'Discreet, polished events that reflect your brand, whether your guests are clients, colleagues or partners.',
 				'contact'         => $home . '/contact/?type=corporate',
 				'primary_label'   => 'Book a discovery call',
-				'show_secondary'  => true,
+				'show_secondary'  => false,
 				'secondary_label' => 'Chat on WhatsApp',
 				'secondary_url'   => ovents_whatsapp_corporate_url(),
 				'cta_note'        => "We’ll reply within one to two business days.",

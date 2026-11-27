@@ -17,7 +17,7 @@ $terms = get_categories(
 );
 ?>
 <nav class="journal-cats" aria-label="<?php esc_attr_e( 'Journal categories', 'ovents' ); ?>">
-	<a class="<?php echo is_home() ? 'is-current' : ''; ?>" href="<?php echo esc_url( $journal_url ); ?>"><?php esc_html_e( 'All posts', 'ovents' ); ?></a>
+	<a class="<?php echo is_home() ? 'is-current' : ''; ?>" href="<?php echo esc_url( $journal_url ); ?>"><?php esc_html_e( 'All', 'ovents' ); ?></a>
 	<?php foreach ( $terms as $term ) : ?>
 		<?php if ( 'uncategorized' === $term->slug ) { continue; } ?>
 		<a class="<?php echo is_category( $term->term_id ) ? 'is-current' : ''; ?>" href="<?php echo esc_url( get_category_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>

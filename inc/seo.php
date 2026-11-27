@@ -75,6 +75,36 @@ if ( ovents_rank_math_active() ) {
 		},
 		20
 	);
+	add_filter(
+		'rank_math/json_ld',
+		function ( $data ) {
+			if ( isset( $data['breadcrumb'] ) ) {
+				unset( $data['breadcrumb'] );
+			}
+			return $data;
+		},
+		99
+	);
+	add_filter(
+		'rank_math/opengraph/facebook/image',
+		function ( $image ) {
+			if ( empty( $image ) ) {
+				return ovents_seo_social_image();
+			}
+			return $image;
+		},
+		20
+	);
+	add_filter(
+		'rank_math/opengraph/twitter/image',
+		function ( $image ) {
+			if ( empty( $image ) ) {
+				return ovents_seo_social_image();
+			}
+			return $image;
+		},
+		20
+	);
 }
 
 if ( ovents_aioseo_active() ) {
@@ -204,19 +234,6 @@ add_action(
 	4
 );
 
-add_action(
-	'wp_head',
-	function () {
-		if ( ! ovents_seo_plugin_active() ) {
-			return;
-		}
-		$image = ovents_seo_social_image();
-		echo '<meta property="og:image" content="' . esc_url( $image ) . '">' . "\n";
-		echo '<meta property="og:image:width" content="1200">' . "\n";
-		echo '<meta property="og:image:height" content="630">' . "\n";
-	},
-	5
-);
 
 /**
  * H1 from SEO config when template uses it.

@@ -29,7 +29,7 @@ $recent  = get_posts(
 		<h2><?php esc_html_e( 'Categories', 'ovents' ); ?></h2>
 		<ul class="journal-aside__list">
 			<li>
-				<a class="<?php echo is_home() ? 'is-current' : ''; ?>" href="<?php echo esc_url( $journal_url ); ?>"><?php esc_html_e( 'All posts', 'ovents' ); ?></a>
+				<a class="<?php echo is_home() ? 'is-current' : ''; ?>" href="<?php echo esc_url( $journal_url ); ?>"><?php esc_html_e( 'All', 'ovents' ); ?></a>
 			</li>
 			<?php foreach ( $terms as $term ) : ?>
 				<?php if ( 'uncategorized' === $term->slug ) { continue; } ?>

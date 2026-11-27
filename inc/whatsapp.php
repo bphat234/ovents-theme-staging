@@ -29,7 +29,7 @@ function ovents_whatsapp_corporate_url() {
  * Show site-wide floating WhatsApp button (hidden on contact — WhatsApp card in sidebar).
  */
 function ovents_whatsapp_float_visible() {
-	return ! is_page( 'contact' );
+	return ! is_page( 'contact' ) && ! is_page( 'corporate-events' );
 }
 
 /**
