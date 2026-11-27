@@ -41,7 +41,7 @@ add_action(
 			'@type'        => array( 'EventPlanner', 'LocalBusiness' ),
 			'name'         => 'Ovents',
 			'legalName'    => 'Ovents LTD',
-			'url'          => ovents_is_launch_live() ? 'https://www.ovents.co.uk/' : home_url( '/' ),
+			'url'          => ovents_schema_site_url() . '/',
 			'telephone'    => '+44 7447 462409',
 			'email'        => 'info@ovents.co.uk',
 			'description'  => 'Luxury wedding, corporate and private party planning and coordination from London across the United Kingdom.',

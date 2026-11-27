@@ -29,7 +29,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</figure>
 		<div class="inner-split__copy content-prose">
 			<h2 id="corp-planning-heading">Planned with care, and with discretion.</h2>
-			<p>We are a London-based planning team. The same care we bring to a wedding or a private celebration, from timings and suppliers to the feel of the room, is the care we bring to your company event.</p>
+			<p>We are corporate event planners in London. The same care we bring to a wedding or a private celebration, from timings and suppliers to the feel of the room, is the care we bring to your company event across the UK.</p>
 			<p>A company event still needs a clear plan, a realistic budget, reliable suppliers and someone calm in charge on the day. We take on the organising: timelines, venues, suppliers, guest flow and run sheets, so your team can look after your guests, your message and your business.</p>
 			<p>Whether you need a planning partner from the first conversation, or a hands-on team for the event itself, we will shape the work around your brief and your budget. Our approach is the same for <a href="<?php echo esc_url( $home . '/weddings/' ); ?>">luxury weddings</a> and <a href="<?php echo esc_url( $home . '/parties/' ); ?>">private parties</a>.</p>
 		</div>

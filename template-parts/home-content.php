@@ -38,7 +38,7 @@ $home_h1     = function_exists( 'ovents_page_h1' ) ? ovents_page_h1() : 'Wedding
 		</h2>
 		<p>Some of you come with a date, some with a venue, some with only an idea.</p>
 		<p>Wherever you’re starting from, we’ll take it from there.</p>
-		<p class="intro-process">We offer luxury event planning and coordination for weddings, private parties and corporate occasions, so you can be present for the moments that matter.</p>
+		<p class="intro-process">As a luxury event planner in London, we offer planning and coordination for weddings, private parties and corporate occasions across the UK, so you can be present for the moments that matter.</p>
 	</div>
 </section>
 

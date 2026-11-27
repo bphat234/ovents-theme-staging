@@ -20,7 +20,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</figure>
 		<div class="inner-split__copy content-prose">
 			<h2 id="weddings-intro-heading">Wherever you&rsquo;re starting from.</h2>
-			<p>Some couples come to us before a venue is chosen. Others have most of the suppliers booked, and need a calm coordinator on the day. We will meet you where you are, and take it from there.</p>
+			<p>Whether you need a luxury wedding planner in London for full planning or on-the-day coordination, we meet you where you are. Some couples come to us before a venue is chosen; others have most suppliers booked and need calm delivery on the day.</p>
 			<p>We are based in London and work across England, Scotland, Wales and Northern Ireland, including Essex, Hertfordshire, Surrey, Kent and Sussex.</p>
 		</div>
 	</div>

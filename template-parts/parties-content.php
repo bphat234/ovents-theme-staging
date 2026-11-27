@@ -20,7 +20,7 @@ get_template_part( 'template-parts/inner', 'hero' );
 		</figure>
 		<div class="inner-split__copy content-prose">
 			<h2 id="parties-bespoke-heading">Wherever you&rsquo;re starting from.</h2>
-			<p>We plan private celebrations in London and across the UK, shaped around your guest list, your venue and your budget. You should enjoy the occasion, not manage suppliers in the middle of it.</p>
+			<p>As a private party planner in London, we shape celebrations across the UK around your guest list, venue and budget. You should enjoy the occasion, not manage suppliers in the middle of it.</p>
 			<p>We build a run sheet, brief the suppliers and stay on hand on the night, so you can host, not troubleshoot. We plan private parties in London and across Essex, Hertfordshire, Surrey, Kent, Sussex and the wider UK.</p>
 			<p>Some celebrations are shared widely; others are held quietly among the people who matter. We plan both with the same care, and the same discretion.</p>
 		</div>

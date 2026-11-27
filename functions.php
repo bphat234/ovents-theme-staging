@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OVENTS_VERSION', '2.9.79' );
+define( 'OVENTS_VERSION', '2.9.80' );
 
 require_once get_template_directory() . '/inc/env.php';
 require_once get_template_directory() . '/inc/staging-guard.php';
@@ -28,6 +28,7 @@ require_once get_template_directory() . '/inc/contact-form.php';
 require_once get_template_directory() . '/inc/portfolio.php';
 require_once get_template_directory() . '/inc/schema.php';
 require_once get_template_directory() . '/inc/seo.php';
+require_once get_template_directory() . '/inc/rank-math-seo.php';
 require_once get_template_directory() . '/inc/breadcrumbs.php';
 require_once get_template_directory() . '/inc/wix-redirects.php';
 require_once get_template_directory() . '/inc/redirects.php';
